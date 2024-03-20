@@ -136,9 +136,9 @@
             </v-card>
           </v-col>
       </v-row>
-        <v-row>
+        <v-row justify="space-evenly">
           <v-col md="4" class="ml-5">
-            <v-card flat height="250" class="pa-3">
+            <v-card flat class="pa-3" color="transparent">
               <div>
                 <v-row>
                   <v-col>
@@ -155,22 +155,28 @@
               </div>           
             </v-card>
           </v-col>
-          <v-col md="4">
+          <v-col md="3">
             <v-card class="rounded-xl">
-              <v-img height="250" src="../assets/logo.png" cover></v-img>
-              <v-card-item>
-                <v-card-title>Cafe Badilico</v-card-title>
-
-                <v-card-subtitle>
-                  <span class="me-1">Local Favorite</span>
-
-                  <v-icon color="error" icon="mdi-fire-circle" size="small"></v-icon>
-                </v-card-subtitle>
-              </v-card-item>
+              <div class="ma-5">
+                <v-img height="150" src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg" cover></v-img>
+              </div>              
+              <v-card-text>        
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam saepe, 
+                officia et totam nihil 
+              </v-card-text>
+              <p class="ma-5"><small>See all</small></p>
             </v-card>
           </v-col>
           <v-col md="3">
-            <v-card class="rounded-xl" color="#2A3280" min-height="250"> </v-card>
+            <v-card class="rounded-xl" color="#2A3280">
+              <div class="ma-5">
+                <v-img height="150" src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg" cover></v-img>
+              </div>
+              <v-card-text>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique recusandae quaerat tempore veritatis nemo ducimus.</p>
+              </v-card-text>
+              <p class="ma-5"><small>See all</small></p>
+            </v-card>
           </v-col>
         </v-row>
         <v-row>
@@ -237,48 +243,50 @@
             </v-card>
           </v-col>
           <v-col md="6">
-            <v-card class="pa-4 d-flex justify-space-between">              
-                <span>Recent</span>
+            <div class="pa-4 d-flex justify-space-between">              
+                <h3>Expiring Leases</h3>
                 <v-spacer />                
                 <a href="#">See More<v-icon>mdi-chevron-right</v-icon></a>             
-            </v-card>
-            <v-card>
-              <v-tabs
-                v-model="tab"
-                bg-color="primary"
-              >
-                <v-tab value="one">Item One</v-tab>
-                <v-tab value="two">Item Two</v-tab>
-                <v-tab value="three">Item Three</v-tab>
-              </v-tabs>
-
-              <v-card-text>
-                <v-window v-model="tab">
-                  <v-window-item value="one">
-                    One
-                  </v-window-item>
-
-                  <v-window-item value="two">
-                    Two
-                  </v-window-item>
-
-                  <v-window-item value="three">
-                    Three
-                  </v-window-item>
-                </v-window>
-              </v-card-text>
-            </v-card>
+            </div>
+            <div class="ma-5">
+              <Bar :data="data" :options="options" />
+            </div>
           </v-col>
         </v-row>                   
       </v-main>      
   </v-container>
 </template>
 <script>
-  export default {
-    data: () => ({
-      tab: null,
-    }),
+  import {
+  Chart as ChartJS,
+  Title,
+  Tooltip,
+  Legend,
+  BarElement,
+  CategoryScale,
+  LinearScale
+} from 'chart.js'
+import { Bar } from 'vue-chartjs'
+
+ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
+
+export default {
+  name: 'App',
+  components: {
+    Bar
+  },
+  data() {
+    return {
+      data: {
+        labels: ['January', 'February', 'March'],
+        datasets: [{ data: [40, 20, 12] }]
+      },
+      options: {
+        responsive: true
+      }
+    }
   }
+}
 </script>
 <style scoped>
 .main {
