@@ -26,10 +26,10 @@
             prepend-icon="mdi-view-dashboard"
             title="Dashboard"
           ></v-list-item>
-          <v-list-item prepend-icon="mdi-account-box" title="Payments"></v-list-item>
-          <v-list-item prepend-icon="mdi-gavel" title="Community"></v-list-item>
-          <v-list-item prepend-icon="mdi-gavel" title="Manage Users"></v-list-item>
-          <v-list-item prepend-icon="mdi-gavel" title="Search"></v-list-item>
+          <v-list-item prepend-icon="mdi-cash-sync" title="Payments"></v-list-item>
+          <v-list-item prepend-icon="mdi-home-group" title="Community"></v-list-item>
+          <v-list-item prepend-icon="mdi-account-details" title="Manage Users"></v-list-item>
+          <v-list-item prepend-icon="mdi-magnify" title="Search"></v-list-item>
         </v-list>
 
         <template v-slot:append>
