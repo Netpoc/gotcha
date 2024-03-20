@@ -42,9 +42,9 @@
         </template>
       </v-navigation-drawer>
       <v-main class="ma-5" style="height: 90vh">
-      <v-row>
-          <v-col md="6">
-            <v-card color="#2A3280" plain class="ma-5">
+      <v-row align="center">
+          <v-col cols="6">
+            <v-card color="#2A3280" class="ma-5">
               <h1 class="mb-5">Admin Dashboard</h1>
               <v-sheet class="mx-auto rounded-xl" color="transparent" elevation="8">
                 <v-card
@@ -99,12 +99,12 @@
               </v-sheet>
             </v-card>
           </v-col>
-          <v-col md="5">
+          <v-col cols="6">
             <v-card
               prepend-icon="mdi-account"
               subtitle="Properties"
               title="36"
-              class="rounded-xl pa-3"
+              class="rounded-xl ma-5 pa-3"
               color="#24BAAB"
               min-height="250"
             >
@@ -113,33 +113,46 @@
               </template>
 
               <v-row>
-                <div class="d-flex justify-space-between">
+                <v-col>
+
+                <v-card class="ma-5 pa-5 d-flex justify-space-between rounded-xl">
                   <div>
                     <p>8</p>
                     <p>Vacant</p>
                   </div>
+                  <v-divider vertical></v-divider>
                   <div>
                     <p>8</p>
                     <p>Vacant</p>
                   </div>
+                  <v-divider vertical></v-divider>
                   <div>
                     <p>8</p>
                     <p>Vacant</p>
                   </div>
-                </div>
+                </v-card>
+                </v-col>
               </v-row>
             </v-card>
           </v-col>
-        </v-row>
+      </v-row>
         <v-row>
           <v-col md="4" class="ml-5">
-            <v-card color="transparent" min-height="250" class="pa-3">
-              <h2>Recent community activities</h2>
-              <p>Explore fun activities and events near you today...</p>
-
-              <v-card-action>
-                <v-btn rounded="xl">Lets go</v-btn>
-              </v-card-action>
+            <v-card flat height="250" class="pa-3">
+              <div>
+                <v-row>
+                  <v-col>
+                <div>
+                  <h2>Recent community activities</h2>
+                  <p>Explore fun activities and events near you today...</p>
+                </div>                
+  
+                <div class="d-flex align-end">
+                  <v-btn rounded="xl">Lets go</v-btn>
+                </div>
+                </v-col> 
+              </v-row>
+              </div>           
             </v-card>
           </v-col>
           <v-col md="4">
