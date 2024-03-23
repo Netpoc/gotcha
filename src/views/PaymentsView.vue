@@ -42,174 +42,225 @@
             </template>
           </v-navigation-drawer>
           <v-main class="ma-5" style="height: 90vh">
-            <v-row align="center">
-                <v-col cols="5">
+            <v-row align="top" justify="space-between">
+                <!-- Pamyments Heading and Group of Buttons -->
+                <v-col cols="6">
                   <v-card flat class="pa-5">
                     <h1 class="mb-5">Payments</h1>
                     <div class="d-flex justify-space-between">
-                        <div>
-                            <v-icon>mdi-google</v-icon>
-                            <p>Pay</p>
+                        <v-sheet
+                        class="rounded-xl d-flex align-center justify-center"
+                        :height="100" 
+                        :width="100" 
+                        color="grey-lighten-1">
+                          <div class="d-flex flex-column justify-center align-center">
+                            <v-icon size="x-large">mdi-cash-sync</v-icon>
+                            <p><small>Expiring Bills</small></p>
+                          </div>
+                        </v-sheet>
+                        <v-sheet
+                        class="rounded-xl d-flex align-center justify-center"
+                        :height="100" 
+                        :width="100" 
+                        color="grey-lighten-1">
+                          <div class="d-flex flex-column justify-center align-center">
+                            <v-icon size="x-large">mdi-wallet-outline</v-icon>
+                            <p><small>Reports</small></p>
                         </div>
-                        <div>
-                            <v-icon>mdi-account</v-icon>
-                            <p>Wallet</p>
+                        </v-sheet>
+                        <v-sheet
+                        class="rounded-xl d-flex align-center justify-center"
+                        :height="100" 
+                        :width="100" 
+                        color="grey-lighten-1">
+                          <div class="d-flex flex-column justify-center align-center">
+                            <v-icon size="x-large">mdi-file-chart-outline</v-icon>
+                            <p><small>Pre-Authorize</small></p>
                         </div>
-                        <div>
-                            <v-icon>mdi-account-details</v-icon>
-                            <p>Reports</p>
-                        </div>
+                        </v-sheet>
+                    </div>
+                  </v-card>
+                  <!--Payment Notification Card -->
+                  <v-card flat>
+                    <div class="ma-5 d-flex justify-space-between align-center">
+                      <h3>Payment Notifications</h3>
+                      <v-btn rounded="xl" size="x-small">See more</v-btn>
+                    </div>
+                    <div>
+                      <v-table>
+                        <thead>
+                          <tr>
+                            <th class="text-left">
+                              Name
+                            </th>
+                            <th class="text-left">
+                              Type
+                            </th>
+                            <th class="text-left">
+                              Due Date
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr
+                            v-for="item in desserts"
+                            :key="item.name"
+                          >
+                            <td>{{ item.name }}</td>
+                            <td>{{ item.calories }}</td>
+                            <td>{{ item.date }}</td>
+                          </tr>
+                        </tbody>
+                      </v-table>
                     </div>
                   </v-card>
                 </v-col>
                 <v-col cols="6">
-                  <v-card>             
-                  
-                    <template v-slot:append>
-                      <a>See all <v-icon>mdi-arrow-right</v-icon></a>
-                    </template>
-      
-                    <v-row>
-                      <v-col>
-      
-                      <v-card class="ma-5 pa-5 d-flex justify-space-between rounded-xl">
-                        <div>
-                          <p>8</p>
-                          <p>Vacant</p>
-                        </div>
-                        <v-divider vertical></v-divider>
-                        <div>
-                          <p>8</p>
-                          <p>Vacant</p>
-                        </div>
-                        <v-divider vertical></v-divider>
-                        <div>
-                          <p>8</p>
-                          <p>Vacant</p>
-                        </div>
-                      </v-card>
-                      </v-col>
-                    </v-row>
+                  <v-card class="ma-5">             
+                    <div class="ma-5 d-flex justify-space-between">
+                        <h3>My Cards</h3>
+                        <a><v-icon>mdi-arrow-right</v-icon></a>
+                    </div>          
+                    <v-carousel
+                      class="ma-5"
+                      :continuous="false"
+                      :show-arrows="false"
+                      delimiter-icon="mdi-circle"
+                      height="200"
+                      hide-delimiter-background
+                    >
+                      <v-carousel-item
+                        v-for="(item, i) in slides"
+                        :key="i"
+                      >
+                      <v-img src="https://img.freepik.com/free-vector/realistic-credit-card-design_23-2149126090.jpg?t=st=1711225840~exp=1711229440~hmac=5cf1f31f3c017ad7d6c626e6681f9b61cef13f0c1379f4dc200fbe3d66b318ae&w=740"></v-img>
+                      </v-carousel-item>
+                    </v-carousel>
                   </v-card>
+                  <div class="ma-5 d-flex justify-space-between align-center">
+                    <h4>Schedule Payment</h4>
+                    <v-btn variant="text"><v-icon>mdi-plus</v-icon></v-btn>
+                  </div>
                 </v-col>
             </v-row>
-              <v-row justify="space-evenly">
-                <v-col md="4" class="ml-5">
-                  <v-card flat class="pa-3" color="transparent">
-                    <div>
-                      <v-row>
-                        <v-col>
-                      <div>
-                        <h2>Recent community activities</h2>
-                        <p>Explore fun activities and events near you today...</p>
-                      </div>                
-        
-                      <div class="d-flex align-end">
-                        <v-btn rounded="xl">Lets go</v-btn>
-                      </div>
-                      </v-col> 
-                    </v-row>
-                    </div>           
-                  </v-card>
-                </v-col>
-                <v-col md="3">
-                  <v-card class="rounded-xl">
-                    <div class="ma-5">
-                      <v-img height="150" src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg" cover></v-img>
-                    </div>              
-                    <v-card-text>        
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam saepe, 
-                      officia et totam nihil 
-                    </v-card-text>
-                    <p class="ma-5"><small>See all</small></p>
-                  </v-card>
-                </v-col>
-                <v-col md="3">
-                  <v-card class="rounded-xl" color="#2A3280">
-                    <div class="ma-5">
-                      <v-img height="150" src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg" cover></v-img>
-                    </div>
-                    <v-card-text>
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique recusandae quaerat tempore veritatis nemo ducimus.</p>
-                    </v-card-text>
-                    <p class="ma-5"><small>See all</small></p>
-                  </v-card>
-                </v-col>
-              </v-row>
-              <v-row>
-                <v-col md="6">
-                  <v-card flat class="pa-4 d-flex justify-space-between">  
-                      <h3>Recent Tasks</h3>
-                      <v-spacer />                
-                      <a>See More<v-icon>mdi-chevron-right</v-icon></a>
-                  </v-card>
-                  <v-card flat>
-                    <v-tabs
-                      v-model="tab"                
-                    >
-                      <v-tab value="one">Incoming Requests</v-tab>
-                      <v-tab value="two">Assigned to me</v-tab>                
-                    </v-tabs>
-      
-                    <v-card-text>
-                      <v-window v-model="tab">
-                        <v-window-item value="one">
-                          <div class="ma-5">
-                            <div>
-                              <p>Hole in Bedroom well at 150 Gordon Crescent...</p>
-                            </div>
-                            <div class="d-flex justify-space-between">
-                              <div>
-                                <v-btn variant="plain" size="small" class="ma-2 pa-2">New</v-btn><v-btn variant="plain" size="small" class="ma-2 pa-2">Resident Request</v-btn>
-                              </div>                       
-                              <div class="d-flex align-center">3days ago</div>
-                            </div>
-                            <div>
-                              <v-avatar size="x-small">
-                                <v-icon icon="mdi-account-circle"></v-icon> 
-                              </v-avatar>
-                             <small>Phil Norlan</small> 
-                            </div>
-                            <v-divider class="mt-3"></v-divider> 
-                          </div>
-                          <div class="ma-5">
-                            <div>
-                              <p>Hole in Bedroom well at 150 Gordon Crescent...</p>
-                            </div>
-                            <div class="d-flex justify-space-between">
-                              <div>
-                                <v-btn variant="plain" size="small" class="ma-2 pa-2">New</v-btn><v-btn variant="plain" size="small" class="ma-2 pa-2">Resident Request</v-btn>
-                              </div>                       
-                              <div class="d-flex align-center">3days ago</div>
-                            </div>
-                            <div>
-                              <v-avatar size="x-small">
-                                <v-icon icon="mdi-account-circle"></v-icon> 
-                              </v-avatar>
-                             <small>Phil Norlan</small> 
-                            </div>
-                            <v-divider class="mt-3"></v-divider> 
-                          </div>              
-                        </v-window-item>
-      
-                        <v-window-item value="two">
-                          Two
-                        </v-window-item>
-                      </v-window>
-                    </v-card-text>
-                  </v-card>
-                </v-col>
-                <v-col md="6">
-                  <div class="pa-4 d-flex justify-space-between">              
-                      <h3>Expiring Leases</h3>
-                      <v-spacer />                
-                      <a href="#">See More<v-icon>mdi-chevron-right</v-icon></a>             
-                  </div>
-                  <div class="ma-5">
-                    <Bar :data="data" :options="options" />
-                  </div>
-                </v-col>
-              </v-row>                   
-            </v-main>
+            <!--Transaction History-->  
+            <v-row>
+              <v-col>
+                <div class="d-flex justify-space-between align-center">
+                  <h4>Transaction History</h4>
+                  <v-btn rounded="xl" size="x-small" variant="text">See more<v-icon>mdi-chevron-right</v-icon></v-btn>
+                </div>
+                <div>
+                  <v-table>
+                    <thead>
+                      <tr>
+                        <th class="text-left">
+                          Name
+                        </th>
+                        <th class="text-left">
+                          Type
+                        </th>
+                        <th class="text-left">
+                          Card
+                        </th>
+                        <th class="text-left">
+                          Date
+                        </th>
+                        <th class="text-left">
+                          Amount
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr
+                        v-for="item in trans"
+                        :key="item.name"
+                      >
+                        <td>{{ item.name }}</td>
+                        <td>{{ item.type }}</td>
+                        <td>{{ item.card }}</td>
+                        <td>{{ item.date }}</td>
+                        <td>{{ item.amount }}</td>
+                      </tr>
+                    </tbody>
+                  </v-table>
+                </div>
+              </v-col>
+            </v-row>                             
+          </v-main>
     </v-container>
 </template>
+<script>
+  export default {
+    data () {
+      return {
+        colors: [
+          'green',
+          'secondary',
+          'yellow darken-4',
+          'red lighten-2',
+          'orange darken-1',
+        ],
+        slides: [
+          'First',
+          'Second',
+          'Third',
+          'Fourth',
+          'Fifth',
+        ],
+        desserts: [
+          {
+            name: 'Electricity',
+            calories: 'Utility',
+            date: '12 Jan 2024'
+          },
+          {
+            name: 'Ice cream sandwich',
+            calories: 'Tax',
+            date: '19 Jun 2024'
+          },
+          {
+            name: 'Eclair',
+            calories: 'Utility',
+            date: '05 Mar 2024'
+          },
+          {
+            name: 'Cupcake',
+            calories: 'Rent',
+            date: '25 Apr 2024'
+          }
+        ],
+        trans: [
+          {
+            name: 'Electricity',
+            type: 'Utility',
+            card: '*** 3452',
+            date: '12 Jan 2024',
+            amount: 2434
+          },
+          {
+            name: 'Electricity',
+            type: 'Utility',
+            card: '*** 5672',
+            date: '3 May 2024',
+            amount: 2913
+          },
+          {
+            name: 'Electricity',
+            type: 'Utility',
+            card: '*** 2334',
+            date: '1 Jun 2024',
+            amount: 2434
+          },
+          {
+            name: 'Electricity',
+            type: 'Utility',
+            card: '*** 9470',
+            date: '12 Jan 2024',
+            amount: 1200
+          }
+        ],
+      }
+    },
+  }
+</script>
