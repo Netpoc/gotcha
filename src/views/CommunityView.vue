@@ -51,37 +51,37 @@
                         class="rounded-xl d-flex flex-column justify-center align-center"
                         height="100"
                         width="100"
-                        color="blue">
-                            <v-btn variant="text"><v-icon>mdi-chat</v-icon></v-btn>
+                        color="#ef3746">
+                            <v-btn variant="text"><v-icon color="#2A3280" size="40">mdi-forum-outline</v-icon></v-btn>
+                            <span><small>Forum</small></span>
+                        </v-sheet>
+                        <v-sheet
+                        class="rounded-xl d-flex flex-column justify-center align-center"
+                        height="100"
+                        width="100"
+                        color="#2A3280">
+                            <v-btn variant="text"><v-icon size="40">mdi-square-edit-outline</v-icon></v-btn>
+                            <span><small>Post</small></span>
+                        </v-sheet>
+                        <v-sheet
+                        class="rounded-xl d-flex flex-column justify-center align-center"
+                        height="100"
+                        width="100"
+                        color="#2A3280">
+                            <v-btn variant="text"><v-icon size="40">mdi-chat</v-icon></v-btn>
                             <span><small>Chat</small></span>
                         </v-sheet>
                         <v-sheet
                         class="rounded-xl d-flex flex-column justify-center align-center"
                         height="100"
                         width="100"
-                        color="blue">
-                            <v-btn variant="text"><v-icon>mdi-chat</v-icon></v-btn>
-                            <span><small>Chat</small></span>
-                        </v-sheet>
-                        <v-sheet
-                        class="rounded-xl d-flex flex-column justify-center align-center"
-                        height="100"
-                        width="100"
-                        color="blue">
-                            <v-btn variant="text"><v-icon>mdi-chat</v-icon></v-btn>
-                            <span><small>Chat</small></span>
-                        </v-sheet>
-                        <v-sheet
-                        class="rounded-xl d-flex flex-column justify-center align-center"
-                        height="100"
-                        width="100"
-                        color="blue">
-                            <v-btn variant="text"><v-icon>mdi-chat</v-icon></v-btn>
-                            <span><small>Chat</small></span>
+                        color="#2A3280">
+                            <v-btn variant="text"><v-icon size="40">mdi-account-cog</v-icon></v-btn>
+                            <span><small>Manage</small></span>
                         </v-sheet>
                     </div>
                     </v-card>
-                    <v-card class="mb-5" color="grey">
+                    <v-card class="rounded-xl mb-5" color="grey">
                         <div class="ma-5 d-flex justify-space-between">
                             <h3>Recent Posts</h3>
                             <v-btn variant="text">See more</v-btn>
@@ -98,7 +98,7 @@
                                         <p>Hole in Bedroom</p>
                                         <div class="d-flex align-center">
                                             <v-sheet color="white" height="20" width="20" rounded="xl">
-                                                <v-icon size="x-small">mdi-google</v-icon>
+                                                <v-icon size="x-small">mdi-account</v-icon>
                                             </v-sheet>
                                             <p class="mx-3"><small>Baldwin Cole</small></p>
                                         </div>
@@ -111,15 +111,15 @@
                             <div class="d-flex">
                                 <v-sheet
                                 rounded="lg"
-                                color="white" 
+                                color="cyan" 
                                 height="50" 
                                 width="50">
                                 </v-sheet>
                                     <div class="mx-3">
                                         <p>Hole in Bedroom</p>
                                         <div class="d-flex align-center">
-                                            <v-sheet color="grey" height="20" width="20" rounded="xl">
-        
+                                            <v-sheet color="white" height="20" width="20" rounded="xl">
+                                                <v-icon size="x-small">mdi-account</v-icon>
                                             </v-sheet>
                                             <p class="mx-3"><small>Baldwin Cole</small></p>
                                         </div>
@@ -140,8 +140,8 @@
                                     <div class="mx-3">
                                         <p>Hole in Bedroom</p>
                                         <div class="d-flex align-center">
-                                            <v-sheet color="grey" height="20" width="20" rounded="xl">
-        
+                                            <v-sheet color="white" height="20" width="20" rounded="xl">
+                                                <v-icon size="x-small">mdi-account</v-icon>
                                             </v-sheet>
                                             <p class="mx-3"><small>Baldwin Cole</small></p>
                                         </div>
@@ -157,10 +157,40 @@
                             <h3>Upcoming Events</h3>
                             <v-btn size="small" class="rounded-xl" variant="text">See more</v-btn>
                         </div>
+                        <div>
+                            <div class="ma-3 d-flex justify-space-between align-center">
+                                <div class="d-flex align-center">
+                                <v-sheet class="d-flex justify-center align-center" color="cyan" height="30" width="30">
+                                    <v-icon>mdi-calendar-month</v-icon>
+                                </v-sheet>
+                                <p class="ma-3">Birthday!</p>
+                                </div>
+                                <span><small>23 Mar</small></span>
+                            </div>
+                            <div class="ma-3 d-flex justify-space-between align-center">
+                                <div class="d-flex align-center">
+                                <v-sheet class="d-flex justify-center align-center" color="cyan" height="30" width="30">
+                                    <v-icon>mdi-calendar-month</v-icon>
+                                </v-sheet>
+                                <p class="ma-3">Community Meeting</p>
+                                </div>
+                                <span><small>23 Mar</small></span>
+                            </div>
+                            <div class="ma-3 d-flex justify-space-between align-center">
+                                <div class="d-flex align-center">
+                                <v-sheet class="d-flex justify-center align-center" color="cyan" height="30" width="30">
+                                    <v-icon>mdi-calendar-month</v-icon>
+                                </v-sheet>
+                                <p class="ma-3">Carnival</p>
+                                </div>
+                                <span><small>23 Mar</small></span>
+                            </div>
+                        </div>
                     </v-card>                    
                 </v-col>
                 <v-col cols="6">
-                    <v-sheet 
+                    <div>
+                        <v-sheet 
                     rounded="xl" 
                     height="250" 
                     color="grey">
@@ -169,6 +199,77 @@
                             <v-btn variant="text"><v-icon>mdi-arrow-right</v-icon></v-btn>
                         </div>
                     </v-sheet>
+                    </div>
+                    <div class="mt-5">
+                        <div class="ma-5 d-flex justify-space-between align-center">
+                            <h3>General Anouncement</h3>
+                            <v-btn variant="text"><v-icon>mdi-plus</v-icon></v-btn>
+                        </div>
+                        <v-sheet class="d-flex justify-center align-center" height="100">
+                            <p><small>No news</small></p>
+                        </v-sheet>
+                    </div>
+                    <div class="ma-5">
+                        <div class="d-flex justify-space-between align-center">
+                            <h3>Inbox</h3>
+                            <v-btn rounded="xl" size="x-small">See More <v-icon>mdi-chevron-right</v-icon></v-btn>
+                        </div>
+                        <v-card flat>
+                            <v-tabs
+                              v-model="tab"                
+                            >
+                              <v-tab value="one">Incoming Requests</v-tab>
+                              <v-tab value="two">Assigned to me</v-tab>                
+                            </v-tabs>
+              
+                            <v-card-text>
+                              <v-window v-model="tab">
+                                <v-window-item value="one">
+                                  <div class="ma-5">
+                                    <div>
+                                      <p>Hole in Bedroom well at 150 Gordon Crescent...</p>
+                                    </div>
+                                    <div class="d-flex justify-space-between">
+                                      <div>
+                                        <v-btn variant="plain" size="small" class="ma-2 pa-2">New</v-btn><v-btn variant="plain" size="small" class="ma-2 pa-2">Resident Request</v-btn>
+                                      </div>                       
+                                      <div class="d-flex align-center">3days ago</div>
+                                    </div>
+                                    <div>
+                                      <v-avatar size="x-small">
+                                        <v-icon icon="mdi-account-circle"></v-icon> 
+                                      </v-avatar>
+                                     <small>Phil Norlan</small> 
+                                    </div>
+                                    <v-divider class="mt-3"></v-divider> 
+                                  </div>
+                                  <div class="ma-5">
+                                    <div>
+                                      <p>Hole in Bedroom well at 150 Gordon Crescent...</p>
+                                    </div>
+                                    <div class="d-flex justify-space-between">
+                                      <div>
+                                        <v-btn variant="plain" size="small" class="ma-2 pa-2">New</v-btn><v-btn variant="plain" size="small" class="ma-2 pa-2">Resident Request</v-btn>
+                                      </div>                       
+                                      <div class="d-flex align-center">3days ago</div>
+                                    </div>
+                                    <div>
+                                      <v-avatar size="x-small">
+                                        <v-icon icon="mdi-account-circle"></v-icon> 
+                                      </v-avatar>
+                                     <small>Phil Norlan</small> 
+                                    </div>
+                                    <v-divider class="mt-3"></v-divider> 
+                                  </div>              
+                                </v-window-item>
+              
+                                <v-window-item value="two">
+                                  Two
+                                </v-window-item>
+                              </v-window>
+                            </v-card-text>
+                          </v-card>
+                    </div>
                 </v-col>
             </v-row>
           </v-main>
