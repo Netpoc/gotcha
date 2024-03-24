@@ -2,7 +2,8 @@
     <v-container fluid>
       <!--The Main Home Page Tool Bar-->
       <v-toolbar color="transparent">
-        <v-toolbar-title>Gotcha</v-toolbar-title>
+        <v-toolbar-title><v-img max-height="80" src="https://res.cloudinary.com/netpoc-inc/image/upload/v1711293080/sytmtgr7sdch1m8brpz3.png"></v-img></v-toolbar-title>
+        <v-spacer></v-spacer>
           <v-btn variant="text">Home</v-btn>
           <v-divider vertical></v-divider>
           <v-btn variant="text">About Us</v-btn>
@@ -50,7 +51,7 @@
               <div class="d-flex flex-column">
                 <v-btn
                   class="mt-4"
-                  color="success"
+                  color="#2A3280"
                   block
                   to="about"
                 >

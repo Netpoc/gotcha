@@ -2,7 +2,7 @@
   <v-container class="main" fluid>    
       <v-navigation-drawer theme="dark" color="#2A3280" permanent>
         <div class="mb-5">
-          <v-img max-height="80" src="../assets/tester.png"></v-img>
+          <v-img max-height="80" src="https://res.cloudinary.com/netpoc-inc/image/upload/v1711293080/sytmtgr7sdch1m8brpz3.png"></v-img>
         </div>
         <v-divider></v-divider>
         <div class="d-flex flex-column align-center ma-5">
