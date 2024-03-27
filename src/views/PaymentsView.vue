@@ -27,8 +27,8 @@
                 title="Dashboard"
               ></v-list-item>
               <v-list-item prepend-icon="mdi-cash-sync" title="Payments"></v-list-item>
-              <v-list-item prepend-icon="mdi-home-group" title="Community"></v-list-item>
-              <v-list-item prepend-icon="mdi-account-details" title="Manage Users"></v-list-item>
+              <v-list-item to="community" prepend-icon="mdi-home-group" title="Community"></v-list-item>
+              <v-list-item to="Manage" prepend-icon="mdi-account-details" title="Manage Users"></v-list-item>
               <v-list-item prepend-icon="mdi-magnify" title="Search"></v-list-item>
             </v-list>
     

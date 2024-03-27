@@ -191,9 +191,9 @@
                 <v-col cols="6">
                     <div>
                         <v-sheet 
-                    rounded="xl" 
-                    height="250" 
-                    color="grey">
+                          rounded="xl" 
+                          height="250" 
+                          color="grey">
                         <div class="pa-5 d-flex justify-space-between">
                             <h3>Approvals</h3>
                             <v-btn variant="text"><v-icon>mdi-arrow-right</v-icon></v-btn>
