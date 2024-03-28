@@ -1,9 +1,10 @@
 <!-- eslint-disable no-undef -->
 <template>    
-    <v-container fluid>
+    <v-container>
       <!--The Main Home Page Tool Bar-->
       <v-toolbar dark color="transparent">
-        <v-toolbar-title><v-img max-height="80" :src="require('../assets/gotcha.png')"></v-img></v-toolbar-title>
+        <v-toolbar-title>
+          <v-img max-height="80" :src="require('../assets/gotcha.png')"></v-img></v-toolbar-title>
         <v-spacer></v-spacer>
           <v-btn variant="text">Home</v-btn>
           <v-divider vertical></v-divider>
@@ -16,14 +17,17 @@
           <v-btn variant="text">Contact</v-btn>
       <!--The Main Home Page Tool Bar Ends-->    
       </v-toolbar>
-      <v-row>
+      <v-row align="center">
         <v-col md="8">
-          <v-card class="ma-5">
-            <div class="ma-5 d-flex flex-column align-center">
+          <div>
+            <div class="d-flex flex-column">
               <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis modi repellendus dolorum aspernatur repellat magnam, eos nostrum maiores, temporibus hic illo ab pariatur maxime laudantium illum magni quia ullam. Fuga maxime accusantium ab.</p>
             </div>
-          </v-card>
+
+            <v-btn class="mt-5 rounded-xl">Get started</v-btn>
+            
+          </div>
             
         </v-col>
         <v-col md="4">
@@ -82,7 +86,8 @@ export default {
   data() {
     return {
       username: '',
-      password: ''
+      password: '',
+      selection: [],
     };
   },
   methods: {

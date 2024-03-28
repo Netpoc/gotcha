@@ -1,17 +1,16 @@
 <template>
-  <v-container class="main">
+  <v-container fluid class="main">
     <v-navigation-drawer color="#2A3280" permanent>
       <div class="mb-5">
         <v-img max-height="65" :src="require('../../assets/white.png')"></v-img>
-      </div>
-      <v-divider></v-divider>
+      </div>      
       <div class="d-flex flex-column align-center ma-5">
-        <div>
-          <v-avatar color="grey" size="85">
+        <div class="ma-2">
+          <v-avatar color="grey" size="75">
             <v-img src="https://cdn.vuetifyjs.com/images/profiles/marcus.jpg" cover></v-img>
           </v-avatar>
         </div>
-        <div>
+        <div class="d-flex flex-column justify-center">
           <p>Property Owner</p>
           <v-chip>Landlord</v-chip>
         </div>
@@ -27,45 +26,42 @@
 
       <template v-slot:append>
         <div class="pa-2">
-          <v-btn variant="text" to="/" block> Settings </v-btn>
+          <v-btn size="small" variant="text" to="/" block> Settings </v-btn>
         </div>
         <div class="pa-2">
-          <v-btn variant="text" to="/" block> Logout </v-btn>
+          <v-btn size="small" variant="text" to="/" block> Logout </v-btn>
         </div>
       </template>
     </v-navigation-drawer>
-    <v-main class="ma-5" style="height: 90vh">
-      <v-row align="center">
+    <v-main style="height: 90vh">
+      <v-row align="start">
         <v-col cols="6">
-          <h1 class="mb-5">Owner Dashboard</h1>
-          <v-card color="tranparent" class="ma-5">
-            <v-sheet elevation="8">
-              <div class="pa-4 d-flex justify-space-between">
-                <span>Activities Due</span>
+          <h1 class="ma-5">Owner Dashboard</h1>
+          <v-card class="pa-5 rounded-xl" color="#E5ACB6">
+            <v-sheet color="transparent">
+              <div class="d-flex justify-space-between">
+                <span>Upcoming Dues</span>
                 <v-spacer></v-spacer>
                 <a><v-icon>mdi-dots-horizontal</v-icon></a>
               </div>
-
-              <v-slide-group v-model="model" class="pa-4" selected-class="bg-primary" show-arrows>
-                <v-slide-group-item v-for="n in 6" :key="n" v-slot="{ isSelected, toggle, selectedClass }">
-                  <v-card :class="['ma-4', selectedClass, 'rounded-xl']" color="grey-lighten-1" height="80" width="80"
-                    @click="toggle">
-                    <div class="d-flex fill-height align-center justify-center">
-                      <v-scale-transition>
-                        <v-icon v-if="isSelected" color="white" icon="mdi-close-circle-outline" size="48"></v-icon>
-                      </v-scale-transition>
-                    </div>
-                  </v-card>
-                </v-slide-group-item>
-              </v-slide-group>
-
-              <v-expand-transition>
-                <v-sheet v-if="model != null" height="150">
-                  <div class="d-flex fill-height align-center justify-center">
-                    <h3 class="text-h6">Selected {{ model }}</h3>
-                  </div>
-                </v-sheet>
-              </v-expand-transition>
+              
+                <div class="ma-3 d-flex justify-space-evenly">
+                  <v-sheet height="100" width="100" class="d-flex justify-center align-center rounded-xl" color="#EF3746">
+                    <p>Levies</p>
+                  </v-sheet>
+                  <v-sheet height="100" width="100" class="d-flex justify-center align-center rounded-xl" color="#EF3746">
+                    <p>Utility</p>
+                  </v-sheet>
+                  <v-sheet height="100" width="100" class="d-flex justify-center align-center rounded-xl" color="#EF3746">
+                    <p>Tax</p>
+                  </v-sheet>
+                  <v-btn variant="text">
+                    <v-sheet height="100" width="100" class="d-flex justify-center align-center rounded-xl" color="#EF3746">
+                      <p>Others</p>
+                    </v-sheet>
+                  </v-btn>
+                </div>
+              
             </v-sheet>
           </v-card>
         </v-col>
