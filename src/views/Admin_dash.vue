@@ -1,8 +1,8 @@
 <template>
   <v-container class="main" fluid>    
       <v-navigation-drawer theme="dark" color="#2A3280" permanent>
-        <div class="mb-5">
-          <v-img max-height="80" src="https://res.cloudinary.com/netpoc-inc/image/upload/v1711293080/sytmtgr7sdch1m8brpz3.png"></v-img>
+        <div>
+          <v-img max-height="50" :src="require('../assets/white.png')"></v-img>
         </div>
         <v-divider></v-divider>
         <div class="d-flex flex-column align-center ma-5">
@@ -27,8 +27,8 @@
           ></v-list-item>
           <v-list-item to="payment" prepend-icon="mdi-cash-sync" title="Payments"></v-list-item>
           <v-list-item to="community" prepend-icon="mdi-home-group" title="Community"></v-list-item>
-          <v-list-item prepend-icon="mdi-account-details" title="Manage Users"></v-list-item>
-          <v-list-item prepend-icon="mdi-magnify" title="Search"></v-list-item>
+          <v-list-item to="manage" prepend-icon="mdi-account-details" title="Manage Users"></v-list-item>
+          <v-list-item to="search" prepend-icon="mdi-magnify" title="Search"></v-list-item>
         </v-list>
 
         <template v-slot:append>
@@ -43,7 +43,7 @@
       <v-main class="ma-5" style="height: 90vh">
       <v-row align="center">
           <v-col cols="6">
-            <v-card color="#2A3280" class="ma-5">
+            <v-card color="transparent" class="ma-5">
               <h1 class="mb-5">Admin Dashboard</h1>
               <v-sheet class="mx-auto rounded-xl" color="transparent" elevation="8">
                 <v-card
@@ -105,7 +105,7 @@
               title="36"
               class="rounded-xl ma-5 pa-3"
               color="#24BAAB"
-              min-height="250"
+              min-height="220"
             >
               <template v-slot:append>
                 <a>See all <v-icon>mdi-arrow-right</v-icon></a>
@@ -114,22 +114,22 @@
               <v-row>
                 <v-col>
 
-                <v-card class="ma-5 pa-5 d-flex justify-space-between rounded-xl">
-                  <div>
-                    <p>8</p>
+                <v-sheet color="cyan" height="100" class="d-flex justify-space-evenly rounded-xl">
+                  <div class="d-flex flex-column justify-center align-center">
+                    <h1>8</h1>
                     <p>Vacant</p>
                   </div>
                   <v-divider vertical></v-divider>
-                  <div>
-                    <p>8</p>
-                    <p>Vacant</p>
+                  <div class="d-flex flex-column justify-center align-center">
+                    <h1>8</h1>
+                    <p>Occupied</p>
                   </div>
                   <v-divider vertical></v-divider>
-                  <div>
-                    <p>8</p>
-                    <p>Vacant</p>
+                  <div class="d-flex flex-column justify-center align-center">
+                    <h1>8</h1>
+                    <p>Unlisted</p>
                   </div>
-                </v-card>
+                </v-sheet>
                 </v-col>
               </v-row>
             </v-card>

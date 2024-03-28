@@ -2,7 +2,7 @@
   <v-container class="main" fluid>    
       <v-navigation-drawer theme="dark" color="#2A3280" permanent>
         <div class="mb-5">
-          <v-img max-height="80" src="../assets/tester.png"></v-img>
+          <v-img max-height="65" :src="require('../../assets/white.png')"></v-img>
         </div>
         <v-divider></v-divider>
         <div class="d-flex flex-column align-center ma-5">
@@ -15,19 +15,20 @@
             </v-avatar>
           </div>
           <div>
-            <p>Sample User</p>
-            <v-chip>Admin</v-chip>
+            <p>Tenant User</p>
+            <v-chip>Tenant</v-chip>
           </div>
         </div>
 
         <v-list color="transparent">
-          <v-list-item            
+          <v-list-item
+            to="Tenant"            
             prepend-icon="mdi-view-dashboard"
             title="Dashboard"
           ></v-list-item>
           <v-list-item to="payment" prepend-icon="mdi-cash-sync" title="Payments"></v-list-item>
-          <v-list-item prepend-icon="mdi-home-group" title="Community"></v-list-item>
-          <v-list-item prepend-icon="mdi-account-details" title="Manage Users"></v-list-item>
+          <v-list-item to="community" prepend-icon="mdi-home-group" title="Community"></v-list-item>
+          <v-list-item to="manage" prepend-icon="mdi-account-details" title="Manage Users"></v-list-item>
           <v-list-item prepend-icon="mdi-magnify" title="Search"></v-list-item>
         </v-list>
 
@@ -44,7 +45,7 @@
       <v-row align="center">
           <v-col cols="6">
             <v-card color="#2A3280" class="ma-5">
-              <h1 class="mb-5">Admin Dashboard</h1>
+              <h1 class="mb-5">Occupant Dashboard</h1>
               <v-sheet class="mx-auto rounded-xl" color="transparent" elevation="8">
                 <v-card
                   flat

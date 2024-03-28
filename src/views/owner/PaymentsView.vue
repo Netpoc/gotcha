@@ -2,7 +2,7 @@
     <v-container fluid>
         <v-navigation-drawer theme="dark" color="#2A3280" permanent>
             <div class="mb-5">
-              <v-img max-height="80" src="../assets/tester.png"></v-img>
+              <v-img max-height="65" :src="require('../../assets/white.png')"></v-img>
             </div>
             <v-divider></v-divider>
             <div class="d-flex flex-column align-center ma-5">
@@ -22,13 +22,13 @@
     
             <v-list color="transparent">
               <v-list-item
-                to="/about"
+                to="owner"
                 prepend-icon="mdi-view-dashboard"
                 title="Dashboard"
               ></v-list-item>
-              <v-list-item to="/payment" prepend-icon="mdi-cash-sync" title="Payments"></v-list-item>
-              <v-list-item to="/community" prepend-icon="mdi-home-group" title="Community"></v-list-item>
-              <v-list-item prepend-icon="mdi-account-details" title="Manage Users"></v-list-item>
+              <v-list-item to="payment" prepend-icon="mdi-cash-sync" title="Payments"></v-list-item>
+              <v-list-item to="community" prepend-icon="mdi-home-group" title="Community"></v-list-item>
+              <v-list-item to="manage" prepend-icon="mdi-account-details" title="Manage Users"></v-list-item>
               <v-list-item prepend-icon="mdi-magnify" title="Search"></v-list-item>
             </v-list>
     

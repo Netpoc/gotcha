@@ -1,10 +1,9 @@
 <template>
     <v-container fluid>
         <v-navigation-drawer theme="dark" color="#2A3280" permanent>
-            <div class="mb-5">
-              <v-img max-height="80" src="../assets/tester.png"></v-img>
-            </div>
-            <v-divider></v-divider>
+            <div>
+              <v-img max-height="65" :src="require('../assets/white.png')"></v-img>
+            </div>            
             <div class="d-flex flex-column align-center ma-5">
               <div>
                 <v-avatar color="grey" size="100">
@@ -22,7 +21,7 @@
     
             <v-list color="transparent">
               <v-list-item
-                to="/about"
+                to="dashboard"
                 prepend-icon="mdi-view-dashboard"
                 title="Dashboard"
               ></v-list-item>
@@ -33,11 +32,11 @@
             </v-list>
     
             <template v-slot:append>
-              <div class="pa-2">
-                <v-btn variant="text" to="/" block> Settings </v-btn>
+              <div class="ma-2">
+                <v-btn size="small" variant="text" to="/" block> Settings </v-btn>
               </div>
-              <div class="pa-2">
-                <v-btn variant="text" to="/" block> Logout </v-btn>
+              <div class="ma-2">
+                <v-btn size="small" variant="text" to="/" block> Logout </v-btn>
               </div>
             </template>
           </v-navigation-drawer>

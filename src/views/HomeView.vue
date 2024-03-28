@@ -1,8 +1,9 @@
+<!-- eslint-disable no-undef -->
 <template>    
     <v-container fluid>
       <!--The Main Home Page Tool Bar-->
-      <v-toolbar color="transparent">
-        <v-toolbar-title><v-img max-height="80" src="https://res.cloudinary.com/netpoc-inc/image/upload/v1711293080/sytmtgr7sdch1m8brpz3.png"></v-img></v-toolbar-title>
+      <v-toolbar dark color="transparent">
+        <v-toolbar-title><v-img max-height="80" :src="require('../assets/gotcha.png')"></v-img></v-toolbar-title>
         <v-spacer></v-spacer>
           <v-btn variant="text">Home</v-btn>
           <v-divider vertical></v-divider>
@@ -30,13 +31,15 @@
             <div class="ma-5 d-flex flex-column align-center">
               <h2>Login</h2>
             </div>
-            <v-form class="mb-5" ref="form">
-              <v-text-field                
+            <v-form class="mb-5">
+              <v-text-field
+                v-model="username"                
                 label="Email or Username"
                 required
               ></v-text-field>
         
-              <v-text-field                
+              <v-text-field   
+                v-model="password"             
                 label="Password"
                 required
                 type="password"
@@ -53,9 +56,9 @@
                   class="mt-4"
                   color="#2A3280"
                   block
-                  to="about"
+                  @click="login"
                 >
-                  Validate
+                  Login
                 </v-btn>
                 <p class="ma-5">Forgot password or username?</p>
                 
@@ -74,3 +77,32 @@
       </v-row> 
     </v-container>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      username: '',
+      password: ''
+    };
+  },
+  methods: {
+    login() {
+      if (this.username === 'admin' && this.password === 'password') {
+        this.loggedIn = true
+        this.user =  {username: this.username};
+        // eslint-disable-next-line no-undef
+        this.$router.push({name: 'Dashboard'})
+      } else if (this.username === 'landlord' && this.password === 'password'){
+        this.loggedIn = true
+        this.user = {username: this.username};
+        this.$router.push({name: 'Owner'})
+      } else if (this.username === 'tenant' && this.password === 'password') {
+        this.$router.push({name: 'Tenant'})
+        console.log("Tenant Login Successful");
+      } else {
+        console.log("Error!!!")
+      }
+    }
+  }
+}
+</script>
