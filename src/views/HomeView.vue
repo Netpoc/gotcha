@@ -48,13 +48,6 @@
                 required
                 type="password"
               ></v-text-field>
-        
-              <v-checkbox                
-                :rules="[v => !!v || 'You must agree to continue!']"
-                label="Do you agree?"
-                required
-              ></v-checkbox>
-        
               <div class="d-flex flex-column">
                 <v-btn
                   class="mt-4"
@@ -64,9 +57,7 @@
                 >
                   Login
                 </v-btn>
-                <p class="ma-5">Forgot password or username?</p>
-                
-
+                <p class="mt-5">Forgot password or username?</p>
               </div>
             </v-form>
             <v-divider></v-divider>

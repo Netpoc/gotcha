@@ -3,7 +3,7 @@
     <v-navigation-drawer color="#2A3280" permanent>
       <div class="mb-5">
         <v-img max-height="65" :src="require('../../assets/white.png')"></v-img>
-      </div>      
+      </div>
       <div class="d-flex flex-column align-center ma-5">
         <div class="ma-2">
           <v-avatar color="grey" size="75">
@@ -39,73 +39,63 @@
           <h1 class="ma-5">Owner Dashboard</h1>
           <v-card class="pa-5 rounded-xl" color="#E5ACB6">
             <v-sheet color="transparent">
-              <div class="d-flex justify-space-between">
-                <span>Upcoming Dues</span>
+              <div class="d-flex justify-space-between align-center">
+                <h4>Upcoming Dues</h4>
                 <v-spacer></v-spacer>
-                <a><v-icon>mdi-dots-horizontal</v-icon></a>
+                <v-btn variant="text" icon><v-icon>mdi-dots-horizontal</v-icon></v-btn>
               </div>
-              
-                <div class="ma-3 d-flex justify-space-evenly">
-                  <v-sheet height="100" width="100" class="d-flex justify-center align-center rounded-xl" color="#EF3746">
-                    <p>Levies</p>
-                  </v-sheet>
-                  <v-sheet height="100" width="100" class="d-flex justify-center align-center rounded-xl" color="#EF3746">
-                    <p>Utility</p>
-                  </v-sheet>
-                  <v-sheet height="100" width="100" class="d-flex justify-center align-center rounded-xl" color="#EF3746">
-                    <p>Tax</p>
-                  </v-sheet>
-                  <v-btn variant="text">
-                    <v-sheet height="100" width="100" class="d-flex justify-center align-center rounded-xl" color="#EF3746">
-                      <p>Others</p>
-                    </v-sheet>
-                  </v-btn>
-                </div>
-              
+
+              <div class="ma-3 d-flex justify-space-evenly">
+                <v-sheet height="100" width="100" class="d-flex justify-center align-center rounded-xl" color="#EF3746">
+                  <p>Levies</p>
+                </v-sheet>
+                <v-sheet height="100" width="100" class="d-flex justify-center align-center rounded-xl" color="#EF3746">
+                  <p>Utility</p>
+                </v-sheet>
+                <v-sheet height="100" width="100" class="d-flex justify-center align-center rounded-xl" color="#EF3746">
+                  <p>Tax</p>
+                </v-sheet>
+                <v-sheet height="100" width="100" class="d-flex justify-center align-center rounded-xl" color="#EF3746">
+                  <p>Others</p>
+                </v-sheet>
+              </div>
+
             </v-sheet>
           </v-card>
         </v-col>
         <v-col cols="6">
-          <v-card prepend-icon="mdi-account" subtitle="Properties" title="36" class="rounded-xl ma-5 pa-3"
-            color="#24BAAB" min-height="250">
-            <template v-slot:append>
-              <a>See all <v-icon>mdi-arrow-right</v-icon></a>
-            </template>
-
-            <v-row>
-              <v-col>
-
-                <v-card class="ma-5 pa-5 d-flex justify-space-between rounded-xl">
-                  <div>
-                    <p>8</p>
-                    <p>Vacant</p>
-                  </div>
-                  <v-divider vertical></v-divider>
-                  <div>
-                    <p>8</p>
-                    <p>Vacant</p>
-                  </div>
-                  <v-divider vertical></v-divider>
-                  <div>
-                    <p>8</p>
-                    <p>Vacant</p>
-                  </div>
-                </v-card>
-              </v-col>
-            </v-row>
-          </v-card>
+          <v-sheet class="ma-5">
+            <div class="d-flex justify-space-between align-center">
+              <h3>Community Posts</h3>
+              <v-btn icon variant="text"><v-icon>mdi-arrow-right</v-icon></v-btn>
+            </div>
+            <div class="ma-5 d-flex justify-space-evenly">
+              <div class="d-flex flex-column align-center">
+                <v-icon color="#2A3280" size="45">mdi-forum</v-icon>
+                <span>Join Chat</span>
+              </div>
+              <div class="d-flex flex-column align-center">
+                <v-icon color="#2A3280" size="45">mdi-square-edit-outline</v-icon>
+                <span>Create Post</span>
+              </div>
+              <div class="d-flex flex-column align-center">
+                <v-icon color="#2A3280" size="45">mdi-newspaper-variant-multiple-outline</v-icon>
+                <span>News</span>
+              </div>
+            </div>
+          </v-sheet>
         </v-col>
       </v-row>
       <v-row justify="space-evenly">
         <v-col md="4" class="ml-5">
-          <v-card flat class="pa-3" color="transparent">                  
-              <v-card-text>
-                <h2>Recent community activities</h2>
-                <p>Explore fun activities and events near you today...</p>
-              </v-card-text>     
-                    <v-card-actions>
-                      <v-btn variant="text" rounded="xl">Lets go</v-btn>
-                    </v-card-actions>                      
+          <v-card flat class="pa-3" color="transparent">
+            <v-card-text>
+              <h2>Recent community activities</h2>
+              <p>Explore fun activities and events near you today...</p>
+            </v-card-text>
+            <v-card-actions>
+              <v-btn variant="text" rounded="xl">Lets go</v-btn>
+            </v-card-actions>
           </v-card>
         </v-col>
         <v-col md="3">
