@@ -126,7 +126,7 @@
       <v-row>
         <v-col md="6">
           <v-card flat class="pa-4 d-flex justify-space-between">
-            <h3>Recent Tasks</h3>
+            <h3>Recent Activities</h3>
             <v-spacer />
             <a>See More<v-icon>mdi-chevron-right</v-icon></a>
           </v-card>
@@ -188,7 +188,7 @@
         </v-col>
         <v-col md="6">
           <div class="pa-4 d-flex justify-space-between">
-            <h3>Expiring Leases</h3>
+            <h3>News and Update</h3>
             <v-spacer />
             <a href="#">See More<v-icon>mdi-chevron-right</v-icon></a>
           </div>

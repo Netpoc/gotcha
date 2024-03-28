@@ -23,13 +23,13 @@ const routes = [
     meta: {requiresAuth: true}
   },
   {
-    path: '/dashboard',
+    path: '/owner_dashboard',
     name: 'Owner',
     component: OwnerDash,
     meta: {requiresAuth: true}
   },
   {
-    path: '/dashboard',
+    path: '/tenant_dashboard',
     name: 'Tenant',
     component: TenantDash,
     meta: {requiresAuth: true}
