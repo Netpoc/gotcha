@@ -63,8 +63,8 @@
             <v-divider></v-divider>
 
             <div class="ma-5 d-flex justify-center">
-              <v-btn><v-icon>mdi-facebook</v-icon></v-btn>
-              <v-btn><v-icon>mdi-gmail</v-icon></v-btn>
+              <v-btn variant="text" icon><v-icon>mdi-facebook</v-icon></v-btn>
+              <v-btn variant="text" icon><v-icon>mdi-gmail</v-icon></v-btn>
             </div>
             
           </v-card>
