@@ -1,7 +1,7 @@
 <template>
   <v-container fluid class="main">
     <Nav />
-    <v-main style="height: 90vh">
+    <v-main>
       <v-row align="start">
         <v-col cols="6">
           <h1 class="ma-5">Owner Dashboard</h1>
@@ -203,13 +203,12 @@ export default {
 }
 </script>
 <style scoped>
-.main {
-  position: absolute;
+.main {  
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(to left, #ffffff 40%, #657ABC 40%);
+  background: linear-gradient(to left, #ffffff 40%, #657ABC 40%) !important; 
   display: flex;
   flex-wrap: wrap;
   align-items: center;

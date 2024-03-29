@@ -5,7 +5,7 @@
             <v-row>
                 <v-col cols="6">
                     <h2>Payments</h2>
-                    <v-card color="#C0E5E2" class="ma-5 d-flex justify-space-evenly">
+                    <v-card color="#C0E5E2" class="pa-5 d-flex justify-space-evenly">
                         <v-sheet
                         class="rounded-xl d-flex flex-column align-center justify-center" 
                         height="100" 

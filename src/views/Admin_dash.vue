@@ -1,5 +1,5 @@
 <template>
-  <v-container class="main" fluid>    
+  <v-container fluid>    
       <v-navigation-drawer theme="dark" color="#2A3280" permanent>
         <div>
           <v-img max-height="50" :src="require('../assets/white.png')"></v-img>

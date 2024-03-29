@@ -87,7 +87,7 @@ export default {
         this.loggedIn = true
         this.user =  {username: this.username};
         // eslint-disable-next-line no-undef
-        this.$router.push({name: 'Dashboard'})
+        this.$router.push({name: 'dashboard'})
       } else if (this.username === 'landlord' && this.password === 'password'){
         this.loggedIn = true
         this.user = {username: this.username};
