@@ -4,6 +4,7 @@ import ManageView from '@/views/ManageView.vue'
 import AdminDash from '@/views/Admin_dash.vue'
 import OwnerDash from '@/views/owner/Owner_dash.vue'
 import TenantDash from '@/views/tenant/Tenant_dash.vue'
+import AccountView from '@/views/owner/Account'
 
 const routes = [
   {
@@ -12,25 +13,30 @@ const routes = [
     component: HomeView
   },
   {
+    path: '/account_view',
+    name: 'account',
+    component: AccountView
+  },
+  {
     path: '/manage',
     name: 'manage',
     component: ManageView
   },
   {
     path: '/dashboard',
-    name: 'Dashboard',
+    name: 'dashboard',
     component: AdminDash,
     meta: {requiresAuth: true}
   },
   {
     path: '/owner_dashboard',
-    name: 'Owner',
+    name: 'owner',
     component: OwnerDash,
     meta: {requiresAuth: true}
   },
   {
     path: '/tenant_dashboard',
-    name: 'Tenant',
+    name: 'tenant',
     component: TenantDash,
     meta: {requiresAuth: true}
   },

@@ -91,7 +91,7 @@ export default {
       } else if (this.username === 'landlord' && this.password === 'password'){
         this.loggedIn = true
         this.user = {username: this.username};
-        this.$router.push({name: 'Owner'})
+        this.$router.push({name: 'owner'})
       } else if (this.username === 'tenant' && this.password === 'password') {
         this.$router.push({name: 'Tenant'})
         console.log("Tenant Login Successful");

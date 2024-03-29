@@ -1,38 +1,6 @@
 <template>
   <v-container fluid class="main">
-    <v-navigation-drawer color="#2A3280" permanent>
-      <div class="mb-5">
-        <v-img max-height="65" :src="require('../../assets/white.png')"></v-img>
-      </div>
-      <div class="d-flex flex-column align-center ma-5">
-        <div class="ma-2">
-          <v-avatar color="grey" size="75">
-            <v-img src="https://cdn.vuetifyjs.com/images/profiles/marcus.jpg" cover></v-img>
-          </v-avatar>
-        </div>
-        <div class="d-flex flex-column justify-center">
-          <p>Property Owner</p>
-          <v-chip>Landlord</v-chip>
-        </div>
-      </div>
-
-      <v-list color="transparent">
-        <v-list-item to="owner" prepend-icon="mdi-view-dashboard" title="Dashboard"></v-list-item>
-        <v-list-item to="payment" prepend-icon="mdi-cash-sync" title="Payments"></v-list-item>
-        <v-list-item to="community" prepend-icon="mdi-home-group" title="Community"></v-list-item>
-        <v-list-item to="manage" prepend-icon="mdi-account-details" title="Manage Users"></v-list-item>
-        <v-list-item to="payment" prepend-icon="mdi-magnify" title="Search"></v-list-item>
-      </v-list>
-
-      <template v-slot:append>
-        <div class="pa-2">
-          <v-btn size="small" variant="text" to="/" block> Settings </v-btn>
-        </div>
-        <div class="pa-2">
-          <v-btn size="small" variant="text" to="/" block> Logout </v-btn>
-        </div>
-      </template>
-    </v-navigation-drawer>
+    <Nav />
     <v-main style="height: 90vh">
       <v-row align="start">
         <v-col cols="6">
@@ -201,6 +169,7 @@
   </v-container>
 </template>
 <script>
+import Nav from '../../components/OwnerNavDrawer.vue'
 import {
   Chart as ChartJS,
   Title,
@@ -217,7 +186,8 @@ ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
 export default {
   name: 'App',
   components: {
-    Bar
+    Bar,
+    Nav
   },
   data() {
     return {
