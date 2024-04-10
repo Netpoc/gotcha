@@ -1,5 +1,5 @@
 <template>
-    <v-container fluid>
+    <v-container fluid class="main">
         <v-navigation-drawer theme="dark" color="#2A3280" permanent>
             <div>
               <v-img max-height="65" :src="require('../assets/white.png')"></v-img>
@@ -40,20 +40,20 @@
               </div>
             </template>
           </v-navigation-drawer>
-          <v-main class="ma-5" style="height: 90vh">
+          <v-main>
             <v-row align="top" justify="space-between">
                 <!-- Pamyments Heading and Group of Buttons -->
                 <v-col cols="6">
-                  <v-card flat class="pa-5">
+                  <v-card flat color="transparent" class="ma-5">
                     <h1 class="mb-5">Payments</h1>
-                    <div class="d-flex justify-space-between">
+                    <div class="d-flex justify-space-evenly">
                         <v-sheet
                         class="rounded-xl d-flex align-center justify-center"
                         :height="100" 
                         :width="100" 
-                        color="#E97080">
+                        color="#EF3746">
                           <div class="d-flex flex-column justify-center align-center">
-                            <v-icon size="x-large">mdi-cash-sync</v-icon>
+                            <v-icon color="#2A3280" size="45">mdi-cash-sync</v-icon>
                             <p><small>Expiring Bills</small></p>
                           </div>
                         </v-sheet>
@@ -61,9 +61,9 @@
                         class="rounded-xl d-flex align-center justify-center"
                         :height="100" 
                         :width="100" 
-                        color="#E97080">
+                        color="#EF3746">
                           <div class="d-flex flex-column justify-center align-center">
-                            <v-icon size="x-large">mdi-wallet-outline</v-icon>
+                            <v-icon color="#2A3280" size="45">mdi-wallet-outline</v-icon>
                             <p><small>Reports</small></p>
                         </div>
                         </v-sheet>
@@ -71,9 +71,9 @@
                         class="rounded-xl d-flex align-center justify-center"
                         :height="100" 
                         :width="100" 
-                        color="#657ABC">
+                        color="#EF3746">
                           <div class="d-flex flex-column justify-center align-center">
-                            <v-icon size="x-large">mdi-file-chart-outline</v-icon>
+                            <v-icon color="#2A3280" size="45">mdi-file-chart-outline</v-icon>
                             <p><small>Pre-Authorize</small></p>
                         </div>
                         </v-sheet>
@@ -81,21 +81,21 @@
                         class="rounded-xl d-flex align-center justify-center"
                         :height="100" 
                         :width="100" 
-                        color="#657ABC">
+                        color="#EF3746">
                           <div class="d-flex flex-column justify-center align-center">
-                            <v-icon size="x-large">mdi-file-chart-outline</v-icon>
+                            <v-icon color="#2A3280" size="45">mdi-file-chart-outline</v-icon>
                             <p><small>Pre-Authorize</small></p>
                         </div>
                         </v-sheet>
                     </div>
                   </v-card>
                   <!--Payment Notification Card -->
-                  <v-card flat>
+                  <v-card color="transparent" flat>
                     <div class="ma-5 d-flex justify-space-between align-center">
                       <h3>Payment Notifications</h3>
-                      <v-btn rounded="xl" size="x-small">See more</v-btn>
+                      <v-btn variant="text" rounded="xl" size="x-small">See more</v-btn>
                     </div>
-                    <div>
+                    <div class="ma-5">
                       <v-table>
                         <thead>
                           <tr>
@@ -125,7 +125,7 @@
                   </v-card>
                 </v-col>
                 <v-col cols="6">
-                  <v-card class="ma-5">             
+                  <v-card class="ma-5 rounded-xl">             
                     <div class="ma-5 d-flex justify-space-between">
                         <h3>My Cards</h3>
                         <a><v-icon>mdi-arrow-right</v-icon></a>
@@ -155,11 +155,11 @@
             <!--Transaction History-->  
             <v-row>
               <v-col>
-                <div class="d-flex justify-space-between align-center">
+                <div class="ma-5 d-flex justify-space-between align-center">
                   <h4>Transaction History</h4>
                   <v-btn rounded="xl" size="x-small" variant="text">See more<v-icon>mdi-chevron-right</v-icon></v-btn>
                 </div>
-                <div>
+                <div class="ma-5">
                   <v-table>
                     <thead>
                       <tr>
@@ -273,3 +273,16 @@
     },
   }
 </script>
+<style scoped>
+.main {  
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to left, #ffffff 40%, #657ABC 40%) !important; 
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+</style>
