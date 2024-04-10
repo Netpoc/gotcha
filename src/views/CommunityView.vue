@@ -22,7 +22,7 @@
     
             <v-list color="transparent">
               <v-list-item
-                to="/about"
+                to="/dashboard"
                 prepend-icon="mdi-view-dashboard"
                 title="Dashboard"
               ></v-list-item>

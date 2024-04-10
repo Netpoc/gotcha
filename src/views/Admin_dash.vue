@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid>    
+  <v-container fluid class="main">    
       <v-navigation-drawer theme="dark" color="#2A3280" permanent>
         <div>
           <v-img max-height="50" :src="require('../assets/white.png')"></v-img>
@@ -40,8 +40,8 @@
           </div>
         </template>
       </v-navigation-drawer>
-      <v-main class="ma-5" style="height: 90vh">
-      <v-row align="center">
+      <v-main>
+      <v-row justify="space-evenly" align="center">
           <v-col cols="6">
             <v-card flat color="transparent" class="ma-5">
               <h1 class="mb-5">Admin Dashboard</h1>
@@ -99,22 +99,24 @@
             </v-card>
           </v-col>
           <v-col cols="6">
-            <v-card
-              prepend-icon="mdi-account"
-              subtitle="Properties"
-              title="36"
-              class="rounded-xl ma-5 pa-3"
-              color="#24BAAB"
-              min-height="220"
-            >
-              <template v-slot:append>
-                <a>See all <v-icon>mdi-arrow-right</v-icon></a>
-              </template>
-
+            <v-card class="ma-5 rounded-xl" color="grey-light" flat>              
+              <div class="pa-5 d-flex justify-space-between align-center">
+              <div class="d-flex align-center">
+                <v-sheet color="#ef3746" height="45" width="45" class="ma-2 rounded-lg d-flex justify-center align-center">
+                  <v-icon size="30">
+                    mdi-account
+                  </v-icon>
+                </v-sheet>
+                <div>
+                  <h3>36</h3>
+                  <span><small>Properties</small></span>
+                </div>
+              </div>
+              <v-btn size="x-small" variant="text">See all<v-icon>mdi-arrow-right</v-icon></v-btn>
+            </div>
               <v-row>
                 <v-col>
-
-                <v-sheet color="cyan" height="100" class="d-flex justify-space-evenly rounded-xl">
+                <v-sheet color="#2A3280" height="100" class="ma-5 d-flex justify-space-evenly rounded-xl">
                   <div class="d-flex flex-column justify-center align-center">
                     <h1>8</h1>
                     <p>Vacant</p>
@@ -180,12 +182,12 @@
         </v-row>
         <v-row>
           <v-col md="6">
-            <v-card flat color="#2A3280" class="pa-4 d-flex justify-space-between">  
+            <v-card flat color="#657ABC" class="pa-4 d-flex justify-space-between">  
                 <h3>Recent Tasks</h3>
                 <v-spacer />                
                 <v-btn size="x-small" variant="text" href="#">See More<v-icon>mdi-chevron-right</v-icon></v-btn>
             </v-card>
-            <v-card color="#2A3280" flat>
+            <v-card color="transparent" flat>
               <v-tabs
                 v-model="tab"                
               >
@@ -288,13 +290,12 @@ export default {
 }
 </script>
 <style scoped>
-.main {
-  position: absolute;
+.main {  
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(to left, #ffffff 40%, #2a3280 40%);
+  background: linear-gradient(to left, #ffffff 40%, #657ABC 40%) !important; 
   display: flex;
   flex-wrap: wrap;
   align-items: center;
