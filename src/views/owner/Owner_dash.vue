@@ -93,12 +93,12 @@
       </v-row>
       <v-row>
         <v-col md="6">
-          <v-card flat class="pa-4 d-flex justify-space-between">
+          <v-card flat color="transparent" class="pa-4 d-flex justify-space-between">
             <h3>Recent Activities</h3>
             <v-spacer />
             <a>See More<v-icon>mdi-chevron-right</v-icon></a>
           </v-card>
-          <v-card flat>
+          <v-card flat color="transparent">
             <v-tabs v-model="tab">
               <v-tab value="one">Incoming Requests</v-tab>
               <v-tab value="two">Assigned to me</v-tab>

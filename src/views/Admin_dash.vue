@@ -43,9 +43,9 @@
       <v-main class="ma-5" style="height: 90vh">
       <v-row align="center">
           <v-col cols="6">
-            <v-card color="transparent" class="ma-5">
+            <v-card flat color="transparent" class="ma-5">
               <h1 class="mb-5">Admin Dashboard</h1>
-              <v-sheet class="mx-auto rounded-xl" color="transparent" elevation="8">
+              <v-sheet class="mx-auto rounded-xl" color="#E5ACB6" elevation="8">
                 <v-card
                   flat
                   color="transparent"
@@ -69,7 +69,7 @@
                   >
                     <v-card
                       :class="['ma-4', selectedClass, 'rounded-xl']"
-                      color="grey-lighten-1"
+                      color="#EF3746"
                       height="80"
                       width="80"
                       @click="toggle"
@@ -180,12 +180,12 @@
         </v-row>
         <v-row>
           <v-col md="6">
-            <v-card flat class="pa-4 d-flex justify-space-between">  
+            <v-card flat color="#2A3280" class="pa-4 d-flex justify-space-between">  
                 <h3>Recent Tasks</h3>
                 <v-spacer />                
-                <a>See More<v-icon>mdi-chevron-right</v-icon></a>
+                <v-btn size="x-small" variant="text" href="#">See More<v-icon>mdi-chevron-right</v-icon></v-btn>
             </v-card>
-            <v-card flat>
+            <v-card color="#2A3280" flat>
               <v-tabs
                 v-model="tab"                
               >
@@ -243,9 +243,9 @@
           </v-col>
           <v-col md="6">
             <div class="pa-4 d-flex justify-space-between">              
-                <h3>Expiring Leases</h3>
+                <h3 class="mx-5">Expiring Leases</h3>
                 <v-spacer />                
-                <a href="#">See More<v-icon>mdi-chevron-right</v-icon></a>             
+                <v-btn size="x-small" variant="text" href="#">See More<v-icon>mdi-chevron-right</v-icon></v-btn>             
             </div>
             <div class="ma-5">
               <Bar :data="data" :options="options" />
