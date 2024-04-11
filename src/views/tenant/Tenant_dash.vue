@@ -2,60 +2,69 @@
   <v-container class="main" fluid>    
       <Nav />
       <v-main class="ma-5">
-      <v-row align="center">
+      <v-row align="center" justify="space-evenly">
           <v-col cols="6">
             <v-card color="transparent" class="ma-5" flat>
               <h1>Occupant Dashboard</h1>
-              <v-sheet class="pa-5 rounded-xl" color="yellow" elevation="8">
+              <v-sheet class="pa-5 rounded-xl" color="#2A3280" elevation="8">
+                <div class="d-flex justify-space-between">
+                  <p>Frequent Activity</p>
+                  <v-btn size="small" variant="text"><v-icon>mdi-dots-horizontal</v-icon></v-btn>
+                </div>
                 <div class="ma-5 d-flex justify-space-evenly">
                   <v-sheet class="d-flex ma-3 rounded-xl flex-column align-center justify-center" height="100" width="100" color="#EF3746">
-                    <v-icon size="45">mdi-forum</v-icon>
-                    <small>Chat</small>
+                    <v-icon size="45">mdi-cash-multiple</v-icon>
+                    <small>Rent</small>
                   </v-sheet>
                   <v-sheet class="d-flex ma-3 rounded-xl flex-column align-center justify-center" height="100" width="100" color="#EF3746">
-                    <v-icon size="45">mdi-square-edit-outline</v-icon>
-                    <small>Create post</small>
+                    <v-icon size="45">mdi-invoice-text-multiple-outline</v-icon>
+                    <small>Utility</small>
+                  </v-sheet>
+                  <v-sheet class="d-flex ma-3 rounded-xl flex-column align-center justify-center" height="100" width="100" color="#EF3746">
+                    <v-icon size="45">mdi-inbox</v-icon>
+                    <small>Indox</small>
                   </v-sheet>
                   <v-sheet class="d-flex ma-3 rounded-xl flex-column align-center justify-center" height="100" width="100" color="#EF3746">
                     <v-icon size="45">mdi-newspaper-variant-multiple-outline</v-icon>
-                    <small>News</small>
+                    <small>Others</small>
                   </v-sheet>
                 </div>
               </v-sheet>
             </v-card>
           </v-col>
-          <v-col cols="6">
-            <v-card
-              prepend-icon="mdi-account"
-              subtitle="Properties"
-              title="36"
-              class="rounded-xl ma-5 pa-3"
+          <v-col cols="5">
+            <v-card              
               color="#24BAAB"
               min-height="250"
-            >
-              <template v-slot:append>
-                <a>See all <v-icon>mdi-arrow-right</v-icon></a>
-              </template>
+              class="rounded-xl"
+            >            
+            <div class="d-flex justify-space-between ma-5">
+              <h3>Community Posts</h3>
+              <v-btn size="small" variant="text"><v-icon>mdi-arrow-right</v-icon></v-btn>
+            </div>  
 
               <v-row>
                 <v-col>
-
-                <v-card class="ma-5 pa-5 d-flex justify-space-between rounded-xl">
-                  <div>
-                    <p>8</p>
-                    <p>Vacant</p>
+                  <div class="d-flex justify-space-evenly">
+                    <v-sheet height="150" width="150" color="transparent" class="d-flex rounded-xl flex-column align-center justify-center">
+                      <v-icon size="45">
+                        mdi-forum
+                      </v-icon>
+                      <small>Chat</small>
+                    </v-sheet>
+                    <v-sheet height="150" width="150" color="transparent" class="d-flex rounded-xl flex-column align-center justify-center">
+                      <v-icon size="45">
+                        mdi-square-edit-outline
+                      </v-icon>
+                      <small>Create Post</small>
+                    </v-sheet>
+                    <v-sheet height="150" width="150" color="transparent" class="d-flex rounded-xl flex-column align-center justify-center">
+                      <v-icon size="45">
+                        mdi-newspaper
+                      </v-icon>
+                      <small>News</small>
+                    </v-sheet>
                   </div>
-                  <v-divider vertical></v-divider>
-                  <div>
-                    <p>8</p>
-                    <p>Vacant</p>
-                  </div>
-                  <v-divider vertical></v-divider>
-                  <div>
-                    <p>8</p>
-                    <p>Vacant</p>
-                  </div>
-                </v-card>
                 </v-col>
               </v-row>
             </v-card>
@@ -216,13 +225,12 @@ export default {
 }
 </script>
 <style scoped>
-.main {
-  position: absolute;
+.main {  
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(to left, #ffffff 40%, #2a3280 40%);
+  background: linear-gradient(to left, #ffffff 40%, #E5ACB6 40%);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
