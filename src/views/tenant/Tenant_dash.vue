@@ -1,101 +1,26 @@
 <template>
   <v-container class="main" fluid>    
-      <v-navigation-drawer theme="dark" color="#2A3280" permanent>
-        <div class="mb-5">
-          <v-img max-height="65" :src="require('../../assets/white.png')"></v-img>
-        </div>
-        <v-divider></v-divider>
-        <div class="d-flex flex-column align-center ma-5">
-          <div>
-            <v-avatar color="grey" size="100">
-              <v-img
-                src="https://cdn.vuetifyjs.com/images/profiles/marcus.jpg"
-                cover
-              ></v-img>
-            </v-avatar>
-          </div>
-          <div>
-            <p>Tenant User</p>
-            <v-chip>Tenant</v-chip>
-          </div>
-        </div>
-
-        <v-list color="transparent">
-          <v-list-item
-            to="Tenant"            
-            prepend-icon="mdi-view-dashboard"
-            title="Dashboard"
-          ></v-list-item>
-          <v-list-item to="payment" prepend-icon="mdi-cash-sync" title="Payments"></v-list-item>
-          <v-list-item to="community" prepend-icon="mdi-home-group" title="Community"></v-list-item>
-          <v-list-item to="manage" prepend-icon="mdi-account-details" title="Manage Users"></v-list-item>
-          <v-list-item prepend-icon="mdi-magnify" title="Search"></v-list-item>
-        </v-list>
-
-        <template v-slot:append>
-          <div class="pa-2">
-            <v-btn variant="text" to="/" block> Settings </v-btn>
-          </div>
-          <div class="pa-2">
-            <v-btn variant="text" to="/" block> Logout </v-btn>
-          </div>
-        </template>
-      </v-navigation-drawer>
-      <v-main class="ma-5" style="height: 90vh">
+      <Nav />
+      <v-main class="ma-5">
       <v-row align="center">
           <v-col cols="6">
-            <v-card color="#2A3280" class="ma-5">
-              <h1 class="mb-5">Occupant Dashboard</h1>
-              <v-sheet class="mx-auto rounded-xl" color="transparent" elevation="8">
-                <v-card
-                  flat
-                  color="transparent"
-                  class="pa-4 d-flex justify-space-between"
-                >
-                  <span>Activities Due</span>
-                  <v-spacer></v-spacer>
-                  <a><v-icon>mdi-dots-horizontal</v-icon></a>
-                </v-card>
-
-                <v-slide-group
-                  v-model="model"
-                  class="pa-4"
-                  selected-class="bg-primary"
-                  show-arrows
-                >
-                  <v-slide-group-item
-                    v-for="n in 6"
-                    :key="n"
-                    v-slot="{ isSelected, toggle, selectedClass }"
-                  >
-                    <v-card
-                      :class="['ma-4', selectedClass, 'rounded-xl']"
-                      color="grey-lighten-1"
-                      height="80"
-                      width="80"
-                      @click="toggle"
-                    >
-                      <div class="d-flex fill-height align-center justify-center">
-                        <v-scale-transition>
-                          <v-icon
-                            v-if="isSelected"
-                            color="white"
-                            icon="mdi-close-circle-outline"
-                            size="48"
-                          ></v-icon>
-                        </v-scale-transition>
-                      </div>
-                    </v-card>
-                  </v-slide-group-item>
-                </v-slide-group>
-
-                <v-expand-transition>
-                  <v-sheet v-if="model != null" height="150">
-                    <div class="d-flex fill-height align-center justify-center">
-                      <h3 class="text-h6">Selected {{ model }}</h3>
-                    </div>
+            <v-card color="transparent" class="ma-5" flat>
+              <h1>Occupant Dashboard</h1>
+              <v-sheet class="pa-5 rounded-xl" color="yellow" elevation="8">
+                <div class="ma-5 d-flex justify-space-evenly">
+                  <v-sheet class="d-flex ma-3 rounded-xl flex-column align-center justify-center" height="100" width="100" color="#EF3746">
+                    <v-icon size="45">mdi-forum</v-icon>
+                    <small>Chat</small>
                   </v-sheet>
-                </v-expand-transition>
+                  <v-sheet class="d-flex ma-3 rounded-xl flex-column align-center justify-center" height="100" width="100" color="#EF3746">
+                    <v-icon size="45">mdi-square-edit-outline</v-icon>
+                    <small>Create post</small>
+                  </v-sheet>
+                  <v-sheet class="d-flex ma-3 rounded-xl flex-column align-center justify-center" height="100" width="100" color="#EF3746">
+                    <v-icon size="45">mdi-newspaper-variant-multiple-outline</v-icon>
+                    <small>News</small>
+                  </v-sheet>
+                </div>
               </v-sheet>
             </v-card>
           </v-col>
@@ -267,13 +192,15 @@
   LinearScale
 } from 'chart.js'
 import { Bar } from 'vue-chartjs'
+import Nav from '../../components/TenantNav.vue'
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
 
-export default {
+export default {  
   name: 'App',
   components: {
-    Bar
+    Bar,
+    Nav
   },
   data() {
     return {

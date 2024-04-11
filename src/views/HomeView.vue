@@ -93,7 +93,7 @@ export default {
         this.user = {username: this.username};
         this.$router.push({name: 'owner'})
       } else if (this.username === 'tenant' && this.password === 'password') {
-        this.$router.push({name: 'Tenant'})
+        this.$router.push({name: 'tenant'})
         console.log("Tenant Login Successful");
       } else {
         console.log("Error!!!")

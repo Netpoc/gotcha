@@ -1,11 +1,11 @@
 <template>
-    <v-container fluid>
+    <v-container fluid class="main">
         <Nav />
         <v-main>
             <v-row>
                 <v-col cols="6">
-                    <v-card class="ma-5">
-                        <h3 class="ma-5">Manage Users</h3>
+                    <v-card flat color="transparent" class="ma-5">
+                        <h2>Manage Users</h2>
                         <div class="d-flex justify-space-between ma-5">
                             <v-sheet color="#ff5400" class="rounded-xl d-flex flex-column justify-center align-center" height="100" width="100">
                                 <v-icon class="ma-1">mdi-google</v-icon>
@@ -137,3 +137,16 @@ export default {
     
 }
 </script>
+<style scoped>
+.main {  
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to left, #ffffff 40%, #657ABC 40%) !important; 
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+</style>

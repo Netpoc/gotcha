@@ -3,8 +3,12 @@ import HomeView from '../views/HomeView.vue'
 import ManageView from '@/views/ManageView.vue'
 import AdminDash from '@/views/Admin_dash.vue'
 import OwnerDash from '@/views/owner/Owner_dash.vue'
-import TenantDash from '@/views/tenant/Tenant_dash.vue'
 import AccountView from '@/views/owner/Account'
+
+// Tenant Routes
+import TenantDash from '@/views/tenant/Tenant_dash.vue'
+import TenantCommunity from '@/views/tenant/Tenant_Community.vue'
+import TenantProfile from '@/views/tenant/Profile.vue'
 
 const routes = [
   {
@@ -40,6 +44,7 @@ const routes = [
     component: TenantDash,
     meta: {requiresAuth: true}
   },
+
   {
     path: '/payment',
     name: 'payment',
@@ -55,6 +60,16 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/CommunityView.vue')
+  },
+  {
+    path: '/tenant_community',
+    name: 'tenant_community',
+    component: TenantCommunity
+  },
+  {
+    path: '/tenant_profile',
+    name: 'tenant_profile',
+    component: TenantProfile
   }
 ]
 

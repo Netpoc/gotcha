@@ -22,13 +22,13 @@
     
             <v-list color="transparent">
               <v-list-item
-                to="/owner_dashboard"
+                to="/tenant_dashboard"
                 prepend-icon="mdi-view-dashboard"
                 title="Dashboard"
               ></v-list-item>
-              <v-list-item to="/account_view" prepend-icon="mdi-cash-sync" title="Account"></v-list-item>
-              <v-list-item to="community" prepend-icon="mdi-home-group" title="Community"></v-list-item>
-              <v-list-item to="manage" prepend-icon="mdi-account-details" title="Tenants"></v-list-item>
+              <v-list-item to="/account_view" prepend-icon="mdi-cash-sync" title="Payments"></v-list-item>
+              <v-list-item to="/tenant_community" prepend-icon="mdi-home-group" title="Community"></v-list-item>
+              <v-list-item to="/tenant_profile" prepend-icon="mdi-account-details" title="Profile"></v-list-item>
               <v-list-item to="search" prepend-icon="mdi-magnify" title="Search"></v-list-item>
             </v-list>
     
@@ -40,7 +40,7 @@
                 <v-btn size="small" variant="text" to="/" block>Logout</v-btn>
               </div>
             </template>
-        </v-navigation-drawer>
+          </v-navigation-drawer>
     </v-container>
 </template>
 <script>
