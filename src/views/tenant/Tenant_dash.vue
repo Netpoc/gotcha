@@ -115,14 +115,14 @@
         </v-row>
         <v-row>
           <v-col md="6">
-            <v-card flat class="pa-4 d-flex justify-space-between">  
-                <h3>Recent Tasks</h3>
+            <v-card flat color="transparent" class="pa-4 d-flex justify-space-between">  
+                <h3>Recent Activities</h3>
                 <v-spacer />                
-                <a>See More<v-icon>mdi-chevron-right</v-icon></a>
+                <v-btn size="small" variant="text">See More<v-icon>mdi-chevron-right</v-icon></v-btn>
             </v-card>
-            <v-card flat>
+            <v-card flat color="transparent">
               <v-tabs
-                v-model="tab"                
+                v-model="tab"       
               >
                 <v-tab value="one">Incoming Requests</v-tab>
                 <v-tab value="two">Assigned to me</v-tab>                
@@ -177,13 +177,55 @@
             </v-card>
           </v-col>
           <v-col md="6">
-            <div class="pa-4 d-flex justify-space-between">              
-                <h3>Expiring Leases</h3>
+            <div class="ma-4 d-flex justify-space-between">              
+                <h3>Community Posts</h3>
                 <v-spacer />                
-                <a href="#">See More<v-icon>mdi-chevron-right</v-icon></a>             
+                <v-btn size="small" variant="text">See More<v-icon>mdi-chevron-right</v-icon></v-btn>             
             </div>
             <div class="ma-5">
-              <Bar :data="data" :options="options" />
+              <h4>Holes in bedroom wall at 10 Gordon Cres.</h4>
+              <div class="d-flex justify-space-between align-center">
+                <div>
+                  <v-btn size="small">New</v-btn> <v-btn size="small">Redsident Request</v-btn>
+                </div>
+                <small>1d ago</small>
+              </div>
+              <div class="pa-2 d-flex align-center">
+                <v-sheet class="rounded-xl ma-2" height="25" width="25" color="cyan">
+                  <v-icon>mdi-account</v-icon>
+                </v-sheet>
+                <small>Baldwin Cole</small>
+              </div>
+            </div>
+            <div class="ma-5">
+              <h4>Holes in bedroom wall at 10 Gordon Cres.</h4>
+              <div class="d-flex justify-space-between align-center">
+                <div>
+                  <v-btn size="small">New</v-btn> <v-btn size="small">Redsident Request</v-btn>
+                </div>
+                <small>1d ago</small>
+              </div>
+              <div class="pa-2 d-flex align-center">
+                <v-sheet class="rounded-xl ma-2" height="25" width="25" color="cyan">
+                  <v-icon>mdi-account</v-icon>
+                </v-sheet>
+                <small>Baldwin Cole</small>
+              </div>
+            </div>
+            <div class="ma-5">
+              <h4>Holes in bedroom wall at 10 Gordon Cres.</h4>
+              <div class="d-flex justify-space-between align-center">
+                <div>
+                  <v-btn size="small">New</v-btn> <v-btn size="small">Redsident Request</v-btn>
+                </div>
+                <small>1d ago</small>
+              </div>
+              <div class="pa-2 d-flex align-center">
+                <v-sheet class="rounded-xl ma-2" height="25" width="25" color="cyan">
+                  <v-icon>mdi-account</v-icon>
+                </v-sheet>
+                <small>Baldwin Cole</small>
+              </div>
             </div>
           </v-col>
         </v-row>                   
