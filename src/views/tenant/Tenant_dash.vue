@@ -12,13 +12,93 @@
                 <v-btn size="small" variant="text"><v-icon>mdi-dots-horizontal</v-icon></v-btn>
               </div>
               <div class="ma-5 d-flex justify-space-evenly">
-                <v-card class="rounded-xl" color="transparent" to="/tenant_payment" flat>
-                  <v-sheet class="d-flex ma-3 rounded-xl flex-column align-center justify-center" height="100" width="100"
-                  color="#EF3746">
-                  <v-icon size="45">mdi-cash-multiple</v-icon>
-                  <small>Rent</small>
-                </v-sheet>
+                <!--Cash Option Modal/Dialog-->
+                <v-dialog
+                v-model="dialog"
+                max-width="500"
+                >
+                <template v-slot:activator="{props: activatorProps}">
+                  <v-card class="rounded-xl" v-bind="activatorProps" color="transparent" flat>
+                    <v-sheet class="d-flex ma-3 rounded-xl flex-column align-center justify-center" height="100" width="100"
+                    color="#EF3746">
+                    <v-icon size="45">mdi-cash-multiple</v-icon>
+                    <small>Rent</small>
+                  </v-sheet>
+                  </v-card>
+                </template>
+                <v-card class="pa-5">
+                  <h2>Payment Method</h2>
+                  <!--Payment Option Starts-->
+                  <div class="mt-3 d-flex justify-space-evenly align-center">
+                    <v-sheet 
+                    class="d-flex rounded-xl flex-column justify-center align-center" 
+                    color="grey" 
+                    height="100" 
+                    width="100">
+                      <v-icon size="50">mdi-wallet</v-icon>
+                      <small>Card</small>
+                    </v-sheet>
+                    <v-sheet 
+                    class="d-flex rounded-xl flex-column justify-center align-center" 
+                    color="grey" 
+                    height="100" 
+                    width="100">
+                      <v-icon size="50">mdi-wallet</v-icon>
+                      <small>Bank</small>
+                    </v-sheet>
+                    <v-sheet 
+                    class="d-flex rounded-xl flex-column justify-center align-center" 
+                    color="grey" 
+                    height="100" 
+                    width="100">
+                      <v-icon size="50">mdi-wallet</v-icon>
+                      <small>e-Wallet</small>
+                    </v-sheet>
+                  </div>
+                  <!--Payment Option Ends-->
+                  <v-card class="mt-5" flat>
+                    <v-row>
+                      <v-col>
+                        <v-text-field label="Card Number" required append-icon="mdi-card">
+                        </v-text-field>
+                      </v-col>
+                    </v-row>
+                    <v-row>
+                      <v-col cols="6">
+                        <v-text-field label="MM/YY" append-icon="mdi-calendar"></v-text-field>
+                      </v-col>
+                      <v-col cols="6">
+                        <v-text-field label="MM/YY" append-icon="mdi-calendar"></v-text-field>
+                      </v-col>
+  
+                    </v-row>
+                    <v-row>
+                      <v-col>
+                        <v-sheet min-height="150" color="grey" class="d-flex pa-5 rounded-xl justify-center align-center">
+                          <v-file-input
+                            :rules="rules"
+                            accept="image/png, image/jpeg, image/bmp"
+                            label="Upload proof of payment"
+                            placeholder="Upload proof of payment"
+                            prepend-icon="mdi-camera"
+                          ></v-file-input>
+                        </v-sheet>
+                      </v-col>
+                    </v-row>
+                  </v-card>
+                  <template v-slot:actions>
+                    <v-spacer></v-spacer>
+          
+                    <v-btn class="rounded-xl" variant="outlined" @click="dialog = false">
+                      Cancel
+                    </v-btn>
+          
+                    <v-btn class="rounded-xl" @click="dialog = false">
+                      Save
+                    </v-btn>
+                  </template>
                 </v-card>
+                </v-dialog>
                 <v-card class="rounded-xl" color="transparent" to="/tenant_payment" flat>
                   <v-sheet class="d-flex ma-3 rounded-xl flex-column align-center justify-center" height="100" width="100"
                   color="#EF3746">
@@ -263,6 +343,7 @@ export default {
   },
   data() {
     return {
+      dialog: false,
       data: {
         labels: ['January', 'February', 'March'],
         datasets: [{ data: [40, 20, 12] }]
