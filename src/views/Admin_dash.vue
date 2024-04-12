@@ -63,7 +63,7 @@
                   show-arrows
                 >
                   <v-slide-group-item
-                    v-for="n in 6"
+                    v-for="n in 5"
                     :key="n"
                     v-slot="{ isSelected, toggle, selectedClass }"
                   >
@@ -86,15 +86,7 @@
                       </div>
                     </v-card>
                   </v-slide-group-item>
-                </v-slide-group>
-
-                <v-expand-transition>
-                  <v-sheet v-if="model != null" height="150">
-                    <div class="d-flex fill-height align-center justify-center">
-                      <h3 class="text-h6">Selected {{ model }}</h3>
-                    </div>
-                  </v-sheet>
-                </v-expand-transition>
+                </v-slide-group>                
               </v-sheet>
             </v-card>
           </v-col>
@@ -301,7 +293,6 @@ export default {
   align-items: center;
   justify-content: center;
 }
-
 .center {
   display: inline-block;
   height: 250px;

@@ -26,7 +26,7 @@
                 prepend-icon="mdi-view-dashboard"
                 title="Dashboard"
               ></v-list-item>
-              <v-list-item to="/account_view" prepend-icon="mdi-cash-sync" title="Payments"></v-list-item>
+              <v-list-item to="/tenant_payment" prepend-icon="mdi-cash-sync" title="Payments"></v-list-item>
               <v-list-item to="/tenant_community" prepend-icon="mdi-home-group" title="Community"></v-list-item>
               <v-list-item to="/tenant_profile" prepend-icon="mdi-account-details" title="Profile"></v-list-item>
               <v-list-item to="search" prepend-icon="mdi-magnify" title="Search"></v-list-item>
