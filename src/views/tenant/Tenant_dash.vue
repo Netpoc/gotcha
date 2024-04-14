@@ -32,7 +32,7 @@
                   <div class="mt-3 d-flex justify-space-evenly align-center">
                     <v-sheet 
                     class="d-flex rounded-xl flex-column justify-center align-center" 
-                    color="grey" 
+                    color="#2A3280" 
                     height="100" 
                     width="100">
                       <v-icon size="50">mdi-wallet</v-icon>
@@ -40,18 +40,18 @@
                     </v-sheet>
                     <v-sheet 
                     class="d-flex rounded-xl flex-column justify-center align-center" 
-                    color="grey" 
+                    color="#2A3280" 
                     height="100" 
                     width="100">
-                      <v-icon size="50">mdi-wallet</v-icon>
+                      <v-icon size="50">mdi-bank</v-icon>
                       <small>Bank</small>
                     </v-sheet>
                     <v-sheet 
                     class="d-flex rounded-xl flex-column justify-center align-center" 
-                    color="grey" 
+                    color="#2A3280" 
                     height="100" 
                     width="100">
-                      <v-icon size="50">mdi-wallet</v-icon>
+                      <v-icon size="50">mdi-wallet-bifold</v-icon>
                       <small>e-Wallet</small>
                     </v-sheet>
                   </div>
