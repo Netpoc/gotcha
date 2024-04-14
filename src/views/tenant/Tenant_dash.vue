@@ -35,7 +35,7 @@
                     color="#2A3280" 
                     height="100" 
                     width="100">
-                      <v-icon size="50">mdi-wallet</v-icon>
+                      <v-icon size="50" color="#ef3746">mdi-wallet</v-icon>
                       <small>Card</small>
                     </v-sheet>
                     <v-sheet 

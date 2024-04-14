@@ -1,9 +1,10 @@
 <template>
-    <v-container>
+    <v-container fluid>
         <Nav />
         <v-main>
             <v-row>
-                <v-col cols="6">
+                <v-col cols="4">
+                  <h1>Chat Room</h1>
                     <v-sheet class="pa-5 rounded-xl" color="#2A3280" elevation="8">
                         <div class="ma-5 d-flex justify-space-evenly">
                           <v-sheet class="d-flex ma-3 rounded-xl flex-column align-center justify-center" height="100" width="100" color="#EF3746">
@@ -20,6 +21,65 @@
                           </v-sheet>
                         </div>
                       </v-sheet>
+                      <div>
+                        <v-sheet></v-sheet>
+                      </div>
+                </v-col>
+                <v-col cols="8">
+                  <v-text-field label="Search" prepend="mdi-magnify">
+
+                  </v-text-field>
+                  <v-card class="pa-5 rounded-xl">
+                    <div class="d-flex">
+                      <v-icon>mdi-account</v-icon>
+                      <h3>Abdul Christopher</h3>
+                    </div>
+                    <v-sheet class="pa-5" height="500" color="grey">
+                      <div class="ma-3">
+                        <v-sheet class="pa-5 rounded-xl" color="cyan" width="300">
+                          <span>hi</span>
+                        </v-sheet>
+                      </div>
+                      <div class="ma-3 d-flex justify-end">
+                        <v-sheet class="pa-5 rounded-xl" color="yellow" width="300">
+                          <span>hi</span>
+                        </v-sheet>
+                      </div>
+                      <div class="ma-3">
+                        <v-sheet class="pa-5 rounded-xl" color="cyan" width="300">
+                          <span>hi</span>
+                        </v-sheet>
+                      </div>
+                      <div class="ma-3 d-flex justify-end">
+                        <v-sheet class="pa-5 rounded-xl" color="cyan" width="300">
+                          <span>hi</span>
+                        </v-sheet>
+                      </div>
+                      <div class="ma-3">
+                        <v-sheet class="pa-5 rounded-xl" color="cyan" width="300">
+                          <span>hi</span>
+                        </v-sheet>
+                        <small>2mins ago</small>
+                      </div>
+
+                    </v-sheet>
+                    <div>
+                      <v-row justify="center">
+                        <v-col cols="10">
+                          <div class="ma-3">
+                            <v-textarea variant="outlined" rows="1" auto-grow label="Write a message..."></v-textarea>
+                          </div>                          
+                        </v-col>
+                        <v-col cols="2">
+                          <div class="d-flex align-center justify-center">
+                            <v-icon>mdi-image</v-icon>
+                            <v-icon>mdi-microphone</v-icon>
+                            <v-icon>mdi-send</v-icon>
+                          </div>
+                        </v-col>
+                      </v-row>
+                    </div>
+                  </v-card>
                 </v-col>
             </v-row>
         </v-main>
