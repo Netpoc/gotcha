@@ -71,16 +71,8 @@
                       <!--Offline Chat-->
                       <div class="mt-5">
                         <h3>Offline Chat</h3>
-                        <v-card class="rounded-xl pa-2">
-                          <v-sheet color="grey" class="d-flex pa-3 rounded-xl">
-                            <v-icon>mdi-account</v-icon>
-                            <div class="d-flex flex-column justify-center">
-                              <strong>Abdul Christopher</strong>
-                              <span>Hello...</span>
-                            </div>
-                            <small class="d-flex">12:30AM</small>
-                          </v-sheet>
-                          <div class="d-flex justify-space-between align-center">
+                        <v-card class="rounded-xl pa-4">                          
+                          <div class="d-flex justify-space-between align-center ma-2">
                             <div class="d-flex align-center">
                               <v-icon class="ma-2">mdi-account</v-icon>
                               <div class="d-flex flex-column">
@@ -90,7 +82,7 @@
                             </div>
                             <small>8:00AM</small>
                           </div>
-                          <div class="d-flex justify-space-between align-center">
+                          <div class="d-flex justify-space-between align-center ma-2">
                             <div class="d-flex align-center">
                               <v-icon class="ma-2">mdi-account</v-icon>
                               <div class="d-flex flex-column">
@@ -100,7 +92,7 @@
                             </div>
                             <small>6:13PM</small>
                           </div>
-                          <div class="d-flex justify-space-between align-center">
+                          <div class="d-flex justify-space-between align-center ma-2">
                             <div class="d-flex align-center">
                               <v-icon class="ma-2">mdi-account</v-icon>
                               <div class="d-flex flex-column">
@@ -110,7 +102,7 @@
                             </div>
                             <small>2:43PM</small>
                           </div>
-                          <div class="d-flex justify-space-between align-center">
+                          <div class="d-flex justify-space-between align-center ma-2">
                             <div class="d-flex align-center">
                               <v-icon class="ma-2">mdi-account</v-icon>
                               <div class="d-flex flex-column">
