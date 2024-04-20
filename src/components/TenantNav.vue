@@ -16,20 +16,27 @@
               </div>
               <div>
                 <p>Sample User</p>
-                <v-chip>Admin</v-chip>
+                <v-chip>Tenant</v-chip>
               </div>
             </div>
     
             <v-list color="transparent">
-              <v-list-item
-                to="/tenant_dashboard"
-                prepend-icon="mdi-view-dashboard"
-                title="Dashboard"
-              ></v-list-item>
-              <v-list-item to="/tenant_payment" prepend-icon="mdi-cash-sync" title="Payments"></v-list-item>
-              <v-list-item to="/tenant_community" prepend-icon="mdi-home-group" title="Community"></v-list-item>
-              <v-list-item to="/tenant_profile" prepend-icon="mdi-account-details" title="Profile"></v-list-item>
-              <v-list-item to="search" prepend-icon="mdi-magnify" title="Search"></v-list-item>
+              <v-list-item                
+                prepend-icon="mdi-view-dashboard"                
+              ><router-link style="text-decoration: none; color: inherit;" to="/tenant_dashboard">Dashboard</router-link>
+              </v-list-item>
+              <v-list-item prepend-icon="mdi-cash-sync">
+                <router-link style="text-decoration: none; color: inherit;" to="/tenant_payment">Payments</router-link>
+              </v-list-item>
+              <v-list-item prepend-icon="mdi-home-group">
+                <router-link style="text-decoration: none; color: inherit;" to="/tenant_community">Communtiy</router-link>
+              </v-list-item>
+              <v-list-item prepend-icon="mdi-account-details">
+                <router-link style="text-decoration: none; color: inherit;" to="/tenant_community">Profile</router-link>
+              </v-list-item>
+              <v-list-item prepend-icon="mdi-magnify">
+                <router-link style="text-decoration: none; color: inherit;" to="#">Search</router-link>
+              </v-list-item>
             </v-list>
     
             <template v-slot:append>
@@ -52,3 +59,8 @@ export default {
 
 }
 </script>
+<style scoped>
+router-link{
+  text-decoration: none;
+}
+</style>

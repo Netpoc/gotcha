@@ -1,182 +1,154 @@
 <template>
-    <v-container fluid>
+    <v-container fluid class="main">
         <Nav />
         <v-main>
-            <v-row justify="space-evenly">
-                <v-col cols="4">
-                  <h1>Chat Room</h1>
-                    <v-sheet class="pa-5 rounded-xl" color="#2A3280" elevation="8">
-                        <div class="ma-5 d-flex justify-space-evenly">
-                          <v-sheet class="d-flex ma-3 rounded-xl flex-column align-center justify-center" height="100" width="100" color="#EF3746">
-                            <v-icon size="45">mdi-forum</v-icon>
-                            <small>Chat</small>
-                          </v-sheet>
-                          <v-sheet class="d-flex ma-3 rounded-xl flex-column align-center justify-center" height="100" width="100" color="#EF3746">
-                            <v-icon size="45">mdi-square-edit-outline</v-icon>
-                            <small>Post</small>
-                          </v-sheet>
-                          <v-sheet class="d-flex ma-3 rounded-xl flex-column align-center justify-center" height="100" width="100" color="#EF3746">
-                            <v-icon size="45">mdi-newspaper-variant-multiple-outline</v-icon>
-                            <small>News</small>
-                          </v-sheet>
+            <h1>Community</h1>
+            <v-row justify="space-between">
+                <v-col md="6">
+                    <v-card color="#2A3280" class="rounded-xl pa-5">
+                        <div class="d-flex ma-5 justify-space-evenly">
+                            <v-card class="rounded-xl" color="transparent" to="/tenant_chat" flat>
+                            <v-sheet color="#EF3746" class="rounded-xl d-flex justify-center" height="100" width="100">
+                                <div class="d-flex flex-column justify-center align-center">
+                                    <v-icon color="#2A3280" size="45">mdi-forum</v-icon>
+                                    <small>Chat</small>
+                                </div>
+                            </v-sheet>
+                            </v-card>
+                            <v-card class="rounded-xl" color="transparent" to="/tenant_chat" flat>
+                            <v-sheet color="#EF3746" class="rounded-xl d-flex justify-center" height="100" width="100">
+                                <div class="d-flex flex-column justify-center align-center">
+                                    <v-icon color="#2A3280" size="45">mdi-square-edit-outline</v-icon>
+                                    <small>Create Post</small>
+                                </div>
+                            </v-sheet>
+                            </v-card>
+                            <v-card class="rounded-xl" color="transparent" to="/tenant_chat" flat>
+                            <v-sheet color="#EF3746" class="rounded-xl d-flex justify-center" height="100" width="100">
+                                <div class="d-flex flex-column justify-center align-center">
+                                    <v-icon color="#2A3280" size="45">mdi-newspaper-variant-multiple-outline</v-icon>
+                                    <small>News</small>
+                                </div>
+                            </v-sheet>
+                            </v-card>
                         </div>
-                      </v-sheet>
-                      <!--Online Chat-->
-                      <div class="mt-5">
-                        <h3>Online</h3>
-                        <v-card class="rounded-xl pa-2">
-                          <v-sheet color="grey" class="d-flex pa-1  rounded-xl justify-space-between align-center">
-                            <div class="d-flex justify-space-between align-center ma-3">
-                              <v-icon class="ma-2">mdi-account</v-icon>
-                            <div class="d-flex flex-column justify-center">
-                              <strong>Abdul Christopher</strong>
-                              <span>Hello...</span>
+                        <div>
+                            <div class="d-flex justify-space-between">
+                                <h3>Recent Posts</h3>
+                                <v-btn variant="text" size="x-small">See more</v-btn>
                             </div>
+                            <div class="ma-5 d-flex align-center justify-space-between">
+                                <div class="d-flex align-center">
+                                    <v-sheet height="55" width="55" class="rounded-lg" color="grey">
+
+                                    </v-sheet>
+                                    <div class="mx-2">
+                                        <strong>Summer party with the williams...</strong>
+                                        <div class="d-flex align-center">
+                                            <v-sheet 
+                                            height="25" 
+                                            width="25" 
+                                            class="rounded-xl d-flex justify-center align-center">
+                                                <v-icon size="small">mdi-account</v-icon>                                            
+                                            </v-sheet>
+                                            <small class="mx-2">Willams Olsen</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <small>2 days ago</small>
                             </div>
-                            <small>12:30AM</small>
-                          </v-sheet>
-                          <div class="d-flex justify-space-between align-center ma-3">
-                            <div class="d-flex align-center">
-                              <v-icon class="ma-2">mdi-account</v-icon>
-                              <div class="d-flex flex-column">
-                                <strong>Christopher Kolade</strong>
-                                <span>How are you doing?</span>
-                              </div>                              
+
+                            <div class="ma-5 d-flex align-center justify-space-between">
+                                <div class="d-flex align-center">
+                                    <v-sheet height="55" width="55" class="rounded-lg" color="grey">
+
+                                    </v-sheet>
+                                    <div class="mx-2">
+                                        <strong>Summer party with the williams...</strong>
+                                        <div class="d-flex align-center">
+                                            <v-sheet 
+                                            height="25" 
+                                            width="25" 
+                                            class="rounded-xl d-flex justify-center align-center">
+                                                <v-icon size="small">mdi-account</v-icon>                                            
+                                            </v-sheet>
+                                            <small class="mx-2">Willams Olsen</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <small>2 days ago</small>
                             </div>
-                            <small>8:00AM</small>
-                          </div>
-                          <div class="d-flex justify-space-between align-center ma-3">
-                            <div class="d-flex align-center">
-                              <v-icon class="ma-2">mdi-account</v-icon>
-                              <div class="d-flex flex-column">
-                                <strong>Christopher Kolade</strong>
-                                <span>How are you doing?</span>
-                              </div>                              
+
+                            <div class="ma-5 d-flex align-center justify-space-between">
+                                <div class="d-flex align-center">
+                                    <v-sheet height="55" width="55" class="rounded-lg" color="grey">
+
+                                    </v-sheet>
+                                    <div class="mx-2">
+                                        <strong>Summer party with the williams...</strong>
+                                        <div class="d-flex align-center">
+                                            <v-sheet 
+                                            height="25" 
+                                            width="25" 
+                                            class="rounded-xl d-flex justify-center align-center">
+                                                <v-icon size="small">mdi-account</v-icon>                                            
+                                            </v-sheet>
+                                            <small class="mx-2">Willams Olsen</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <small>2 days ago</small>
                             </div>
-                            <small>6:13PM</small>
-                          </div>
-                          <div class="d-flex justify-space-between align-center ma-3">
-                            <div class="d-flex align-center">
-                              <v-icon class="ma-2">mdi-account</v-icon>
-                              <div class="d-flex flex-column">
-                                <strong>Christopher Kolade</strong>
-                                <span>How are you doing?</span>
-                              </div>                              
+                            
+                        </div>
+                    </v-card>
+
+                    <div class="ma-5">
+                        <div class="d-flex justify-space-between">
+                            <h3>Upcoming Events</h3>
+                            <v-btn variant="text" size="small">See more</v-btn>
+                        </div>
+                        <div class="pa-3 d-flex justify-space-between align-center">
+                            <div>
+                                <v-icon size="45">mdi-calendar-month</v-icon>
+                                <strong class="mx-2">Birthday!</strong>
                             </div>
-                            <small>2:43PM</small>
-                          </div>
-                          
-                        </v-card>
-                      </div>
-                      <!--Offline Chat-->
-                      <div class="mt-5">
-                        <h3>Offline Chat</h3>
-                        <v-card class="rounded-xl pa-4">                          
-                          <div class="d-flex justify-space-between align-center ma-2">
-                            <div class="d-flex align-center">
-                              <v-icon class="ma-2">mdi-account</v-icon>
-                              <div class="d-flex flex-column">
-                                <strong>Christopher Kolade</strong>
-                                <span>How are you doing?</span>
-                              </div>                              
+                            <small>2 mins ago</small>
+                        </div>
+                        <div class="pa-3 d-flex justify-space-between align-center">
+                            <div>
+                                <v-icon size="45">mdi-calendar-month</v-icon>
+                                <strong class="mx-2">Birthday!</strong>
                             </div>
-                            <small>8:00AM</small>
-                          </div>
-                          <div class="d-flex justify-space-between align-center ma-2">
-                            <div class="d-flex align-center">
-                              <v-icon class="ma-2">mdi-account</v-icon>
-                              <div class="d-flex flex-column">
-                                <strong>Bankole</strong>
-                                <span>How are you doing?</span>
-                              </div>                              
+                            <small>2 mins ago</small>
+                        </div>
+                        <div class="pa-3 d-flex justify-space-between align-center">
+                            <div>
+                                <v-icon size="45">mdi-calendar-month</v-icon>
+                                <strong class="mx-2">Birthday!</strong>
                             </div>
-                            <small>6:13PM</small>
-                          </div>
-                          <div class="d-flex justify-space-between align-center ma-2">
-                            <div class="d-flex align-center">
-                              <v-icon class="ma-2">mdi-account</v-icon>
-                              <div class="d-flex flex-column">
-                                <strong>Cynthia</strong>
-                                <span>How are you doing?</span>
-                              </div>                              
-                            </div>
-                            <small>2:43PM</small>
-                          </div>
-                          <div class="d-flex justify-space-between align-center ma-2">
-                            <div class="d-flex align-center">
-                              <v-icon class="ma-2">mdi-account</v-icon>
-                              <div class="d-flex flex-column">
-                                <strong>Sean</strong>
-                                <span>How are you doing?</span>
-                              </div>                              
-                            </div>
-                            <small>6:13PM</small>
-                          </div>
-                        </v-card>
-                      </div>
+                            <small>2 mins ago</small>
+                        </div>
+                    </div>
                 </v-col>
-                <v-col cols="7">
-                  <v-text-field label="Search" prepend="mdi-magnify">
+                
+                <v-col md="5">
+                    <v-card class="pa-5 rounded-xl">
+                        <div class="d-flex justify-space-between align-center">
+                            <h3>Group Membership</h3>
+                            <v-btn variant="text"><v-icon>mdi-arrow-right</v-icon></v-btn>
+                        </div>
+                        <v-sheet class="rounded-xl" color="#647ABB" height="150">
 
-                  </v-text-field>
-                  <v-card class="pa-5 rounded-xl">
-                    <div class="d-flex">
-                      <v-icon>mdi-account</v-icon>
-                      <h3>Abdul Christopher</h3>
-                    </div>
-                    <v-sheet class="pa-5" height="500" color="grey">
-                      <div class="ma-3">
-                        <v-sheet class="pa-5 rounded-xl" color="cyan" width="300">
-                          <span>hi</span>
                         </v-sheet>
-                      </div>
-                      <div class="ma-3 d-flex justify-end">
-                        <v-sheet class="pa-5 rounded-xl" color="yellow" width="300">
-                          <span>hi</span>
-                        </v-sheet>
-                      </div>
-                      <div class="ma-3">
-                        <v-sheet class="pa-5 rounded-xl" color="cyan" width="300">
-                          <span>hi</span>
-                        </v-sheet>
-                      </div>
-                      <div class="ma-3 d-flex justify-end">
-                        <v-sheet class="pa-5 rounded-xl" color="cyan" width="300">
-                          <span>hi</span>
-                        </v-sheet>
-                      </div>
-                      <div class="ma-3">
-                        <v-sheet class="pa-5 rounded-xl" color="cyan" width="300">
-                          <span>hi</span>
-                        </v-sheet>
-                        <small>2mins ago</small>
-                      </div>
-
-                    </v-sheet>
-                    <div class="d-flex justify-center align-center">
-                      <v-row>
-                        <v-col cols="10">
-                          <div class="ma-3">
-                            <v-textarea variant="outlined" rows="1" auto-grow label="Write a message..."></v-textarea>
-                          </div>                          
-                        </v-col>
-                        <v-col cols="2">
-                          <div class="d-flex align-center justify-center">
-                            <v-btn variant="text" icon><v-icon>mdi-image</v-icon></v-btn>
-                            <v-btn variant="text" icon><v-icon>mdi-microphone</v-icon></v-btn>
-                            <v-btn variant="text" icon><v-icon>mdi-send</v-icon></v-btn>
-                          </div>
-                        </v-col>
-                      </v-row>
-                    </div>
-                  </v-card>
+                    </v-card>
                 </v-col>
             </v-row>
         </v-main>
     </v-container>
 </template>
 <script>
-import Nav from '../../components/TenantNav.vue'
+import Nav from "../../components/TenantNav.vue"
 export default {
     components: {
         Nav
@@ -189,12 +161,12 @@ export default {
 }
 </script>
 <style scoped>
-.main {  
+.main {
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(to left, #ffffff 40%, #657ABC 40%) !important; 
+    background: linear-gradient(to left, #ffffff 40%, #647ABB 40%);
     display: flex;
     flex-wrap: wrap;
     align-items: center;

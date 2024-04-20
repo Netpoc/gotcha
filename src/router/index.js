@@ -10,6 +10,7 @@ import TenantDash from '@/views/tenant/Tenant_dash.vue'
 import TenantCommunity from '@/views/tenant/Tenant_Community.vue'
 import TenantProfile from '@/views/tenant/Profile.vue'
 import TenantPayment from '@/views/tenant/Tenant_Payments.vue'
+import Tenant_Chat from '@/views/tenant/Tenant_Chat.vue'
 
 const routes = [
   {
@@ -66,6 +67,11 @@ const routes = [
     path: '/tenant_community',
     name: 'tenant_community',
     component: TenantCommunity
+  },
+  {
+    path: '/tenant_chat',
+    name: 'tenant_chat',
+    component: Tenant_Chat
   },
   {
     path: '/tenant_profile',

@@ -130,13 +130,16 @@
             <v-row>
               <v-col>
                 <div class="d-flex justify-space-evenly">
-                  <v-sheet height="150" width="150" color="transparent"
+                  <v-card class="rounded-xl" color="transparent" to="/tenant_chat" flat>
+                    <v-sheet height="100" width="150" color="transparent"
                     class="d-flex rounded-xl flex-column align-center justify-center">
                     <v-icon size="45">
                       mdi-forum
                     </v-icon>
                     <small>Chat</small>
                   </v-sheet>
+                  </v-card>
+                  
                   <v-sheet height="150" width="150" color="transparent"
                     class="d-flex rounded-xl flex-column align-center justify-center">
                     <v-icon size="45">
@@ -321,36 +324,14 @@
   </v-container>
 </template>
 <script>
-import {
-  Chart as ChartJS,
-  Title,
-  Tooltip,
-  Legend,
-  BarElement,
-  CategoryScale,
-  LinearScale
-} from 'chart.js'
-import { Bar } from 'vue-chartjs'
 import Nav from '../../components/TenantNav.vue'
-
-ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
-
-export default {
-  name: 'App',
-  components: {
-    Bar,
+export default {  
+  components: {    
     Nav
   },
   data() {
     return {
-      dialog: false,
-      data: {
-        labels: ['January', 'February', 'March'],
-        datasets: [{ data: [40, 20, 12] }]
-      },
-      options: {
-        responsive: true
-      }
+      dialog: false,      
     }
   }
 }
