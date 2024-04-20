@@ -133,15 +133,92 @@
                 </v-col>
                 
                 <v-col md="5">
-                    <v-card class="pa-5 rounded-xl">
-                        <div class="d-flex justify-space-between align-center">
-                            <h3>Group Membership</h3>
-                            <v-btn variant="text"><v-icon>mdi-arrow-right</v-icon></v-btn>
-                        </div>
-                        <v-sheet class="rounded-xl" color="#647ABB" height="150">
-
-                        </v-sheet>
+                    <v-card class="pa-5 rounded-xl">                        
+                                <div class="d-flex justify-space-between align-center">
+                                    <h3>Group Membership</h3>
+                                    <v-btn variant="text"><v-icon>mdi-arrow-right</v-icon></v-btn>
+                                </div>
+                                <v-sheet class="rounded-xl" color="#647ABB" height="150">
+        
+                                </v-sheet>                        
                     </v-card>
+                    <v-card class="pa-5 mt-5" flat>
+                        <v-row justify="space-around">
+                            <v-col cols="5">
+                                <v-card flat class="d-flex flex-column align-center">
+                                    <v-sheet color="cyan" height="120" width="100%" class="rounded-xl">
+
+                                    </v-sheet>
+                                    <span class="ma-2">
+                                        Explore fun activities and events near you today...
+                                    </span>
+                                </v-card>
+                            </v-col>
+                            <v-col cols="5">
+                                <v-card flat class="d-flex flex-column align-center">
+                                    <v-sheet color="cyan" height="120" width="100%" class="rounded-xl">
+
+                                    </v-sheet>
+                                    <span class="ma-2">
+                                        Explore fun activities and events near you today...
+                                    </span>
+                                </v-card>
+                            </v-col>
+                        </v-row>
+                    </v-card>
+
+                    <v-card flat>
+                        <h3>News & Updates</h3>
+                        <div class="mt-5 d-flex align-center justify-space-between">
+                            <div>
+                                <p>Pest control service available</p>
+                            <div>
+                                <v-btn class="mr-2" size="x-small">New</v-btn>
+                                <v-btn size="x-small">Advertisement</v-btn>
+                            </div>
+                            <div class="mt-2 d-flex align-center">
+                                <v-sheet height="25" width="25" class="rounded-xl" color="grey">
+                                    <v-icon>mdi-account</v-icon>                                    
+                                </v-sheet>
+                                <small class="mx-2">Admin</small>
+                            </div>
+                            </div>
+                            <small>1 min ago</small>
+                        </div>
+                        <div class="mt-5 d-flex align-center justify-space-between">
+                            <div>
+                                <p>Pest control service available</p>
+                            <div>
+                                <v-btn class="mr-2" size="x-small">New</v-btn>
+                                <v-btn size="x-small">Advertisement</v-btn>
+                            </div>
+                            <div class="mt-2 d-flex align-center">
+                                <v-sheet height="25" width="25" class="rounded-xl" color="grey">
+                                    <v-icon>mdi-account</v-icon>                                    
+                                </v-sheet>
+                                <small class="mx-2">Admin</small>
+                            </div>
+                            </div>
+                            <small>1 min ago</small>
+                        </div>
+                        <div class="mt-5 d-flex align-center justify-space-between">
+                            <div>
+                                <p>Pest control service available</p>
+                            <div>
+                                <v-btn class="mr-2" size="x-small">New</v-btn>
+                                <v-btn size="x-small">Advertisement</v-btn>
+                            </div>
+                            <div class="mt-2 d-flex align-center">
+                                <v-sheet height="25" width="25" class="rounded-xl" color="grey">
+                                    <v-icon>mdi-account</v-icon>                                    
+                                </v-sheet>
+                                <small class="mx-2">Admin</small>
+                            </div>
+                            </div>
+                            <small>1 min ago</small>
+                        </div>
+                    </v-card>
+
                 </v-col>
             </v-row>
         </v-main>
