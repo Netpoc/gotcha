@@ -118,14 +118,14 @@
                         <div class="pa-3 d-flex justify-space-between align-center">
                             <div>
                                 <v-icon size="45">mdi-calendar-month</v-icon>
-                                <strong class="mx-2">Birthday!</strong>
+                                <strong class="mx-2">Community Meeting</strong>
                             </div>
                             <small>2 mins ago</small>
                         </div>
                         <div class="pa-3 d-flex justify-space-between align-center">
                             <div>
                                 <v-icon size="45">mdi-calendar-month</v-icon>
-                                <strong class="mx-2">Birthday!</strong>
+                                <strong class="mx-2">Carnival</strong>
                             </div>
                             <small>2 mins ago</small>
                         </div>

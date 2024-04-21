@@ -32,7 +32,7 @@
                 <router-link style="text-decoration: none; color: inherit;" to="/tenant_community">Communtiy</router-link>
               </v-list-item>
               <v-list-item prepend-icon="mdi-account-details">
-                <router-link style="text-decoration: none; color: inherit;" to="/tenant_community">Profile</router-link>
+                <router-link style="text-decoration: none; color: inherit;" to="/tenant_profile">Profile</router-link>
               </v-list-item>
               <v-list-item prepend-icon="mdi-magnify">
                 <router-link style="text-decoration: none; color: inherit;" to="#">Search</router-link>
