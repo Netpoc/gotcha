@@ -21,15 +21,23 @@
             </div>
     
             <v-list color="transparent">
-              <v-list-item
-                to="dashboard"
-                prepend-icon="mdi-view-dashboard"
-                title="Dashboard"
-              ></v-list-item>
-              <v-list-item prepend-icon="mdi-cash-sync" title="Payments"></v-list-item>
-              <v-list-item to="community" prepend-icon="mdi-home-group" title="Community"></v-list-item>
-              <v-list-item to="manage" prepend-icon="mdi-account-details" title="Manage Users"></v-list-item>
-              <v-list-item to="search" prepend-icon="mdi-magnify" title="Search"></v-list-item>
+              <v-list-item                
+                prepend-icon="mdi-view-dashboard"                
+              >
+              <router-link style="text-decoration: none; color: inherit;" to="/dashboard">Dashboard</router-link>
+            </v-list-item>
+              <v-list-item prepend-icon="mdi-cash-sync">
+                <router-link style="text-decoration: none; color: inherit;" to="#">Payments</router-link>
+              </v-list-item>
+              <v-list-item prepend-icon="mdi-home-group">
+                <router-link style="text-decoration: none; color: inherit;" to="/community">Community</router-link>
+              </v-list-item>
+              <v-list-item prepend-icon="mdi-account-details">
+                <router-link style="text-decoration: none; color: inherit;" to="/#">Manage Users</router-link>
+              </v-list-item>
+              <v-list-item prepend-icon="mdi-magnify">
+                <router-link style="text-decoration: none; color: inherit;" to="#">Search</router-link>
+              </v-list-item>
             </v-list>
     
             <template v-slot:append>
@@ -49,6 +57,5 @@ export default {
     components: {
 
     },
-
 }
 </script>

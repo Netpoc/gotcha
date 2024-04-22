@@ -8,7 +8,7 @@ import AccountView from '@/views/owner/Account'
 // Tenant Routes
 import TenantDash from '@/views/tenant/Tenant_dash.vue'
 import TenantCommunity from '@/views/tenant/Tenant_Community.vue'
-import TenantProfile from '@/views/tenant/Profile.vue'
+import TenantProfile from '@/views/tenant/Tenant_Profile.vue'
 import TenantPayment from '@/views/tenant/Tenant_Payments.vue'
 import Tenant_Chat from '@/views/tenant/Tenant_Chat.vue'
 
