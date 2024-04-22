@@ -14,9 +14,9 @@
                   ></v-img>
                 </v-avatar>
               </div>
-              <div>
-                <p>Sample User</p>
-                <v-chip>Admin</v-chip>
+              <div class="ma-2 d-flex flex-column align-center">
+                <p>Landlord</p>
+                <v-chip class="ma-2">Owner</v-chip>
               </div>
             </div>
     
@@ -24,22 +24,22 @@
               <v-list-item                
                 prepend-icon="mdi-view-dashboard"                
               >
-              <router-link style="text-decoration: none; color: inherit;" to="/owener_dashboard">Dashboard</router-link>
+              <router-link style="text-decoration: none; color: inherit;" to="/owner_dashboard">Dashboard</router-link>
             </v-list-item>
               <v-list-item prepend-icon="mdi-cash-sync">
                 <router-link style="text-decoration: none; color: inherit;" to="/account_view">Account</router-link>
               </v-list-item>
               <v-list-item prepend-icon="mdi-home-group">
-                <router-link style="text-decoration: none; color: inherit;" to="/community">Community</router-link>
+                <router-link style="text-decoration: none; color: inherit;" to="/owner_community">Community</router-link>
               </v-list-item>
               <v-list-item prepend-icon="mdi-home-group">
-                <router-link style="text-decoration: none; color: inherit;" to="/community">Profile Edit</router-link>
+                <router-link style="text-decoration: none; color: inherit;" to="/owner_profile">Profile Edit</router-link>
               </v-list-item>
               <v-list-item prepend-icon="mdi-account-details">
-                <router-link style="text-decoration: none; color: inherit;" to="manage">Tenants</router-link>
+                <router-link style="text-decoration: none; color: inherit;" to="manage_tenant">Tenants</router-link>
               </v-list-item>
               <v-list-item prepend-icon="mdi-magnify">
-                <router-link style="text-decoration: none; color: inherit;" to="/#">Search</router-link>
+                <router-link style="text-decoration: none; color: inherit;" to="#">Search</router-link>
               </v-list-item>
             </v-list>
     
