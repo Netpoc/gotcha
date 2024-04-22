@@ -29,14 +29,17 @@
               <v-list-item prepend-icon="mdi-cash-sync">
                 <router-link style="text-decoration: none; color: inherit;" to="/account_view">Account</router-link>
               </v-list-item>
-              <v-list-item to="community" prepend-icon="mdi-home-group" title="Community">
-                <router-link style="text-decoration: none; color: inherit;" to="/account_view">Account</router-link>
+              <v-list-item prepend-icon="mdi-home-group">
+                <router-link style="text-decoration: none; color: inherit;" to="/community">Community</router-link>
               </v-list-item>
-              <v-list-item to="manage" prepend-icon="mdi-account-details" title="Tenants">
-                <router-link style="text-decoration: none; color: inherit;" to="/account_view">Account</router-link>
+              <v-list-item prepend-icon="mdi-home-group">
+                <router-link style="text-decoration: none; color: inherit;" to="/community">Profile Edit</router-link>
               </v-list-item>
-              <v-list-item to="search" prepend-icon="mdi-magnify" title="Search">
-                <router-link style="text-decoration: none; color: inherit;" to="/account_view">Account</router-link>
+              <v-list-item prepend-icon="mdi-account-details">
+                <router-link style="text-decoration: none; color: inherit;" to="manage">Tenants</router-link>
+              </v-list-item>
+              <v-list-item prepend-icon="mdi-magnify">
+                <router-link style="text-decoration: none; color: inherit;" to="/#">Search</router-link>
               </v-list-item>
             </v-list>
     
