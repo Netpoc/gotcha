@@ -124,12 +124,12 @@
                     <v-card class="rounded-xl" color="#F0516E">
                         <div class="pa-5 d-flex justify-space-between align-center">
                             <h3>Recent Annoucements</h3>
-                            <v-btn variant="text" size="x-small" class="rounded-xl">See more <v-icon>mdi-arrow-</v-icon> </v-btn>
+                            <v-btn variant="text" size="x-small" class="rounded-xl">See more <v-icon>mdi-arrow-right</v-icon> </v-btn>
                         </div>
                         <v-tabs fixed-tabs>
-                            <v-tab value="one">Public Room</v-tab>
-                            <v-tab value="two">Owners</v-tab>
-                            <v-tab value="three">Management</v-tab>
+                            <v-tab value="1">1</v-tab>
+                            <v-tab value="2">2</v-tab>
+                            <v-tab value="3">3</v-tab>
                         </v-tabs>
                         <v-card-text>
                             <v-window v-model="tab">
@@ -155,7 +155,7 @@
                         </v-card-text>
                         <v-card-text>
                             <v-window v-model="tab">
-                                <v-window-item value="one">
+                                <v-window-item value="two">
                                     <div class="d-flex align-center justify-space-between ma-3">
                                         <div class="d-flex flex-column">
                                             <span>Hole in Bedroom wall at 150 Gordon Crescent...</span>
@@ -177,7 +177,7 @@
                         </v-card-text>
                         <v-card-text>
                             <v-window v-model="tab">
-                                <v-window-item value="one">
+                                <v-window-item value="three">
                                     <div class="d-flex align-center justify-space-between ma-3">
                                         <div class="d-flex flex-column">
                                             <span>Hole in Bedroom wall at 150 Gordon Crescent...</span>
@@ -197,11 +197,14 @@
                                 </v-window-item>
                             </v-window>
                         </v-card-text>
+                        
                     </v-card>
                 </v-col>
                 <v-col md="4">
-                    <v-card>
-                        
+                    <v-card class="rounded-xl">
+                        <v-sheet color="grey" height="300" width="100%">
+
+                        </v-sheet>
                     </v-card>
                 </v-col>
             </v-row>
