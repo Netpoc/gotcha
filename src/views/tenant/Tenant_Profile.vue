@@ -3,9 +3,9 @@
         <Nav />
         <v-main> 
             <h1>Profile</h1>           
-            <v-row justify="space-around">                
-                <v-col md="5">
-                    <v-card color="transparent" class="pa-5 d-flex justify-space-evenly" flat>
+            <v-row justify="space-between">                
+                <v-col md="6">
+                    <v-card color="#2A3280" class="ma-5 pa-5 d-flex justify-space-evenly rounded-xl" flat>
                         <v-card class="rounded-xl" to="#" color="transparent">
                             <v-sheet color="#EF3746" height="100" width="100" class="rounded-xl d-flex flex-column align-center justify-center">
                                 <v-icon size="45">
@@ -28,6 +28,14 @@
                                     mdi-home-group
                                 </v-icon>
                                 <small>Community</small>
+                            </v-sheet>
+                        </v-card>
+                        <v-card class="rounded-xl" to="#" color="transparent">
+                            <v-sheet color="#EF3746" height="100" width="100" class="rounded-xl d-flex flex-column align-center justify-center">
+                                <v-icon size="45">
+                                    mdi-home-group
+                                </v-icon>
+                                <small>Others</small>
                             </v-sheet>
                         </v-card>
                     </v-card>
@@ -94,12 +102,12 @@ export default {
 }
 </script>
 <style scoped>
-.main {  
+.main {
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(to left, #ffffff 40%, #ffffff 40%) !important; 
+    background: linear-gradient(to left, #ffffff 40%, #647ABB 40%);
     display: flex;
     flex-wrap: wrap;
     align-items: center;

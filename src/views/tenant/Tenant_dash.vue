@@ -2,10 +2,10 @@
   <v-container class="main" fluid>
     <Nav />
     <v-main class="ma-5">
-      <v-row align="center" justify="space-evenly">
+      <h1 class="mx-5">Occupant Dashboard</h1>
+      <v-row align="top" justify="space-between">
         <v-col cols="6">
-          <v-card color="transparent" class="ma-5" flat>
-            <h1>Occupant Dashboard</h1>
+          <v-card color="transparent" class="mx-5" flat>            
             <v-sheet class="pa-5 rounded-xl" color="#2A3280" elevation="8">
               <div class="d-flex justify-space-between">
                 <p>Frequent Activity</p>
@@ -121,39 +121,43 @@
           </v-card>
         </v-col>
         <v-col cols="5">
-          <v-card color="#24BAAB" min-height="250" class="rounded-xl">
+          <v-card color="#F0516E" min-height="200" class="rounded-xl">
             <div class="d-flex justify-space-between ma-5">
               <h3>Community Posts</h3>
               <v-btn size="small" variant="text"><v-icon>mdi-arrow-right</v-icon></v-btn>
             </div>
 
             <v-row>
-              <v-col>
+              <v-col cols>
                 <div class="d-flex justify-space-evenly">
                   <v-card class="rounded-xl" color="transparent" to="/tenant_chat" flat>
-                    <v-sheet height="100" width="150" color="transparent"
+                    <v-sheet height="100" width="100" color="transparent"
                     class="d-flex rounded-xl flex-column align-center justify-center">
-                    <v-icon size="45">
+                    <v-icon color="#2A3280" size="45">
                       mdi-forum
                     </v-icon>
                     <small>Chat</small>
                   </v-sheet>
                   </v-card>
-                  
-                  <v-sheet height="150" width="150" color="transparent"
+                  <v-card class="rounded-xl" color="transparent" to="/tenant_chat" flat>
+                  <v-sheet height="100" width="100" color="transparent"
                     class="d-flex rounded-xl flex-column align-center justify-center">
-                    <v-icon size="45">
+                    <v-icon color="#2A3280" size="45">
                       mdi-square-edit-outline
                     </v-icon>
                     <small>Create Post</small>
                   </v-sheet>
-                  <v-sheet height="150" width="150" color="transparent"
+                  </v-card>
+
+                  <v-card class="rounded-xl" color="transparent" to="/tenant_chat" flat>
+                  <v-sheet height="100" width="100" color="transparent"
                     class="d-flex rounded-xl flex-column align-center justify-center">
-                    <v-icon size="45">
+                    <v-icon color="#2A3280" size="45">
                       mdi-newspaper
                     </v-icon>
                     <small>News</small>
                   </v-sheet>
+                  </v-card>
                 </div>
               </v-col>
             </v-row>
@@ -342,7 +346,7 @@ export default {
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(to left, #ffffff 40%, #E5ACB6 40%);
+  background: linear-gradient(to left, #ffffff 40%, #647ABB 40%);
   display: flex;
   flex-wrap: wrap;
   align-items: center;

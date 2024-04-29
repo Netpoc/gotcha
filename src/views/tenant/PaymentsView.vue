@@ -1,5 +1,5 @@
 <template>
-    <v-container fluid>
+    <v-container class="main" fluid>
         <Nav />
           <v-main class="ma-5" style="height: 90vh">
             <v-row align="top" justify="space-between">
@@ -239,5 +239,15 @@ export default {
   }
 </script>
 <style scoped>
-
+.main {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to left, #ffffff 40%, #647ABB 40%);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
 </style>

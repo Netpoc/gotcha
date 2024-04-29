@@ -1,11 +1,11 @@
 <template>
     <v-container fluid class="main">
         <Nav />
-        <v-main>
-            <h1>Community</h1>
-            <v-row justify="space-between">
+        <v-main class="ma-5">
+            <h1 class="mx-5">Community</h1>
+            <v-row align="top" justify="space-between">
                 <v-col md="6">
-                    <v-card color="#2A3280" class="rounded-xl pa-5">
+                    <v-card color="#2A3280" class="rounded-xl mxg-5">
                         <div class="d-flex ma-5 justify-space-evenly">
                             <v-card class="rounded-xl" color="transparent" to="/tenant_chat" flat>
                             <v-sheet color="#EF3746" class="rounded-xl d-flex justify-center" height="100" width="100">
@@ -32,7 +32,7 @@
                             </v-sheet>
                             </v-card>
                         </div>
-                        <div>
+                        <div class="pa-5">
                             <div class="d-flex justify-space-between">
                                 <h3>Recent Posts</h3>
                                 <v-btn variant="text" size="x-small">See more</v-btn>
