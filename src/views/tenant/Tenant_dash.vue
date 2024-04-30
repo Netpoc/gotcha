@@ -12,7 +12,7 @@
                 <v-btn size="small" variant="text"><v-icon>mdi-dots-horizontal</v-icon></v-btn>
               </div>
               <div class="ma-5 d-flex justify-space-evenly">
-                <!--Cash Option Modal/Dialog-->
+                <!--Rents Option Modal/Dialog-->
                 <v-dialog
                 v-model="dialog"
                 max-width="500"
@@ -22,7 +22,7 @@
                     <v-sheet class="d-flex ma-3 rounded-xl flex-column align-center justify-center" height="100" width="100"
                     color="#EF3746">
                     <v-icon size="45">mdi-cash-multiple</v-icon>
-                    <small>Rent</small>
+                    <small>Rents</small>
                   </v-sheet>
                   </v-card>
                 </template>
@@ -99,6 +99,8 @@
                   </template>
                 </v-card>
                 </v-dialog>
+                <!--Rents Ends-->
+                <!--Utility -->
                 <v-card class="rounded-xl" color="transparent" to="/tenant_payment" flat>
                   <v-sheet class="d-flex ma-3 rounded-xl flex-column align-center justify-center" height="100" width="100"
                   color="#EF3746">
@@ -106,16 +108,23 @@
                   <small>Utility</small>
                 </v-sheet>
                 </v-card>
+                <!--Utility Ends-->
+
+                <!--Inbox Option-->
+                <v-card class="rounded-xl" color="transparent" to="#" flat>
                 <v-sheet class="d-flex ma-3 rounded-xl flex-column align-center justify-center" height="100" width="100"
                   color="#EF3746">
                   <v-icon size="45">mdi-inbox</v-icon>
                   <small>Indox</small>
                 </v-sheet>
+                </v-card>
+                <v-card class="rounded-xl" color="transparent" to="#" flat>
                 <v-sheet class="d-flex ma-3 rounded-xl flex-column align-center justify-center" height="100" width="100"
                   color="#EF3746">
                   <v-icon size="45">mdi-newspaper-variant-multiple-outline</v-icon>
                   <small>Others</small>
                 </v-sheet>
+                </v-card>
               </div>
             </v-sheet>
           </v-card>
