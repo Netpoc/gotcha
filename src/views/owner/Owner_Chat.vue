@@ -188,7 +188,7 @@
     </v-container>
 </template>
 <script>
-import Nav from '../../components/TenantNav.vue'
+import Nav from '../../components/OwnerNavDrawer.vue'
 export default {
     components: {
         Nav

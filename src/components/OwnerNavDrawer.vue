@@ -32,7 +32,7 @@
               <v-list-item prepend-icon="mdi-home-group">
                 <router-link style="text-decoration: none; color: inherit;" to="/owner_community">Community</router-link>
               </v-list-item>
-              <v-list-item prepend-icon="mdi-home-group">
+              <v-list-item prepend-icon="mdi-badge-account-outline">
                 <router-link style="text-decoration: none; color: inherit;" to="/owner_profile">Profile Edit</router-link>
               </v-list-item>
               <v-list-item prepend-icon="mdi-account-details">

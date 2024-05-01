@@ -1,46 +1,6 @@
 <template>
     <v-container fluid>
-        <v-navigation-drawer theme="dark" color="#2A3280" permanent>
-            <div class="mb-5">
-              <v-img max-height="65" :src="require('../../assets/white.png')"></v-img>
-            </div>
-            <v-divider></v-divider>
-            <div class="d-flex flex-column align-center ma-5">
-              <div>
-                <v-avatar color="grey" size="100">
-                  <v-img
-                    src="https://cdn.vuetifyjs.com/images/profiles/marcus.jpg"
-                    cover
-                  ></v-img>
-                </v-avatar>
-              </div>
-              <div>
-                <p>Sample User</p>
-                <v-chip>Admin</v-chip>
-              </div>
-            </div>
-    
-            <v-list color="transparent">
-              <v-list-item
-                to="owner"
-                prepend-icon="mdi-view-dashboard"
-                title="Dashboard"
-              ></v-list-item>
-              <v-list-item to="payment" prepend-icon="mdi-cash-sync" title="Payments"></v-list-item>
-              <v-list-item to="community" prepend-icon="mdi-home-group" title="Community"></v-list-item>
-              <v-list-item to="manage" prepend-icon="mdi-account-details" title="Manage Users"></v-list-item>
-              <v-list-item prepend-icon="mdi-magnify" title="Search"></v-list-item>
-            </v-list>
-    
-            <template v-slot:append>
-              <div class="pa-2">
-                <v-btn variant="text" to="/" block> Settings </v-btn>
-              </div>
-              <div class="pa-2">
-                <v-btn variant="text" to="/" block> Logout </v-btn>
-              </div>
-            </template>
-          </v-navigation-drawer>
+        <Nav />
           <v-main class="ma-5" style="height: 90vh">
             <v-row align="top" justify="space-between">
                 <!-- Pamyments Heading and Group of Buttons -->
@@ -201,7 +161,11 @@
     </v-container>
 </template>
 <script>
+import Nav from '../../components/OwnerNavDrawer.vue'
   export default {
+  components: {
+    Nav
+  },
     data () {
       return {
         colors: [

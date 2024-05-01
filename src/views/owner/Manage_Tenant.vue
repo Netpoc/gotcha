@@ -5,20 +5,20 @@
             <h1 class="ma-5">Tenants Management</h1>
             <v-row justify="space-evenly">
                 <v-col md="5">
-                    <v-card class="pa-5 d-flex justify-space-around rounded-xl">
-                        <v-sheet class="rounded-xl d-flex flex-column align-center justify-center" color="grey" height="100" width="100">
+                    <v-card color="#2A3280" class="pa-5 d-flex align-center justify-space-evenly rounded-xl">
+                        <v-sheet class="rounded-xl d-flex flex-column align-center justify-center" color="#F0516E" height="100" width="100">
                             <v-icon size="45">
                                 mdi-message-text
                             </v-icon>
                             <small>New Message</small>
                         </v-sheet>
-                        <v-sheet class="rounded-xl d-flex flex-column align-center justify-center" color="grey" height="100" width="100">
+                        <v-sheet class="rounded-xl d-flex flex-column align-center justify-center" color="#F0516E" height="100" width="100">
                             <v-icon size="45">
                                 mdi-account-cog-outline
                             </v-icon>
                             <small>Manage</small>
                         </v-sheet>
-                        <v-sheet class="rounded-xl d-flex flex-column align-center justify-center" color="grey" height="100" width="100">
+                        <v-sheet class="rounded-xl d-flex flex-column align-center justify-center" color="#F0516E" height="100" width="100">
                             <v-icon size="45">
                                 mdi-message-text
                             </v-icon>
@@ -55,23 +55,28 @@
                     
                 </v-col>
                 <v-col md="6">
-                    <v-card class="pa-5 rounded-xl">
+                    <v-card class="pa-5 rounded-xl" color="#2A3280">
                         <div class="d-flex justify-space-between align-center">
                             <div class="d-flex align-center">
                                 <v-icon size="45">
                                     mdi-home-city
                                 </v-icon>
                                 <div class="mx-2">
-                                    <h3>36</h3>
-                                    <small>Propeerties</small>                                
+                                    <h2>36</h2>
+                                    <small>Properties</small>                                
                                 </div>
                             </div>
-                            <v-btn size="x-small" variant="text">See all <v-icon>mdi-arrow-right</v-icon></v-btn>
+                            <v-btn 
+                            size="x-small" 
+                            variant="text">See all <v-icon>mdi-arrow-right</v-icon>
+                            </v-btn>
                         </div>
-                        <v-sheet height="100" color="blue" class="ma-5 d-flex align-center rounded-xl justify-space-between">
-                            <div class="ma-5 d-flex flex-column align-center">
-                                <span>8</span>
-                                <small>Vacant</small>
+                        <v-sheet height="100" color="blue" class="d-flex align-center rounded-xl justify-space-between">
+                            <div class="ma-5 d-flex align-center">
+                                <div class="d-flex justify-center">
+                                    <h2>8</h2>
+                                    <small>Vacant</small>
+                                </div>
                             </div>
                             <v-divider
                             class="ms-3"
@@ -79,7 +84,7 @@
                             vertical
                             ></v-divider>
                             <div class="ma-5 d-flex flex-column align-center">
-                                <span>22</span>
+                                <h2>22</h2>
                                 <small>Occupied</small>
                             </div>
                             <v-divider
@@ -88,7 +93,7 @@
                             vertical
                             ></v-divider>
                             <div class="ma-5 d-flex flex-column align-center">
-                                <span>6</span>
+                                <h2>6</h2>
                                 <small>Unlisted</small>
                             </div>
                         </v-sheet>
@@ -127,9 +132,9 @@
                             <v-btn variant="text" size="x-small" class="rounded-xl">See more <v-icon>mdi-arrow-right</v-icon> </v-btn>
                         </div>
                         <v-tabs fixed-tabs>
-                            <v-tab value="1">1</v-tab>
-                            <v-tab value="2">2</v-tab>
-                            <v-tab value="3">3</v-tab>
+                            <v-tab value="1">Announcement</v-tab>
+                            <v-tab value="2">New</v-tab>
+                            <v-tab value="3">Management</v-tab>
                         </v-tabs>
                         <v-card-text>
                             <v-window v-model="tab">
@@ -200,7 +205,7 @@
                         
                     </v-card>
                 </v-col>
-                <v-col md="4">
+                <v-col md="5">
                     <v-card class="rounded-xl">
                         <v-sheet color="grey" height="300" width="100%">
 

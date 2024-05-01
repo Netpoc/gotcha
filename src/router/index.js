@@ -3,7 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import ManageView from '@/views/ManageView.vue'
 import AdminDash from '@/views/Admin_dash.vue'
 import OwnerDash from '@/views/owner/Owner_Dash.vue'
-import AccountView from '@/views/owner/Account'
+import AccountView from '@/views/owner/Account_View.vue'
 
 // Tenant Routes
 import TenantDash from '@/views/tenant/Tenant_dash.vue'
@@ -16,6 +16,7 @@ import Tenant_Chat from '@/views/tenant/Tenant_Chat.vue'
 import OwnerCommunity from '@/views/owner/Owner_Community'
 import OwnerProfile from '@/views/owner/Owner_Profile'
 import ManageTenant from '@/views/owner/Manage_Tenant'
+import OwnerChat from '@/views/owner/Owner_Chat.vue'
 
 
 const routes = [
@@ -56,6 +57,12 @@ const routes = [
     path: '/owner_profile',
     name: 'OwnerProfile',
     component: OwnerProfile,
+    meta: {requiresAuth: true}
+  },
+  {
+    path: '/owner_chat',
+    name: 'OwnerChat',
+    component: OwnerChat,
     meta: {requiresAuth: true}
   },
   {
