@@ -118,7 +118,7 @@
         </v-row>
         <v-row>
           <v-col md="6">
-            <v-card color="#4653C3" class="pa-4 align-center d-flex justify-space-between">  
+            <v-card color="#2A3280" class="pa-4 align-center d-flex justify-space-between">  
                 <h3>Recent Tasks</h3>
                 <v-spacer />                
                 <v-btn size="x-small" variant="text" href="#">See More<v-icon>mdi-chevron-right</v-icon></v-btn>

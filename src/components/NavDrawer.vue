@@ -27,13 +27,13 @@
               <router-link style="text-decoration: none; color: inherit;" to="/dashboard">Dashboard</router-link>
             </v-list-item>
               <v-list-item prepend-icon="mdi-cash-sync">
-                <router-link style="text-decoration: none; color: inherit;" to="#">Payments</router-link>
+                <router-link style="text-decoration: none; color: inherit;" to="/payment">Payments</router-link>
               </v-list-item>
               <v-list-item prepend-icon="mdi-home-group">
                 <router-link style="text-decoration: none; color: inherit;" to="/community">Community</router-link>
               </v-list-item>
               <v-list-item prepend-icon="mdi-account-details">
-                <router-link style="text-decoration: none; color: inherit;" to="/#">Manage Users</router-link>
+                <router-link style="text-decoration: none; color: inherit;" to="/manage">Manage Users</router-link>
               </v-list-item>
               <v-list-item prepend-icon="mdi-magnify">
                 <router-link style="text-decoration: none; color: inherit;" to="#">Search</router-link>

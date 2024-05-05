@@ -1,39 +1,6 @@
 <template>
-  <v-container fluid class="main">
-    <v-navigation-drawer theme="dark" color="#2A3280" permanent>
-      <div class="mb-5">
-        <v-img max-height="50" :src="require('../assets/white.png')"></v-img>
-      </div>
-      <v-divider></v-divider>
-      <div class="d-flex flex-column align-center ma-5">
-        <div>
-          <v-avatar color="grey" size="100">
-            <v-img src="https://cdn.vuetifyjs.com/images/profiles/marcus.jpg" cover></v-img>
-          </v-avatar>
-        </div>
-        <div>
-          <p>Sample User</p>
-          <v-chip>Admin</v-chip>
-        </div>
-      </div>
-
-      <v-list color="transparent">
-        <v-list-item to="/dashboard" prepend-icon="mdi-view-dashboard" title="Dashboard"></v-list-item>
-        <v-list-item to="payment" prepend-icon="mdi-cash-sync" title="Payments"></v-list-item>
-        <v-list-item color="cyan" prepend-icon="mdi-home-group" title="Community"></v-list-item>
-        <v-list-item to="manage" prepend-icon="mdi-account-details" title="Manage Users"></v-list-item>
-        <v-list-item prepend-icon="mdi-magnify" title="Search"></v-list-item>
-      </v-list>
-
-      <template v-slot:append>
-        <div class="pa-2">
-          <v-btn variant="text" block> Settings </v-btn>
-        </div>
-        <div class="pa-2">
-          <v-btn variant="text" to="/" block> Logout </v-btn>
-        </div>
-      </template>
-    </v-navigation-drawer>
+  <v-container fluid>
+    <Nav />
     <v-main>
       <!--FIRST TOP SECTION-->
       <v-row justify="space-between">
@@ -42,30 +9,30 @@
             <!--Group of buttons-->
             <h1 class="ma-5">Community</h1>
             <div class="ma-5 d-flex justify-space-between">
-              <v-sheet class="rounded-xl d-flex flex-column justify-center align-center" height="100" width="100"
+              <v-card class="rounded-xl d-flex flex-column justify-center align-center" height="100" width="100"
                 color="#ef3746">
-                <v-btn variant="text"><v-icon color="#2A3280" size="40">mdi-forum-outline</v-icon></v-btn>
+                <v-icon color="#2A3280" size="40">mdi-forum-outline</v-icon>
                 <span><small>Forum</small></span>
-              </v-sheet>
-              <v-sheet class="rounded-xl d-flex flex-column justify-center align-center" height="100" width="100"
+              </v-card>
+              <v-card class="rounded-xl d-flex flex-column justify-center align-center" height="100" width="100"
                 color="#2A3280">
-                <v-btn variant="text"><v-icon size="40">mdi-square-edit-outline</v-icon></v-btn>
+                <v-icon size="40">mdi-square-edit-outline</v-icon>
                 <span><small>Post</small></span>
-              </v-sheet>
-              <v-sheet class="rounded-xl d-flex flex-column justify-center align-center" height="100" width="100"
+              </v-card>
+              <v-card class="rounded-xl d-flex flex-column justify-center align-center" height="100" width="100"
                 color="#2A3280">
-                <v-btn variant="text"><v-icon size="40">mdi-chat</v-icon></v-btn>
+                <v-icon size="40">mdi-chat</v-icon>
                 <span><small>Chat</small></span>
-              </v-sheet>
-              <v-sheet class="rounded-xl d-flex flex-column justify-center align-center" height="100" width="100"
+              </v-card>
+              <v-card class="rounded-xl d-flex flex-column justify-center align-center" height="100" width="100"
                 color="#2A3280">
-                <v-btn variant="text"><v-icon size="40">mdi-account-cog</v-icon></v-btn>
+                <v-icon size="40">mdi-account-cog</v-icon>
                 <span><small>Manage</small></span>
-              </v-sheet>
+              </v-card>
             </div>
           </v-card>
           <!--Recent Posts Card Content-->
-          <v-card class="rounded-xl ma-5" color="grey">
+          <v-card class="rounded-xl ma-5" color="#2A3280">
             <div class="ma-5 d-flex justify-space-between">
               <h3>Recent Posts</h3>
               <v-btn size="x-small" variant="text">See more</v-btn>
@@ -163,14 +130,14 @@
         </v-col>
         <v-col cols="6">
           <!--Approval Card-->
-          <div class="ma-5">
-            <v-sheet rounded="xl" height="250" color="grey">
+          <v-card class="ma-5 rounded-xl">
+            <v-sheet rounded="xl" height="250">
               <div class="pa-5 d-flex justify-space-between">
                 <h3>Approvals</h3>
                 <v-btn variant="text"><v-icon>mdi-arrow-right</v-icon></v-btn>
               </div>
             </v-sheet>
-          </div>
+          </v-card>
           <div class="ma-5">
             <div class="ma-5 d-flex justify-space-between align-center">
               <h3>General Anouncement</h3>
@@ -247,6 +214,17 @@
   </v-container>
 </template>
 <script>
+import Nav from "../components/NavDrawer"
+export default {
+  components: {
+    Nav,
+  },
+  data() {
+    return {
+
+    }
+  }
+}
 </script>
 <style scoped>
 .main {

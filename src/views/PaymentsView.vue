@@ -1,45 +1,6 @@
 <template>
-    <v-container fluid class="main">
-        <v-navigation-drawer theme="dark" color="#2A3280" permanent>
-            <div>
-              <v-img max-height="65" :src="require('../assets/white.png')"></v-img>
-            </div>            
-            <div class="d-flex flex-column align-center ma-5">
-              <div>
-                <v-avatar color="grey" size="100">
-                  <v-img
-                    src="https://cdn.vuetifyjs.com/images/profiles/marcus.jpg"
-                    cover
-                  ></v-img>
-                </v-avatar>
-              </div>
-              <div>
-                <p>Sample User</p>
-                <v-chip>Admin</v-chip>
-              </div>
-            </div>
-    
-            <v-list color="transparent">
-              <v-list-item
-                to="dashboard"
-                prepend-icon="mdi-view-dashboard"
-                title="Dashboard"
-              ></v-list-item>
-              <v-list-item prepend-icon="mdi-cash-sync" title="Payments"></v-list-item>
-              <v-list-item to="community" prepend-icon="mdi-home-group" title="Community"></v-list-item>
-              <v-list-item to="Manage" prepend-icon="mdi-account-details" title="Manage Users"></v-list-item>
-              <v-list-item prepend-icon="mdi-magnify" title="Search"></v-list-item>
-            </v-list>
-    
-            <template v-slot:append>
-              <div class="ma-2">
-                <v-btn size="small" variant="text" to="/" block> Settings </v-btn>
-              </div>
-              <div class="ma-2">
-                <v-btn size="small" variant="text" to="/" block> Logout </v-btn>
-              </div>
-            </template>
-          </v-navigation-drawer>
+    <v-container fluid>
+      <Nav />        
           <v-main>
             <v-row align="top" justify="space-between">
                 <!-- Pamyments Heading and Group of Buttons -->
@@ -47,33 +8,33 @@
                   <v-card flat color="transparent" class="ma-5">
                     <h1 class="mb-5">Payments</h1>
                     <div class="d-flex justify-space-evenly">
-                        <v-sheet
+                        <v-card
                         class="rounded-xl d-flex align-center justify-center"
                         :height="100" 
                         :width="100" 
-                        color="#EF3746">
+                        color="#2A3280">
                           <div class="d-flex flex-column justify-center align-center">
-                            <v-icon color="#2A3280" size="45">mdi-cash-sync</v-icon>
+                            <v-icon color="#ffffff" size="45">mdi-cash-sync</v-icon>
                             <p><small>Expiring Bills</small></p>
                           </div>
-                        </v-sheet>
-                        <v-sheet
+                        </v-card>
+                        <v-card
                         class="rounded-xl d-flex align-center justify-center"
                         :height="100" 
                         :width="100" 
-                        color="#EF3746">
+                        color="#2A3280">
                           <div class="d-flex flex-column justify-center align-center">
-                            <v-icon color="#2A3280" size="45">mdi-wallet-outline</v-icon>
+                            <v-icon color="#FFFFFF" size="45">mdi-wallet-outline</v-icon>
                             <p><small>Reports</small></p>
                         </div>
-                        </v-sheet>
+                        </v-card>
                         <v-sheet
                         class="rounded-xl d-flex align-center justify-center"
                         :height="100" 
                         :width="100" 
-                        color="#EF3746">
+                        color="#2A3280">
                           <div class="d-flex flex-column justify-center align-center">
-                            <v-icon color="#2A3280" size="45">mdi-file-chart-outline</v-icon>
+                            <v-icon color="#FFFFF" size="45">mdi-file-chart-outline</v-icon>
                             <p><small>Pre-Authorize</small></p>
                         </div>
                         </v-sheet>
@@ -81,9 +42,9 @@
                         class="rounded-xl d-flex align-center justify-center"
                         :height="100" 
                         :width="100" 
-                        color="#EF3746">
+                        color="#2A3280">
                           <div class="d-flex flex-column justify-center align-center">
-                            <v-icon color="#2A3280" size="45">mdi-file-chart-outline</v-icon>
+                            <v-icon color="#FFFFFF" size="45">mdi-file-chart-outline</v-icon>
                             <p><small>Pre-Authorize</small></p>
                         </div>
                         </v-sheet>
@@ -200,7 +161,11 @@
     </v-container>
 </template>
 <script>
+import Nav from "../components/NavDrawer"
   export default {
+    components: {
+      Nav,
+    },
     data () {
       return {
         colors: [
