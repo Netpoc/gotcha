@@ -80,17 +80,32 @@
                     <!--Notification Ends-->
                 </v-col> 
                 <v-col cols="5">
-                    <v-sheet color="grey" class="rounded-xl pa-5">
-                        <div class="d-flex align-center justify-space-between">
-                            <h3>My Cards</h3>
+                    <v-card color="grey" class="rounded-xl">
+                        
+                        <v-sheet color="transparent">
+                          <div class="d-flex align-center justify-space-between">
+                            <h3 class="ma-5">My Cards</h3>
                             <v-btn variant="text"><v-icon>mdi-arrow-right</v-icon></v-btn>
                         </div>
-                        <v-card class="rounded-xl">
-                            <v-sheet class="ma-5">
-                                <v-img :src="require('../../assets/gotcha.png')"></v-img>
-                            </v-sheet>
-                        </v-card>
-                    </v-sheet>
+                          <v-carousel :show-arrows="false" height="250" cycle hide-delimiter-background>
+                            <v-carousel-item
+                              :src="(require('../../assets/contactless.png'))"
+                              contain
+                            ></v-carousel-item>
+                          
+                            <v-carousel-item
+                              :src="(require('../../assets/credit-card.png'))"
+                              contain
+                            ></v-carousel-item>
+                          
+                            <v-carousel-item
+                              :src="(require('../../assets/credit.png'))"
+                              contain
+                            ></v-carousel-item>
+                          </v-carousel>
+                        </v-sheet>
+                        
+                    </v-card>
                     <v-sheet class="d-flex justify-space-between ma-5">
                         <h3>Schedule Payments</h3>
                         <v-btn variant="text"><v-icon>mdi-plus</v-icon></v-btn>

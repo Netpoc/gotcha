@@ -131,78 +131,26 @@
                             <h3>Recent Annoucements</h3>
                             <v-btn variant="text" size="x-small" class="rounded-xl">See more <v-icon>mdi-arrow-right</v-icon> </v-btn>
                         </div>
-                        <v-tabs fixed-tabs>
-                            <v-tab value="1">Announcement</v-tab>
-                            <v-tab value="2">New</v-tab>
-                            <v-tab value="3">Management</v-tab>
+                        <v-tabs v-model="tab">
+                            <v-tab value="one">Public</v-tab>
+                            <v-tab value="two">Owner</v-tab>
+                            <v-tab value="three">Management</v-tab>
                         </v-tabs>
                         <v-card-text>
-                            <v-window v-model="tab">
-                                <v-window-item value="one">
-                                    <div class="d-flex align-center justify-space-between ma-3">
-                                        <div class="d-flex flex-column">
-                                            <span>Hole in Bedroom wall at 150 Gordon Crescent...</span>
-                                            <div>
-                                                <v-btn variant="text" size="x-small">New</v-btn>
-                                                <v-btn variant="text" size="x-small">Resident request</v-btn>
-                                            </div>
-                                            <div class="d-flex align-center mt-2">
-                                                <v-sheet height="25" width="25" class="rounded-xl d-flex align-center justify-center">
-                                                    <v-icon>mdi-account</v-icon>
-                                                </v-sheet>
-                                                <small class="mx-1">Baldwin Chris</small>
-                                            </div>
-                                        </div>
-                                        <small>2 mins ago</small>
-                                    </div>
-                                </v-window-item>
-                            </v-window>
-                        </v-card-text>
-                        <v-card-text>
-                            <v-window v-model="tab">
-                                <v-window-item value="two">
-                                    <div class="d-flex align-center justify-space-between ma-3">
-                                        <div class="d-flex flex-column">
-                                            <span>Hole in Bedroom wall at 150 Gordon Crescent...</span>
-                                            <div>
-                                                <v-btn variant="text" size="x-small">New</v-btn>
-                                                <v-btn variant="text" size="x-small">Resident request</v-btn>
-                                            </div>
-                                            <div class="d-flex align-center mt-2">
-                                                <v-sheet height="25" width="25" class="rounded-xl d-flex align-center justify-center">
-                                                    <v-icon>mdi-account</v-icon>
-                                                </v-sheet>
-                                                <small class="mx-1">Baldwin Chris</small>
-                                            </div>
-                                        </div>
-                                        <small>2 mins ago</small>
-                                    </div>
-                                </v-window-item>
-                            </v-window>
-                        </v-card-text>
-                        <v-card-text>
-                            <v-window v-model="tab">
-                                <v-window-item value="three">
-                                    <div class="d-flex align-center justify-space-between ma-3">
-                                        <div class="d-flex flex-column">
-                                            <span>Hole in Bedroom wall at 150 Gordon Crescent...</span>
-                                            <div>
-                                                <v-btn variant="text" size="x-small">New</v-btn>
-                                                <v-btn variant="text" size="x-small">Resident request</v-btn>
-                                            </div>
-                                            <div class="d-flex align-center mt-2">
-                                                <v-sheet height="25" width="25" class="rounded-xl d-flex align-center justify-center">
-                                                    <v-icon>mdi-account</v-icon>
-                                                </v-sheet>
-                                                <small class="mx-1">Baldwin Chris</small>
-                                            </div>
-                                        </div>
-                                        <small>2 mins ago</small>
-                                    </div>
-                                </v-window-item>
-                            </v-window>
-                        </v-card-text>
-                        
+                            <v-tabs-window v-model="tab">
+                                <v-tabs-window-item value="one">
+                                    Public
+                                </v-tabs-window-item>
+                                <v-tabs-window-item value="two">
+                                    Owner
+                                </v-tabs-window-item>
+                                <v-tabs-window-item value="three">
+                                        <span>Management updates goes here.</span>
+                                    
+                                </v-tabs-window-item>
+                            </v-tabs-window>
+                        </v-card-text>    
+                                               
                     </v-card>
                 </v-col>
                 <v-col md="5">
@@ -224,6 +172,7 @@ export default {
     },
     data () {
         return {
+            tab: null,
             desserts: [
           {
             name: 'Electricity',
