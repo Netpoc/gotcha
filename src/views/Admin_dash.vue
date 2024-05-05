@@ -6,7 +6,7 @@
           <v-col cols="6">
             <v-card flat color="transparent" class="rounded-xl ma-5">
               <h1 class="mb-5">Admin Dashboard</h1>
-              <v-sheet class="mx-auto rounded-xl" color="#FFEBEE" elevation="8">
+              <v-sheet class="mx-auto rounded-xl" color="#2A3280" elevation="8">
                 <v-card
                   flat
                   color="transparent"
@@ -18,16 +18,16 @@
                 </v-card>
 
                 <div class="d-flex justify-space-evenly pa-5">
-                  <v-card to="#" height="70" width="70" color="#2A3280" class="rounded-xl d-flex align-center justify-center">
+                  <v-card to="#" height="90" width="90" color="#4653C3" class="rounded-xl d-flex align-center justify-center">
                     <small>Rent</small> 
                   </v-card>
-                  <v-card to="#" height="70" width="70" color="#2A3280" class="rounded-xl d-flex align-center justify-center">
+                  <v-card to="#" height="90" width="90" color="#4653C3" class="rounded-xl d-flex align-center justify-center">
                     <small>Utility</small> 
                   </v-card>
-                  <v-card to="#" height="70" width="70" color="#2A3280" class="rounded-xl d-flex align-center justify-center">
+                  <v-card to="#" height="90" width="90" color="#4653C3" class="rounded-xl d-flex align-center justify-center">
                     <small>Permits</small> 
                   </v-card>
-                  <v-card to="#" height="70" width="70" color="#2A3280" class="rounded-xl d-flex align-center justify-center">
+                  <v-card to="#" height="90" width="90" color="#4653C3" class="rounded-xl d-flex align-center justify-center">
                     <small>Others</small> 
                   </v-card>
                 </div>              
@@ -118,7 +118,7 @@
         </v-row>
         <v-row>
           <v-col md="6">
-            <v-card flat color="#657ABC" class="pa-4 d-flex justify-space-between">  
+            <v-card color="#4653C3" class="pa-4 align-center d-flex justify-space-between">  
                 <h3>Recent Tasks</h3>
                 <v-spacer />                
                 <v-btn size="x-small" variant="text" href="#">See More<v-icon>mdi-chevron-right</v-icon></v-btn>
