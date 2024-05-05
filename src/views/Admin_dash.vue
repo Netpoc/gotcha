@@ -1,51 +1,12 @@
 <template>
   <v-container fluid class="main">    
-      <v-navigation-drawer theme="dark" color="#EF3746" permanent>
-        <div>
-          <v-img max-height="50" :src="require('../assets/white.png')"></v-img>
-        </div>
-        <v-divider></v-divider>
-        <div class="d-flex flex-column align-center ma-5">
-          <div>
-            <v-avatar color="grey" size="100">
-              <v-img
-                src="https://cdn.vuetifyjs.com/images/profiles/marcus.jpg"
-                cover
-              ></v-img>
-            </v-avatar>
-          </div>
-          <div>
-            <p>Sample User</p>
-            <v-chip>Admin</v-chip>
-          </div>
-        </div>
-
-        <v-list color="transparent">
-          <v-list-item            
-            prepend-icon="mdi-view-dashboard"
-            title="Dashboard"
-          ></v-list-item>
-          <v-list-item to="payment" prepend-icon="mdi-cash-sync" title="Payments"></v-list-item>
-          <v-list-item to="community" prepend-icon="mdi-home-group" title="Community"></v-list-item>
-          <v-list-item to="manage" prepend-icon="mdi-account-details" title="Manage Users"></v-list-item>
-          <v-list-item to="search" prepend-icon="mdi-magnify" title="Search"></v-list-item>
-        </v-list>
-
-        <template v-slot:append>
-          <div class="pa-2">
-            <v-btn variant="text" to="/" block> Settings </v-btn>
-          </div>
-          <div class="pa-2">
-            <v-btn variant="text" to="/" block> Logout </v-btn>
-          </div>
-        </template>
-      </v-navigation-drawer>
+      <Nav />
       <v-main>
       <v-row justify="space-evenly" align="center">
           <v-col cols="6">
-            <v-card flat color="transparent" class="ma-5">
+            <v-card flat color="transparent" class="rounded-xl ma-5">
               <h1 class="mb-5">Admin Dashboard</h1>
-              <v-sheet class="mx-auto rounded-xl" color="#E5ACB6" elevation="8">
+              <v-sheet class="mx-auto rounded-xl" color="#FFEBEE" elevation="8">
                 <v-card
                   flat
                   color="transparent"
@@ -56,37 +17,20 @@
                   <a><v-icon>mdi-dots-horizontal</v-icon></a>
                 </v-card>
 
-                <v-slide-group
-                  v-model="model"
-                  class="pa-4"
-                  selected-class="bg-primary"
-                  show-arrows
-                >
-                  <v-slide-group-item
-                    v-for="n in 5"
-                    :key="n"
-                    v-slot="{ isSelected, toggle, selectedClass }"
-                  >
-                    <v-card
-                      :class="['ma-4', selectedClass, 'rounded-xl']"
-                      color="#EF3746"
-                      height="80"
-                      width="80"
-                      @click="toggle"
-                    >
-                      <div class="d-flex fill-height align-center justify-center">
-                        <v-scale-transition>
-                          <v-icon
-                            v-if="isSelected"
-                            color="white"
-                            icon="mdi-close-circle-outline"
-                            size="48"
-                          ></v-icon>
-                        </v-scale-transition>
-                      </div>
-                    </v-card>
-                  </v-slide-group-item>
-                </v-slide-group>                
+                <div class="d-flex justify-space-evenly pa-5">
+                  <v-card to="#" height="70" width="70" color="#2A3280" class="rounded-xl d-flex align-center justify-center">
+                    <small>Rent</small> 
+                  </v-card>
+                  <v-card to="#" height="70" width="70" color="#2A3280" class="rounded-xl d-flex align-center justify-center">
+                    <small>Utility</small> 
+                  </v-card>
+                  <v-card to="#" height="70" width="70" color="#2A3280" class="rounded-xl d-flex align-center justify-center">
+                    <small>Permits</small> 
+                  </v-card>
+                  <v-card to="#" height="70" width="70" color="#2A3280" class="rounded-xl d-flex align-center justify-center">
+                    <small>Others</small> 
+                  </v-card>
+                </div>              
               </v-sheet>
             </v-card>
           </v-col>
@@ -250,6 +194,7 @@
   </v-container>
 </template>
 <script>
+import Nav from '../components/NavDrawer.vue'
   import {
   Chart as ChartJS,
   Title,
@@ -266,7 +211,8 @@ ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
 export default {
   name: 'App',
   components: {
-    Bar
+    Bar,
+    Nav
   },
   data() {
     return {
@@ -287,7 +233,7 @@ export default {
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(to left, #ffffff 40%, #657ABC 40%) !important; 
+  background: linear-gradient(to left, #ffffff 40%, #ffffff 40%) !important; 
   display: flex;
   flex-wrap: wrap;
   align-items: center;
