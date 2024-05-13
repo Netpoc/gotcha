@@ -1,40 +1,38 @@
 <template>
-  <v-container fluid class="main">    
+  <v-container fluid>    
       <Nav />
       <v-main>
-      <v-row justify="space-evenly" align="center">
-          <v-col cols="6">
-            <v-card flat color="transparent" class="rounded-xl ma-5">
-              <h1 class="mb-5">Admin Dashboard</h1>
-              <v-sheet class="mx-auto rounded-xl" color="#2A3280" elevation="8">
+        <h1 class="mx-5">Admin Dashboard</h1>
+      <v-row justify="space-evenly">        
+          <v-col md="6">
+            <v-card flat color="transparent" class="rounded-xl ma-5">   
                 <v-card
                   flat
-                  color="transparent"
-                  class="pa-4 d-flex justify-space-between"
+                  color="#FAFAFA"
+                  class="pa-4 d-flex align-center justify-space-between rounded-xl"
                 >
-                  <span>Activities Due</span>
+                  <small>Activities Due</small>
                   <v-spacer></v-spacer>
-                  <a><v-icon>mdi-dots-horizontal</v-icon></a>
+                  <v-btn variant="text" icon><v-icon size="x-small">mdi-dots-horizontal</v-icon></v-btn>
                 </v-card>
 
                 <div class="d-flex justify-space-evenly pa-5">
-                  <v-card to="#" height="90" width="90" color="#4653C3" class="rounded-xl d-flex align-center justify-center">
+                  <v-card to="#" height="90" width="90" color="#2A3280" class="rounded-xl d-flex align-center justify-center">
                     <small>Rent</small> 
                   </v-card>
-                  <v-card to="#" height="90" width="90" color="#4653C3" class="rounded-xl d-flex align-center justify-center">
+                  <v-card to="#" height="90" width="90" color="#2A3280" class="rounded-xl d-flex align-center justify-center">
                     <small>Utility</small> 
                   </v-card>
-                  <v-card to="#" height="90" width="90" color="#4653C3" class="rounded-xl d-flex align-center justify-center">
+                  <v-card to="#" height="90" width="90" color="#2A3280" class="rounded-xl d-flex align-center justify-center">
                     <small>Permits</small> 
                   </v-card>
-                  <v-card to="#" height="90" width="90" color="#4653C3" class="rounded-xl d-flex align-center justify-center">
+                  <v-card to="#" height="90" width="90" color="#2A3280" class="rounded-xl d-flex align-center justify-center">
                     <small>Others</small> 
                   </v-card>
-                </div>              
-              </v-sheet>
+                </div>         
             </v-card>
           </v-col>
-          <v-col cols="6">
+          <v-col md="6">
             <v-card class="ma-5 rounded-xl" color="grey-light" flat>              
               <div class="pa-5 d-flex justify-space-between align-center">
               <div class="d-flex align-center">

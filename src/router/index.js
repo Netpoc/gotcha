@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import ManageView from '@/views/ManageView.vue'
 import AdminDash from '@/views/Admin_dash.vue'
-import OwnerDash from '@/views/owner/Owner_dash.vue'
+import OwnerDash from '@/views/owner/Owner_Dash.vue'
 import AccountView from '@/views/owner/Account_View.vue'
 
 // Tenant Routes

@@ -1,5 +1,5 @@
 <template>
-    <v-container class="main" fluid>
+    <v-container fluid>
         <Nav />
         <v-main> 
             <h1 class="mx-5">Profile</h1>           

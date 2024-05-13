@@ -1,5 +1,5 @@
 <template>
-  <v-container class="main" fluid>
+  <v-container fluid>
     <Nav />
     <v-main class="ma-5">
       <h1 class="mx-5">Occupant Dashboard</h1>
@@ -14,7 +14,7 @@
               <div class="ma-5 d-flex justify-space-evenly">
                 <!--Rents Option Modal/Dialog-->
                 <v-dialog
-                v-model="dialog"
+                v-model="rent"
                 max-width="500"
                 >
                 <template v-slot:activator="{props: activatorProps}">
@@ -101,13 +101,23 @@
                 </v-dialog>
                 <!--Rents Ends-->
                 <!--Utility -->
-                <v-card class="rounded-xl" color="transparent" to="/tenant_payment" flat>
-                  <v-sheet class="d-flex ma-3 rounded-xl flex-column align-center justify-center" height="100" width="100"
-                  color="#EF3746">
-                  <v-icon size="45">mdi-invoice-text-multiple-outline</v-icon>
-                  <small>Utility</small>
-                </v-sheet>
+                <v-dialog
+                v-model="utility"
+                max-width="500">
+                <template v-slot:activator="{props: activeUtility}">
+                  <v-card v-bind="activeUtility" flat color="transparent">
+                    <v-sheet class="d-flex ma-3 rounded-xl flex-column align-center justify-center" height="100" width="100"
+                    color="#EF3746">
+                      <v-icon>mdi-invoice-text-multiple-outline</v-icon>
+                      <small>Utility</small>
+                    </v-sheet>
+                  </v-card>
+                </template>
+                <v-card>
+                  <h1>Utility Payments</h1>
+                  
                 </v-card>
+                </v-dialog>                
                 <!--Utility Ends-->
 
                 <!--Inbox Option-->
@@ -219,7 +229,7 @@
       </v-row>
       <v-row align="top" justify="space-evenly">
         <v-col md="6">
-          <v-card flat color="transparent" class="pa-4 d-flex justify-space-between">
+          <v-card flat color="#2A3280" class="pa-4 d-flex justify-space-between rounded-xl">
             <h3>Recent Activities</h3>
             <v-spacer />
             <v-btn size="small" variant="text">See More<v-icon>mdi-chevron-right</v-icon></v-btn>
@@ -344,7 +354,8 @@ export default {
   },
   data() {
     return {
-      dialog: false,      
+      rent: false,      
+      utility: false
     }
   }
 }

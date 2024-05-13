@@ -1,5 +1,5 @@
 <template>
-    <v-container class="main" fluid>
+    <v-container fluid>
         <Nav />
         <v-main class="ma-5">
           <h1>Payments</h1>
