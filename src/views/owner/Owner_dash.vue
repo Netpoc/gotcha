@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="main">
+  <v-container fluid>
     <Nav />
     <v-main>
       <v-row align="start">
