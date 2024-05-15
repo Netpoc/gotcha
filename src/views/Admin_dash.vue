@@ -87,7 +87,7 @@
                       </template>
                     </v-card>
                   </v-dialog>
-                  <v-dialog v-model="utility" max-width="500">
+                  <v-dialog v-model="alerts" max-width="500">
                     <template v-slot:activator="{ props: activatorProps }">
                       <v-card class="d-flex flex-column justify-center align-center rounded-xl" v-bind="activatorProps" color="#2A3280" flat height="90" width="90">
                           <small>Alerts</small>                        
@@ -98,7 +98,7 @@
                       
                     </v-card>
                   </v-dialog>
-                  <v-dialog v-model="utility" max-width="500">
+                  <v-dialog v-model="reports" max-width="500">
                     <template v-slot:activator="{ props: activatorProps }">
                       <v-badge size="x-large" color="error" content="23">
                       <v-card class="d-flex flex-column justify-center align-center rounded-xl" v-bind="activatorProps" color="#2A3280" flat height="90" width="90">
@@ -300,8 +300,9 @@ export default {
   data() {
     return {
       rent: false,
-      utility: false,
+      alerts: false,
       permits: false,
+      reports: false,
       data: {
       
         labels: ['January', 'February', 'March'],
