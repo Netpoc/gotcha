@@ -10,30 +10,23 @@
            </div>
             <v-row align="top" justify="space-evenly">
                 <v-col md="5">                  
-                    <v-card class="mx-5" flat>
-                      <v-sheet class="pa-5 rounded-xl" color="#2A3280" elevation="4">
-                        <div class="ma-5 d-flex justify-space-evenly">
-                          <v-card flat to="#" color="transparent" class="rounded-xl">
-                            <v-sheet class="d-flex ma-3 rounded-xl flex-column align-center justify-center" height="100" width="100" color="#EF3746">
+                    <v-card class="mx-5" flat>                      
+                        <div class="ma-5 d-flex justify-space-evenly">                          
+                            <v-card class="d-flex ma-3 rounded-xl flex-column align-center justify-center" height="100" width="100" color="#2A3280">
                               <v-icon size="45">mdi-forum</v-icon>
                               <small>Chat</small>
-                            </v-sheet>
-                          </v-card>
-                          <v-card flat to="#" color="transparent" class="rounded-xl">
-                            <v-sheet class="d-flex ma-3 rounded-xl flex-column align-center justify-center" height="100" width="100" color="#EF3746">
+                            </v-card>                          
+                          
+                            <v-card class="d-flex ma-3 rounded-xl flex-column align-center justify-center" height="100" width="100" color="#2A3280">
                               <v-icon size="45">mdi-square-edit-outline</v-icon>
                               <small>Post</small>
-                            </v-sheet>
-                          </v-card>  
-                          <v-card flat to="#" color="transparent" class="rounded-xl">
-                            <v-sheet class="d-flex ma-3 rounded-xl flex-column align-center justify-center" height="100" width="100" color="#EF3746">
+                            </v-card>                           
+                          
+                            <v-card class="d-flex ma-3 rounded-xl flex-column align-center justify-center" height="100" width="100" color="#2A3280">
                               <v-icon size="45">mdi-newspaper-variant-multiple-outline</v-icon>
                               <small>News</small>
-                            </v-sheet>
-                          </v-card>                  
-                          
-                        </div>
-                      </v-sheet>
+                            </v-card>                              
+                        </div>                      
                       <!--Online Chat-->
                       <div class="mt-5">
                         <h3>Online</h3>

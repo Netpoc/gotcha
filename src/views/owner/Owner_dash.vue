@@ -2,10 +2,11 @@
   <v-container fluid>
     <Nav />
     <v-main>
+      <h1 class="ma-5">Owner Dashboard</h1>
       <v-row align="start">
         <v-col cols="6">
-          <h1 class="ma-5">Owner Dashboard</h1>
-          <v-card class="pa-5 rounded-xl" color="#E5ACB6">
+          
+          <v-card class="mx-5 pa-5 rounded-xl">
             <v-sheet color="transparent">
               <div class="d-flex justify-space-between align-center">
                 <h4>Upcoming Dues</h4>
@@ -14,16 +15,16 @@
               </div>
 
               <div class="ma-3 d-flex justify-space-evenly">
-                <v-sheet height="100" width="100" class="d-flex justify-center align-center rounded-xl" color="#EF3746">
+                <v-sheet height="80" width="80" class="d-flex justify-center align-center rounded-xl" color="#2A3280">
                   <p>Levies</p>
                 </v-sheet>
-                <v-sheet height="100" width="100" class="d-flex justify-center align-center rounded-xl" color="#EF3746">
+                <v-sheet height="80" width="80" class="d-flex justify-center align-center rounded-xl" color="#2A3280">
                   <p>Utility</p>
                 </v-sheet>
-                <v-sheet height="100" width="100" class="d-flex justify-center align-center rounded-xl" color="#EF3746">
+                <v-sheet height="80" width="80" class="d-flex justify-center align-center rounded-xl" color="#2A3280">
                   <p>Tax</p>
                 </v-sheet>
-                <v-sheet height="100" width="100" class="d-flex justify-center align-center rounded-xl" color="#EF3746">
+                <v-sheet height="80" width="80" class="d-flex justify-center align-center rounded-xl" color="#2A3280">
                   <p>Others</p>
                 </v-sheet>
               </div>
@@ -34,7 +35,11 @@
         <v-col cols="6">
           <v-sheet class="ma-5">
             <div class="d-flex justify-space-between align-center">
-              <h3>Community Posts</h3>
+              <div class="d-flex align-center">
+                <v-sheet class="rounded-lg d-flex align-center justify-center" color="#EF3746" height="40" width="40"><v-icon color="">mdi-town-hall</v-icon></v-sheet>
+                <h3 class="mx-2">Community Posts</h3>
+              </div>
+              
               <v-btn icon variant="text"><v-icon>mdi-arrow-right</v-icon></v-btn>
             </div>
             <div class="ma-5 d-flex justify-space-evenly">

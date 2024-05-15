@@ -2,36 +2,36 @@
     <v-container fluid>
         <Nav />
         <v-main>
+          <h1 class="ma-5">Accounts</h1>
             <v-row align="start" justify="space-around">
-                <v-col cols="5">
-                    <h1 class="ma-5">Accounts</h1>
-                    <v-card color="#C1C6EB" class="pa-5 d-flex justify-space-evenly rounded-xl">
+                <v-col cols="5">                    
+                    <v-card flat class="pa-5 d-flex justify-space-evenly rounded-xl">
                         <v-card class="rounded-xl" to="#">
-                            <v-sheet class="rounded-xl d-flex flex-column align-center justify-center" height="100"
-                            width="100" color="#2A3280">
-                            <v-icon color="#24BAAB" size="40">mdi-cash-fast</v-icon>
+                            <v-sheet class="rounded-xl d-flex flex-column align-center justify-center" height="80"
+                            width="80" color="#2A3280">
+                            <v-icon size="30">mdi-cash-fast</v-icon>
                             <p>Pay</p>
                         </v-sheet>
                         </v-card>
                         <v-card class="rounded-xl" flat to="#">
-                            <v-sheet class="rounded-xl d-flex flex-column align-center justify-center" height="100"
-                            width="100" color="#2A3280">
-                            <v-icon color="#24BAAB" size="40">mdi-wallet-outline</v-icon>
-                            <p>Wallet</p>
+                            <v-sheet class="rounded-xl d-flex flex-column align-center justify-center" height="80"
+                            width="80" color="#2A3280">
+                            <v-icon size="30">mdi-wallet-outline</v-icon>
+                            <small>Wallet</small>
                         </v-sheet>
                         </v-card>
                         <v-card class="rounded-xl" flat to="#">
-                            <v-sheet class="rounded-xl d-flex flex-column align-center justify-center" height="100"
-                            width="100" color="#2A3280">
-                            <v-icon color="#24BAAB" size="40">mdi-file-sign</v-icon>
-                            <p>Report</p>
+                            <v-sheet class="rounded-xl d-flex flex-column align-center justify-center" height="80"
+                            width="80" color="#2A3280">
+                            <v-icon size="30">mdi-file-sign</v-icon>
+                            <small>Report</small>
                         </v-sheet>
                         </v-card>
                         <v-card class="rounded-xl" flat to="#">
-                            <v-sheet class="rounded-xl d-flex flex-column align-center justify-center" height="100"
-                            width="100" color="#2A3280">
-                            <v-icon color="#24BAAB" size="40">mdi-tune-vertical</v-icon>
-                            <p>Misc</p>
+                            <v-sheet class="rounded-xl d-flex flex-column align-center justify-center" height="80"
+                            width="80" color="#2A3280">
+                            <v-icon size="30">mdi-tune-vertical</v-icon>
+                            <small>Misc</small>
                         </v-sheet>
                         </v-card>
                     </v-card>

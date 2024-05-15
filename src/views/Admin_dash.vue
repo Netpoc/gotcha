@@ -17,9 +17,73 @@
                 </v-card>
 
                 <div class="d-flex justify-space-evenly pa-5">
-                  <v-card to="#" height="90" width="90" color="#2A3280" class="rounded-xl d-flex align-center justify-center">
-                    <small>Rent</small> 
-                  </v-card>
+                  <v-dialog v-model="rent" max-width="500">
+                    <template v-slot:activator="{ props: activatorProps }">
+                      <v-card class="d-flex flex-column justify-center align-center rounded-xl" v-bind="activatorProps" color="#2A3280" flat height="90" width="90">
+                          <small>Rents</small>                        
+                      </v-card>
+                    </template>
+                    <v-card class="pa-5">
+                      <h2>Payment Method</h2>
+                      <!--Payment Option Starts-->
+                      <div class="mt-3 d-flex justify-space-evenly align-center">
+                        <v-sheet class="d-flex rounded-xl flex-column justify-center align-center" color="#2A3280"
+                          height="100" width="100">
+                          <v-icon size="50" color="#ef3746">mdi-wallet</v-icon>
+                          <small>Card</small>
+                        </v-sheet>
+                        <v-sheet class="d-flex rounded-xl flex-column justify-center align-center" color="#2A3280"
+                          height="100" width="100">
+                          <v-icon size="50">mdi-bank</v-icon>
+                          <small>Bank</small>
+                        </v-sheet>
+                        <v-sheet class="d-flex rounded-xl flex-column justify-center align-center" color="#2A3280"
+                          height="100" width="100">
+                          <v-icon size="50">mdi-wallet-bifold</v-icon>
+                          <small>e-Wallet</small>
+                        </v-sheet>
+                      </div>
+                      <!--Payment Option Ends-->
+                      <v-card class="mt-5" flat>
+                        <v-row>
+                          <v-col>
+                            <v-text-field label="Card Number" required append-icon="mdi-card">
+                            </v-text-field>
+                          </v-col>
+                        </v-row>
+                        <v-row>
+                          <v-col cols="6">
+                            <v-text-field label="MM/YY" append-icon="mdi-calendar"></v-text-field>
+                          </v-col>
+                          <v-col cols="6">
+                            <v-text-field label="MM/YY" append-icon="mdi-calendar"></v-text-field>
+                          </v-col>
+  
+                        </v-row>
+                        <v-row>
+                          <v-col>
+                            <v-sheet min-height="150" color="grey"
+                              class="d-flex pa-5 rounded-xl justify-center align-center">
+                              <v-file-input :rules="rules" accept="image/png, image/jpeg, image/bmp"
+                                label="Upload proof of payment" placeholder="Upload proof of payment"
+                                prepend-icon="mdi-camera"></v-file-input>
+                            </v-sheet>
+                          </v-col>
+                        </v-row>
+                      </v-card>
+                      <template v-slot:actions>
+                        <v-spacer></v-spacer>
+  
+                        <v-btn class="rounded-xl" variant="outlined" @click="dialog = false">
+                          Cancel
+                        </v-btn>
+  
+                        <v-btn class="rounded-xl" @click="dialog = false">
+                          Save
+                        </v-btn>
+                      </template>
+                    </v-card>
+                  </v-dialog>
                   <v-card to="#" height="90" width="90" color="#2A3280" class="rounded-xl d-flex align-center justify-center">
                     <small>Utility</small> 
                   </v-card>
@@ -214,7 +278,9 @@ export default {
   },
   data() {
     return {
+      rent: false,
       data: {
+      
         labels: ['January', 'February', 'March'],
         datasets: [{ data: [40, 20, 12] }]
       },
