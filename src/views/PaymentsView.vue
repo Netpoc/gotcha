@@ -113,35 +113,43 @@
               </v-carousel-item>
             </v-carousel>
           </v-card>
-          <div class="ma-5 d-flex justify-space-between align-center">
-            <h4>Schedule Payment</h4>
-            <v-dialog v-model="schedule" max-width="800">
-              <template v-slot:activator="{ props: activatorProps }">
-                <v-btn v-bind="activatorProps" variant="text"><v-icon>mdi-plus</v-icon></v-btn>
-              </template>
-              <v-card class="pa-5">                
-                <v-data-table v-model:expanded="expanded" :headers="dessertHeaders" :items="payments" item-value="name"
-                  show-expand>
-                  <template v-slot:top>
-                    <v-toolbar flat>
-                      <v-toolbar-title>Payment Schduling Modal</v-toolbar-title>
-                    </v-toolbar>
-                  </template>
-                  <template v-slot:expanded-row="{ columns, item }">
-                    <tr>
-                      <td :colspan="columns.length">
-                        More info about {{ item.name }}
-                        <v-btn size="small" color="#2A3280" class="rounded-lg ma-2"><v-icon>mdi-pencil-outline</v-icon></v-btn>
-                        <v-btn size="small" color="#2A3280" class="rounded-lg ma-2"><v-icon color="#EF3746">mdi-delete-outline</v-icon></v-btn>
-                      </td>
-                    </tr>
-                  </template>
-                </v-data-table>
-              </v-card>
-            </v-dialog>
-          </div>
+
+          <v-card class="mx-5" flat>
+            <div class="ma-5 d-flex justify-space-between align-center">
+              <h4>Schedule Payment</h4>
+              <v-dialog v-model="schedule" max-width="800">
+                <template v-slot:activator="{ props: activatorProps }">
+                  <v-btn v-bind="activatorProps" variant="text"><v-icon>mdi-plus</v-icon></v-btn>
+                </template>
+                <v-card class="pa-5">                
+                  <v-data-table v-model:expanded="expanded" :headers="dessertHeaders" :items="payments" item-value="name"
+                    show-expand>
+                    <template v-slot:top>
+                      <v-toolbar flat>
+                        <v-toolbar-title>Payment Schduling Modal</v-toolbar-title>
+                      </v-toolbar>
+                    </template>
+                    <template v-slot:expanded-row="{ columns, item }">
+                      <tr>
+                        <td :colspan="columns.length">
+                          More info about {{ item.name }}
+                          <v-btn size="small" color="#2A3280" class="rounded-lg ma-2"><v-icon>mdi-pencil-outline</v-icon></v-btn>
+                          <v-btn size="small" color="#2A3280" class="rounded-lg ma-2"><v-icon color="#EF3746">mdi-delete-outline</v-icon></v-btn>
+                        </td>
+                      </tr>
+                    </template>
+                  </v-data-table>
+                </v-card>
+              </v-dialog>            
+            </div>
+            <v-list v-for="sch in payments" v-bind:key="name">
+              <v-list-item><small>Payment: {{sch.name}}</small> | <small>Amount: ${{sch.amount}}</small> | <small>Due: {{sch.recurrence}}</small></v-list-item>
+            </v-list>
+          </v-card>  
+          
         </v-col>
       </v-row>
+
       <!--Transaction History-->
       <v-row>
         <v-col>
