@@ -19,9 +19,12 @@
                 <div class="d-flex justify-space-evenly pa-5">
                   <v-dialog v-model="rent" max-width="500">
                     <template v-slot:activator="{ props: activatorProps }">
+                      
+                      <v-badge color="success" content="+90">
                       <v-card class="d-flex flex-column justify-center align-center rounded-xl" v-bind="activatorProps" color="#2A3280" flat height="90" width="90">
-                          <small>Rents</small>                        
+                        <small>Rents</small>                                               
                       </v-card>
+                      </v-badge>
                     </template>
                     <v-card class="pa-5">
                       <h2>Payment Method</h2>
@@ -84,12 +87,30 @@
                       </template>
                     </v-card>
                   </v-dialog>
-                  <v-card to="#" height="90" width="90" color="#2A3280" class="rounded-xl d-flex align-center justify-center">
-                    <small>Utility</small> 
-                  </v-card>
-                  <v-card to="#" height="90" width="90" color="#2A3280" class="rounded-xl d-flex align-center justify-center">
-                    <small>Permits</small> 
-                  </v-card>
+                  <v-dialog v-model="utility" max-width="500">
+                    <template v-slot:activator="{ props: activatorProps }">
+                      <v-card class="d-flex flex-column justify-center align-center rounded-xl" v-bind="activatorProps" color="#2A3280" flat height="90" width="90">
+                          <small>Utilities</small>                        
+                      </v-card>
+                    </template>
+                    <v-card class="pa-5">
+                      <h2>Utitlities Payments Reports</h2>
+                      
+                    </v-card>
+                  </v-dialog>
+                  <v-dialog v-model="utility" max-width="500">
+                    <template v-slot:activator="{ props: activatorProps }">
+                      <v-badge size="x-large" color="error" content="23">
+                      <v-card class="d-flex flex-column justify-center align-center rounded-xl" v-bind="activatorProps" color="#2A3280" flat height="90" width="90">
+                          <small>Permits</small>                        
+                      </v-card>
+                      </v-badge>
+                    </template>
+                    <v-card class="pa-5">
+                      <h2>Permits Payments Reports</h2>
+                      
+                    </v-card>
+                  </v-dialog>
                   <v-card to="#" height="90" width="90" color="#2A3280" class="rounded-xl d-flex align-center justify-center">
                     <small>Others</small> 
                   </v-card>
@@ -279,6 +300,8 @@ export default {
   data() {
     return {
       rent: false,
+      utility: false,
+      permits: false,
       data: {
       
         labels: ['January', 'February', 'March'],
@@ -310,4 +333,15 @@ export default {
   margin: 0 auto;
   border: 1px solid black;
 }
+
+
+.notification_alert {
+  position: absolute;
+  top: -15;
+  right: 16;
+  background-color: red;
+  color: #ffffff;
+  
+}
+
 </style>
