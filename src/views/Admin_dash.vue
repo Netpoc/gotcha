@@ -316,8 +316,4 @@ export default {
 }
 </script>
 <style scoped>
-*{
-  margin: 0px;
-  padding: 0px;
-}
 </style>
