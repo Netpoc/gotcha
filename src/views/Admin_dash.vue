@@ -22,7 +22,7 @@
                       
                       <v-badge color="success" content="+90">
                       <v-card class="d-flex flex-column justify-center align-center rounded-xl" v-bind="activatorProps" color="#2A3280" flat height="90" width="90">
-                        <small>Rents</small>                                               
+                        <small>Transactions</small>                                               
                       </v-card>
                       </v-badge>
                     </template>
@@ -90,7 +90,7 @@
                   <v-dialog v-model="utility" max-width="500">
                     <template v-slot:activator="{ props: activatorProps }">
                       <v-card class="d-flex flex-column justify-center align-center rounded-xl" v-bind="activatorProps" color="#2A3280" flat height="90" width="90">
-                          <small>Utilities</small>                        
+                          <small>Alerts</small>                        
                       </v-card>
                     </template>
                     <v-card class="pa-5">
@@ -102,7 +102,7 @@
                     <template v-slot:activator="{ props: activatorProps }">
                       <v-badge size="x-large" color="error" content="23">
                       <v-card class="d-flex flex-column justify-center align-center rounded-xl" v-bind="activatorProps" color="#2A3280" flat height="90" width="90">
-                          <small>Permits</small>                        
+                          <small>Reports</small>                        
                       </v-card>
                       </v-badge>
                     </template>
@@ -112,7 +112,7 @@
                     </v-card>
                   </v-dialog>
                   <v-card to="#" height="90" width="90" color="#2A3280" class="rounded-xl d-flex align-center justify-center">
-                    <small>Others</small> 
+                    <small>Settings</small> 
                   </v-card>
                 </div>         
             </v-card>
@@ -315,33 +315,8 @@ export default {
 }
 </script>
 <style scoped>
-.main {  
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(to left, #ffffff 40%, #ffffff 40%) !important; 
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+*{
+  margin: 0px;
+  padding: 0px;
 }
-.center {
-  display: inline-block;
-  height: 250px;
-  width: 15%;
-  margin: 0 auto;
-  border: 1px solid black;
-}
-
-
-.notification_alert {
-  position: absolute;
-  top: -15;
-  right: 16;
-  background-color: red;
-  color: #ffffff;
-  
-}
-
 </style>

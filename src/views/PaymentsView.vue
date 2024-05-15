@@ -8,46 +8,59 @@
                   <v-card flat color="transparent" class="ma-5">
                     <h1 class="mb-5">Payments</h1>
                     <div class="d-flex justify-space-evenly">
-                        <v-card
-                        class="rounded-xl d-flex align-center justify-center"
-                        :height="100" 
-                        :width="100" 
-                        color="#2A3280">
-                          <div class="d-flex flex-column justify-center align-center">
-                            <v-icon color="#ffffff" size="45">mdi-cash-sync</v-icon>
-                            <p><small>Expiring Bills</small></p>
-                          </div>
+                      <!--Bills Popup Dialog Box Start-->
+                      <v-dialog v-model="bills" max-width="500">
+                        <template v-slot:activator="{ props: activatorProps }">                          
+                          <v-badge color="error" content="+90">
+                          <v-card class="d-flex flex-column justify-center align-center rounded-xl" v-bind="activatorProps" color="#2A3280" flat height="90" width="90">
+                            <v-icon size="40">mdi-timer-sand-complete</v-icon>
+                            <small class="ma-2">Late Bills</small>                                               
+                          </v-card>
+                          </v-badge>
+                        </template>
+                        <v-card class="pa-5">
+                          <h2>Outstanding Bills</h2>
+                          <span>Tabulated records of outstanding bills modal.</span>                          
                         </v-card>
-                        <v-card
-                        class="rounded-xl d-flex align-center justify-center"
-                        :height="100" 
-                        :width="100" 
-                        color="#2A3280">
-                          <div class="d-flex flex-column justify-center align-center">
-                            <v-icon color="#FFFFFF" size="45">mdi-wallet-outline</v-icon>
-                            <p><small>Reports</small></p>
-                        </div>
+                      </v-dialog>
+                      <!--Bills Popup Dialog Box End-->
+                      <!--Reports Popup Dialog Box End-->
+                      <v-dialog v-model="bills" max-width="500">
+                        <template v-slot:activator="{ props: activatorProps }">                     
+                          <v-card class="d-flex flex-column justify-center align-center rounded-xl" v-bind="activatorProps" color="#2A3280" flat height="90" width="90">
+                            <v-icon size="40">mdi-chart-box-outline</v-icon>
+                            <small class="ma-2">Reports</small>                                               
+                          </v-card>  
+                        </template>
+                        <v-card class="pa-5">
+                          <h2>Financial Reports</h2>
+                          <span>Tabulated records of downloadable reports.</span>                          
                         </v-card>
-                        <v-sheet
-                        class="rounded-xl d-flex align-center justify-center"
-                        :height="100" 
-                        :width="100" 
-                        color="#2A3280">
-                          <div class="d-flex flex-column justify-center align-center">
-                            <v-icon color="#FFFFF" size="45">mdi-file-chart-outline</v-icon>
-                            <p><small>Pre-Authorize</small></p>
-                        </div>
-                        </v-sheet>
-                        <v-sheet
-                        class="rounded-xl d-flex align-center justify-center"
-                        :height="100" 
-                        :width="100" 
-                        color="#2A3280">
-                          <div class="d-flex flex-column justify-center align-center">
-                            <v-icon color="#FFFFFF" size="45">mdi-file-chart-outline</v-icon>
-                            <p><small>Pre-Authorize</small></p>
-                        </div>
-                        </v-sheet>
+                      </v-dialog>
+                      <v-dialog v-model="bills" max-width="500">
+                        <template v-slot:activator="{ props: activatorProps }">                          
+                          <v-card class="d-flex flex-column justify-center align-center rounded-xl" v-bind="activatorProps" color="#2A3280" flat height="90" width="90">
+                            <v-icon size="40">mdi-clipboard-text-clock</v-icon>
+                            <small class="ma-2">History</small>                                               
+                          </v-card>
+                        </template>
+                        <v-card class="pa-5">
+                          <h2>Transaction History</h2>
+                          <span>Tabulated records of transactions history modal.</span>                          
+                        </v-card>
+                      </v-dialog>
+                        <v-dialog v-model="pay" max-width="500">
+                          <template v-slot:activator="{ props: activatorProps }">                          
+                            <v-card class="d-flex flex-column justify-center align-center rounded-xl" v-bind="activatorProps" color="#2A3280" flat height="90" width="90">
+                              <v-icon size="40">mdi-cash-fast</v-icon>
+                              <small class="ma-2">Methods</small>                                               
+                            </v-card>
+                          </template>
+                          <v-card class="pa-5">
+                            <h2>Payment Methods Settings</h2>
+                            <span>Payment methods options and activations modal</span>                          
+                          </v-card>
+                        </v-dialog>
                     </div>
                   </v-card>
                   <!--Payment Notification Card -->
@@ -168,6 +181,8 @@ import Nav from "../components/NavDrawer"
     },
     data () {
       return {
+        pay: false,
+        bills: false,
         colors: [
           'green',
           'secondary',
@@ -239,15 +254,5 @@ import Nav from "../components/NavDrawer"
   }
 </script>
 <style scoped>
-.main {  
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(to left, #ffffff 40%, #657ABC 40%) !important; 
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
+
 </style>
