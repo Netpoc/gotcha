@@ -5,25 +5,31 @@
             <h1 class="ma-5">Tenants Management</h1>
             <v-row justify="space-evenly">
                 <v-col md="5">
-                    <v-card color="#2A3280" class="pa-5 d-flex align-center justify-space-evenly rounded-xl">
-                        <v-sheet class="rounded-xl d-flex flex-column align-center justify-center" color="#EF3746" height="100" width="100">
+                    <v-card flat class="pa-5 d-flex align-center justify-space-between rounded-xl">
+                        <v-card to="#" class="rounded-xl d-flex flex-column align-center justify-center" color="#2A3280" height="100" width="100">
                             <v-icon size="45">
                                 mdi-message-text
                             </v-icon>
                             <small>New Message</small>
-                        </v-sheet>
-                        <v-sheet class="rounded-xl d-flex flex-column align-center justify-center" color="#F0516E" height="100" width="100">
+                        </v-card>
+                        <v-card to="#" class="rounded-xl d-flex flex-column align-center justify-center" color="#2A3280" height="100" width="100">
                             <v-icon size="45">
                                 mdi-account-cog-outline
                             </v-icon>
                             <small>Manage</small>
-                        </v-sheet>
-                        <v-sheet class="rounded-xl d-flex flex-column align-center justify-center" color="#F0516E" height="100" width="100">
+                        </v-card>
+                        <v-card to="#" class="rounded-xl d-flex flex-column align-center justify-center" color="#2A3280" height="100" width="100">
                             <v-icon size="45">
-                                mdi-message-text
+                                mdi-account-key
                             </v-icon>
                             <small>Pre-Authorize</small>
-                        </v-sheet>
+                        </v-card>
+                        <v-card to="#" class="rounded-xl d-flex flex-column align-center justify-center" color="#2A3280" height="100" width="100">
+                            <v-icon size="45">
+                                mdi-cog
+                            </v-icon>
+                            <small>Settings</small>
+                        </v-card>
                     </v-card>
                     <div class="ma-3">
                         <v-table>
