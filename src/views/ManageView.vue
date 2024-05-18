@@ -7,22 +7,22 @@
                     <v-card flat color="transparent" class="ma-5">
                         <h2>Manage Users</h2>
                         <div class="d-flex justify-space-between ma-5">
-                            <v-sheet color="#2A3280" class="pa-4 rounded-xl d-flex flex-column justify-center align-center" height="100" width="100">
+                            <v-card to="#" color="#2A3280" class="pa-4 rounded-xl d-flex flex-column justify-center align-center" height="100" width="100">
                                 <v-icon size="40" class="ma-1">mdi-account-box-plus-outline</v-icon>
-                                <small>Add Landlord</small>
-                            </v-sheet>
-                            <v-sheet class="rounded-xl d-flex flex-column justify-center align-center" height="100" width="100" color="grey">
-                                <v-icon class="ma-1">mdi-google</v-icon>
-                                <small>Add User</small>
-                            </v-sheet>
-                            <v-sheet class="rounded-xl d-flex flex-column justify-center align-center" height="100" width="100" color="grey">
-                                <v-icon class="ma-1">mdi-google</v-icon>
-                                <small>Add User</small>
-                            </v-sheet>
-                            <v-sheet class="rounded-xl d-flex flex-column justify-center align-center" height="100" width="100" color="grey">
-                                <v-icon class="ma-1">mdi-google</v-icon>
-                                <small>Add User</small>
-                            </v-sheet>
+                                <small>Landlord</small>
+                            </v-card>
+                            <v-card to="#" color="#2A3280" class="rounded-xl d-flex flex-column justify-center align-center" height="100" width="100">
+                                <v-icon size="40" class="ma-1">mdi-account-cancel</v-icon>
+                                <small>Delete User</small>
+                            </v-card>
+                            <v-card to="#" color="#2A3280" class="rounded-xl d-flex flex-column justify-center align-center" height="100" width="100">
+                                <v-icon size="40" class="ma-1">mdi-account-lock</v-icon>
+                                <small>Blocked Users</small>
+                            </v-card>
+                            <v-card to="#" color="#2A3280" class="rounded-xl d-flex flex-column justify-center align-center" height="100" width="100">
+                                <v-icon size="40" class="ma-1">mdi-account-cog</v-icon>
+                                <small>Settings</small>
+                            </v-card>
                         </div>
                     </v-card>
                 </v-col>
