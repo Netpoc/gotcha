@@ -5,9 +5,9 @@
             <h1 class="mx-5">Profile</h1>           
             <v-row justify="space-between">                
                 <v-col md="6">
-                    <v-card color="#2A3280" class="mx-5 pa-5 d-flex justify-space-evenly rounded-xl" flat>
+                    <v-card class="mx-5 pa-5 d-flex justify-space-evenly rounded-xl" flat>
                         <v-card class="rounded-xl" to="#" color="transparent">
-                            <v-sheet color="#EF3746" height="100" width="100" class="rounded-xl d-flex flex-column align-center justify-center">
+                            <v-sheet color="#2A3280" height="100" width="100" class="rounded-xl d-flex flex-column align-center justify-center">
                                 <v-icon size="45">
                                     mdi-account-edit
                                 </v-icon>
@@ -15,7 +15,7 @@
                             </v-sheet>
                         </v-card>
                         <v-card class="rounded-xl" to="#" color="transparent">
-                            <v-sheet color="#EF3746" height="100" width="100" class="rounded-xl d-flex flex-column align-center justify-center">
+                            <v-sheet color="#2A3280" height="100" width="100" class="rounded-xl d-flex flex-column align-center justify-center">
                                 <v-icon size="45">
                                     mdi-shield-key
                                 </v-icon>
@@ -23,7 +23,7 @@
                             </v-sheet>
                         </v-card>
                         <v-card class="rounded-xl" to="#" color="transparent">
-                            <v-sheet color="#EF3746" height="100" width="100" class="rounded-xl d-flex flex-column align-center justify-center">
+                            <v-sheet color="#2A3280" height="100" width="100" class="rounded-xl d-flex flex-column align-center justify-center">
                                 <v-icon size="45">
                                     mdi-home-group
                                 </v-icon>
@@ -31,7 +31,7 @@
                             </v-sheet>
                         </v-card>
                         <v-card class="rounded-xl" to="#" color="transparent">
-                            <v-sheet color="#EF3746" height="100" width="100" class="rounded-xl d-flex flex-column align-center justify-center">
+                            <v-sheet color="#2A3280" height="100" width="100" class="rounded-xl d-flex flex-column align-center justify-center">
                                 <v-icon size="45">
                                     mdi-home-group
                                 </v-icon>
@@ -110,7 +110,13 @@
                 <v-col md="6">                    
                     <v-card class="pa-5 rounded-xl">
                         <div class="d-flex justify-space-between">
-                            <h3>My Cards</h3>
+                            <div class="d-flex align-center">
+                                <v-sheet color="#EF3746" class="rounded-lg mx-3 d-flex align-center justify-center" height="40" width="40">
+                                    <v-icon>mdi-credit-card</v-icon>                                    
+                                </v-sheet>
+                                <h3>My Cards</h3>
+                            </div>
+                            
                             <v-btn variant="text"><v-icon>mdi-arrow-right</v-icon></v-btn>
                         </div>                     
                     

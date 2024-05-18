@@ -9,7 +9,7 @@
           <v-card class="mx-5 pa-5 rounded-xl">
             <v-sheet color="transparent">
               <div class="d-flex justify-space-between align-center">
-                <v-sheet class="d-flex align-center justify-center rounded-lg" color="#EF3746" height="40" width="40"><v-icon>mdi-credit-card-clock</v-icon></v-sheet>
+                <v-sheet class="mx-2 d-flex align-center justify-center rounded-lg" color="#EF3746" height="40" width="40"><v-icon>mdi-credit-card-clock</v-icon></v-sheet>
                 <h4>Upcoming Dues</h4>
                 <v-spacer></v-spacer>
                 <v-btn variant="text" icon><v-icon>mdi-dots-horizontal</v-icon></v-btn>

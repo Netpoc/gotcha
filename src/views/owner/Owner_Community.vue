@@ -134,8 +134,16 @@
                 
                 <v-col md="5">
                     <v-card class="pa-5 rounded-xl">                        
-                                <div class="d-flex justify-space-between align-center">
-                                    <h3>Group Membership</h3>
+                                <div class="mb-4 d-flex justify-space-between align-center">
+                                    <div class="d-flex align-center">
+                                        <v-sheet class="rounded-lg mx-3 d-flex align-center justify-center" color="#EF3746" height="40" width="40">
+                                        <v-icon size="30">mdi-crowd</v-icon>                                        
+                                        </v-sheet>
+                                        <h3>Group Membership</h3>
+                                        
+                                    </div>
+                                    
+                                    
                                     <v-btn variant="text"><v-icon>mdi-arrow-right</v-icon></v-btn>
                                 </div>
                                 <v-sheet class="rounded-xl" color="#647ABB" height="150">
