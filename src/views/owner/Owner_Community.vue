@@ -5,7 +5,7 @@
             <h1 class="mx-5">Community</h1>
             <v-row align="top" justify="space-between">
                 <v-col md="6">
-                    <v-card color="#2A3280" class="rounded-xl mx-5">
+                    <v-card flat class="rounded-xl mx-5">
                         <div class="d-flex pa-5 justify-space-evenly">
                             <v-card class="rounded-xl" color="transparent" to="/owner_chat" flat>
                             <v-sheet color="#EF3746" class="rounded-xl d-flex justify-center" height="100" width="100">
