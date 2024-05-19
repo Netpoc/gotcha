@@ -16,18 +16,25 @@
               </div>
 
               <div class="ma-3 d-flex justify-space-evenly">
-                <v-sheet height="80" width="80" class="d-flex justify-center align-center rounded-xl" color="#2A3280">
+                <v-badge content="9">
+                  <v-card to="#" height="100" width="100" class="d-flex justify-center align-center rounded-xl" color="#2A3280">
                   <p>Levies</p>
-                </v-sheet>
-                <v-sheet height="80" width="80" class="d-flex justify-center align-center rounded-xl" color="#2A3280">
+                </v-card>
+                </v-badge>
+                <v-badge content="+2">
+                  <v-card to="#" height="100" width="100" class="d-flex justify-center align-center rounded-xl" color="#2A3280">
                   <p>Utility</p>
-                </v-sheet>
-                <v-sheet height="80" width="80" class="d-flex justify-center align-center rounded-xl" color="#2A3280">
+                </v-card>
+                </v-badge>
+                <v-badge content="+20">
+                  <v-card to="#" height="100" width="100" class="d-flex justify-center align-center rounded-xl" color="#2A3280">
                   <p>Tax</p>
-                </v-sheet>
-                <v-sheet height="80" width="80" class="d-flex justify-center align-center rounded-xl" color="#2A3280">
+                </v-card>
+                </v-badge>
+                
+                <v-card to="#" height="100" width="100" class="d-flex justify-center align-center rounded-xl" color="#2A3280">
                   <p>Others</p>
-                </v-sheet>
+                </v-card>
               </div>
 
             </v-sheet>
@@ -168,13 +175,18 @@
         </v-col>
         <v-col md="6">
           <div class="pa-4 d-flex justify-space-between">
-            <h3>News and Update</h3>
+            <div class="d-flex align-center">
+              <v-sheet color="#ef3746" height="40" width="40" class="mx-3 d-flex align-center justify-center rounded-lg">
+                <v-icon>mdi-update</v-icon>
+              </v-sheet>
+              <h3>News and Update</h3>
+            </div>
             <v-spacer />
             <v-btn variant="text"><v-icon>mdi-chevron-right</v-icon></v-btn>
           </div>
-          <div class="ma-5">
-            <Bar :data="data" :options="options" />
-          </div>
+          <v-card min-height="300">
+            
+          </v-card>
         </v-col>
       </v-row>
     </v-main>

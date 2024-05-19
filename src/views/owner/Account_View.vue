@@ -116,7 +116,12 @@
         <v-col>
           <v-card class="mx-5 pa-5" flat>
             <div class="d-flex align-center justify-space-between">
-              <h3>Transaction History</h3>
+              <div class="d-flex align-center">
+                <v-sheet height="40" width="40" color="#ef3746" class="mx-3 rounded-lg d-flex align-center justify-center">
+                  <v-icon>mdi-finance</v-icon>
+                </v-sheet>
+                <h3>Transaction History</h3>
+              </div>              
               <v-btn variant="text" size="x-small" class="rounded-xl"
                 >See more <v-icon>mdi-arrow-right</v-icon></v-btn
               >
