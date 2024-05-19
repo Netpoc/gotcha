@@ -100,9 +100,15 @@
       <v-row>
         <v-col md="6">
           <v-card flat color="transparent" class="pa-4 d-flex justify-space-between">
-            <h3>Recent Activities</h3>
+            <div class="d-flex align-center">
+              <v-sheet color="#ef3746" height="40" width="40" class="mx-3 rounded-lg d-flex align-center justify-center">
+                <v-icon>mdi-gauge</v-icon>
+              </v-sheet>
+              <h3>Recent Activities</h3>
+            </div>
+            
             <v-spacer />
-            <a>See More<v-icon>mdi-chevron-right</v-icon></a>
+            <v-btn class="rounded-lg" variant="text"><v-icon>mdi-chevron-right</v-icon></v-btn>
           </v-card>
           <v-card flat color="transparent">
             <v-tabs v-model="tab">
@@ -164,7 +170,7 @@
           <div class="pa-4 d-flex justify-space-between">
             <h3>News and Update</h3>
             <v-spacer />
-            <a href="#">See More<v-icon>mdi-chevron-right</v-icon></a>
+            <v-btn variant="text"><v-icon>mdi-chevron-right</v-icon></v-btn>
           </div>
           <div class="ma-5">
             <Bar :data="data" :options="options" />
