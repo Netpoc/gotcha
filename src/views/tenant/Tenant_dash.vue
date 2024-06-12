@@ -9,7 +9,7 @@
             <v-sheet class="pa-3 rounded-xl" elevation="8">
               <div class="d-flex justify-space-between align-center">
                 <v-sheet
-                  color="#2A3280"
+                  color="#ef3746"
                   height="40"
                   width="40"
                   class="mx-3 d-flex align-center justify-center rounded-lg"
@@ -27,20 +27,17 @@
                 <v-dialog v-model="rent" max-width="500">
                   <template v-slot:activator="{ props: activatorProps }">
                     <v-card
-                      class="rounded-xl"
+                      class="d-flex ma-3 rounded-xl flex-column align-center justify-center"
                       v-bind="activatorProps"
-                      color="transparent"
+                      color="#2A3280"
+                      height="100"
+                      width="100"
                       flat
                     >
-                      <v-sheet
-                        class="d-flex ma-3 rounded-xl flex-column align-center justify-center"
-                        height="100"
-                        width="100"
-                        color="#EF3746"
+                      <v-icon color="#ef3746" size="45"
+                        >mdi-cash-multiple</v-icon
                       >
-                        <v-icon size="45">mdi-cash-multiple</v-icon>
-                        <small>Rents</small>
-                      </v-sheet>
+                      <small>Rents</small>
                     </v-card>
                   </template>
                   <v-card class="pa-5">
@@ -140,16 +137,18 @@
                 <!--Utility -->
                 <v-dialog v-model="utility" max-width="500">
                   <template v-slot:activator="{ props: activeUtility }">
-                    <v-card v-bind="activeUtility" flat color="transparent">
-                      <v-sheet
-                        class="d-flex ma-3 rounded-xl flex-column align-center justify-center"
-                        height="100"
-                        width="100"
-                        color="#EF3746"
+                    <v-card
+                      class="d-flex ma-3 rounded-xl flex-column align-center justify-center"
+                      v-bind="activeUtility"
+                      flat
+                      height="100"
+                      width="100"
+                      color="#2A3280"
+                    >
+                      <v-icon color="#ef3746" size="45"
+                        >mdi-invoice-text-multiple-outline</v-icon
                       >
-                        <v-icon>mdi-invoice-text-multiple-outline</v-icon>
-                        <small>Utility</small>
-                      </v-sheet>
+                      <small>Utility</small>
                     </v-card>
                   </template>
                   <v-card>
@@ -163,11 +162,11 @@
                   class="d-flex ma-3 rounded-xl flex-column align-center justify-center"
                   height="100"
                   width="100"
-                  color="#EF3746"
+                  color="#2A3280"
                   to="#"
                   flat
                 >
-                  <v-icon size="45">mdi-inbox</v-icon>
+                  <v-icon color="#ef3746" size="45">mdi-inbox</v-icon>
                   <small>Indox</small>
                 </v-card>
 
@@ -175,10 +174,10 @@
                   class="d-flex ma-3 rounded-xl flex-column align-center justify-center"
                   height="100"
                   width="100"
-                  color="#EF3746"
+                  color="#2A3280"
                   to="#"
                 >
-                  <v-icon size="45"
+                  <v-icon color="#ef3746" size="45"
                     >mdi-newspaper-variant-multiple-outline</v-icon
                   >
                   <small>Others</small>
@@ -192,10 +191,11 @@
             <div class="d-flex justify-space-between ma-5">
               <div class="d-flex align-center">
                 <v-sheet
-                class="mr-2 rounded-lg d-flex align-center justify-center" 
-                height="40" 
-                width="40"
-                color="#EF3746">
+                  class="mr-2 rounded-lg d-flex align-center justify-center"
+                  height="40"
+                  width="40"
+                  color="#EF3746"
+                >
                   <v-icon>mdi-human-greeting-proximity</v-icon>
                 </v-sheet>
                 <h3>Community Posts</h3>
