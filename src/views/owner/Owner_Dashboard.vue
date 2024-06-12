@@ -16,17 +16,17 @@
               </div>
 
               <div class="ma-3 d-flex justify-space-evenly">
-                <v-badge content="9">
+                <v-badge color="success" content="9">
                   <v-card to="#" height="100" width="100" class="d-flex justify-center align-center rounded-xl" color="#2A3280">
                   <p>Levies</p>
                 </v-card>
                 </v-badge>
-                <v-badge content="+2">
+                <v-badge color="error" content="+2">
                   <v-card to="#" height="100" width="100" class="d-flex justify-center align-center rounded-xl" color="#2A3280">
                   <p>Utility</p>
                 </v-card>
                 </v-badge>
-                <v-badge content="+20">
+                <v-badge color="warning" content="+20">
                   <v-card to="#" height="100" width="100" class="d-flex justify-center align-center rounded-xl" color="#2A3280">
                   <p>Tax</p>
                 </v-card>

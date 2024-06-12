@@ -189,11 +189,11 @@
               <div class="d-flex align-center">
                 <v-sheet
                   color="#ef3746"
-                  height="45"
-                  width="45"
+                  height="40"
+                  width="40"
                   class="ma-2 rounded-lg d-flex justify-center align-center"
                 >
-                  <v-icon size="30"> mdi-home-city </v-icon>
+                  <v-icon>mdi-home-city</v-icon>
                 </v-sheet>
                 <div class="d-flex flex-column">
                   <span>36</span>
@@ -205,6 +205,7 @@
               >
             </div>
             <v-row>
+              <!--Property Occupancy-->
               <v-col>
                 <v-sheet
                   color="#2A3280"
@@ -212,17 +213,17 @@
                   class="ma-5 d-flex justify-space-evenly rounded-xl"
                 >
                   <div class="d-flex flex-column justify-center align-center">
-                    <h1>8</h1>
+                    <h2>8</h2>
                     <p>Vacant</p>
                   </div>
                   <v-divider vertical></v-divider>
                   <div class="d-flex flex-column justify-center align-center">
-                    <h1>8</h1>
+                    <h2>8</h2>
                     <p>Occupied</p>
                   </div>
                   <v-divider vertical></v-divider>
                   <div class="d-flex flex-column justify-center align-center">
-                    <h1>8</h1>
+                    <h2>8</h2>
                     <p>Unlisted</p>
                   </div>
                 </v-sheet>

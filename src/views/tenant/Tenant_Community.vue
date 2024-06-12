@@ -138,7 +138,7 @@
                                     <h3>Group Membership</h3>
                                     <v-btn variant="text"><v-icon>mdi-arrow-right</v-icon></v-btn>
                                 </div>
-                                <v-sheet class="rounded-xl" color="#647ABB" height="150">
+                                <v-sheet class="rounded-xl" height="150">
         
                                 </v-sheet>                        
                     </v-card>
