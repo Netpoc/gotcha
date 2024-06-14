@@ -10,7 +10,7 @@
                                           
                         <div class="pa-5 d-flex justify-space-between">
                             <v-card to="#" class="rounded-xl">
-                                <v-sheet class="d-flex flex-column align-center justify-center" width="100" height="100" color="red rounded-xl">
+                                <v-sheet class="d-flex flex-column align-center justify-center" width="100" height="100" color="red">
                                     <v-icon size="45">
                                         mdi-credit-card-fast
                                     </v-icon>
@@ -18,7 +18,7 @@
                                 </v-sheet>
                             </v-card>
                             <v-card to="#" class="rounded-xl">
-                                <v-sheet class="d-flex flex-column align-center justify-center" width="100" height="100" color="red rounded-xl">
+                                <v-sheet class="d-flex flex-column align-center justify-center" width="100" height="100" color="red">
                                     <v-icon size="45">
                                         mdi-wallet
                                     </v-icon>
@@ -47,7 +47,12 @@
                     <!--Navigation End-->
                     <!--Payment Notifications-->
                     <div class="d-flex justify-space-between mt-5">
-                        <h3>Payment Notifications</h3>
+                      <div class="d-flex align-center">
+                          <v-sheet height="40" width="40" color="#EF3746" class="mr-2 d-flex align-center justify-center rounded-lg">
+                            <v-icon>mdi-google</v-icon>
+                          </v-sheet>
+                          <h3>Payments Notification</h3>
+                        </div>
                         <v-btn size="small" variant="text">See More</v-btn>
                     </div>
                     <div class="mt-5">
@@ -79,14 +84,19 @@
                     </div>
                     <!--Notification Ends-->
                 </v-col> 
-                <v-col cols="5">
-                    <v-card color="grey" class="rounded-xl">
+                <v-col cols="12" md="5">
+                    <v-card flat class="pa-2 rounded-xl">
                         
-                        <v-sheet color="transparent">
+                        <v-sheet>
                           <div class="d-flex align-center justify-space-between">
-                            <h3 class="ma-5">My Cards</h3>
-                            <v-btn variant="text"><v-icon>mdi-arrow-right</v-icon></v-btn>
-                        </div>
+                            <div class="d-flex align-center">
+                              <v-sheet color="#EF3746" height="40" width="40" class="mr-2 rounded-lg d-flex align-center justify-center">
+                                <v-icon>mdi-account</v-icon>
+                              </v-sheet>
+                              <h3>My Cards</h3>
+                            </div>
+                            <v-btn  variant="text"><v-icon>mdi-arrow-right</v-icon></v-btn>
+                          </div>
                           <v-carousel :show-arrows="false" height="250" cycle hide-delimiter-background>
                             <v-carousel-item
                               :src="(require('../../assets/contactless.png'))"
@@ -107,7 +117,12 @@
                         
                     </v-card>
                     <v-sheet class="d-flex justify-space-between ma-5">
-                        <h3>Schedule Payments</h3>
+                        <div class="d-flex align-center">
+                          <v-sheet height="40" width="40" color="#EF3746" class="mr-2 d-flex align-center justify-center rounded-lg">
+                            <v-icon>mdi-google</v-icon>
+                          </v-sheet>
+                          <h3>Schedule Payments</h3>
+                        </div>
                         <v-btn variant="text"><v-icon>mdi-plus</v-icon></v-btn>
                     </v-sheet>
                 </v-col>               
@@ -115,7 +130,12 @@
             <v-row>
               <v-col>
                 <div class="d-flex justify-space-between align-center">
-                  <h4>Transaction History</h4>
+                  <div class="d-flex align-center">
+                          <v-sheet height="40" width="40" color="#EF3746" class="mr-2 d-flex align-center justify-center rounded-lg">
+                            <v-icon>mdi-google</v-icon>
+                          </v-sheet>
+                          <h3>Transactions</h3>
+                        </div>
                   <v-btn rounded="xl" size="x-small" variant="text">See more<v-icon>mdi-chevron-right</v-icon></v-btn>
                 </div>
                 <div class="mt-5">

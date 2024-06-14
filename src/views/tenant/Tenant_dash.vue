@@ -208,56 +208,46 @@
             <v-row>
               <v-col cols>
                 <div class="d-flex justify-space-evenly">
-                  <v-card
-                    class="rounded-xl"
+                  <v-card                  
+                    class="d-flex rounded-xl flex-column align-center justify-center"
                     color="transparent"
                     to="/tenant_chat"
                     flat
+                    height="100"
+                    width="100"
                   >
-                    <v-sheet
-                      height="100"
-                      width="100"
-                      color="transparent"
-                      class="d-flex rounded-xl flex-column align-center justify-center"
-                    >
+                    
                       <v-icon color="#EF3746" size="45"> mdi-forum </v-icon>
                       <small>Chat</small>
-                    </v-sheet>
+                    
                   </v-card>
                   <v-card
-                    class="rounded-xl"
+                    class="d-flex rounded-xl flex-column align-center justify-center"
                     color="transparent"
-                    to="/tenant_chat"
+                    to="#"
+                    height="100"
+                    width="100"
                     flat
-                  >
-                    <v-sheet
-                      height="100"
-                      width="100"
-                      color="transparent"
-                      class="d-flex rounded-xl flex-column align-center justify-center"
-                    >
+                  >                    
                       <v-icon color="#EF3746" size="45">
                         mdi-square-edit-outline
                       </v-icon>
                       <small>Create Post</small>
-                    </v-sheet>
+                    
                   </v-card>
 
                   <v-card
-                    class="rounded-xl"
+                    class="d-flex rounded-xl flex-column align-center justify-center"
                     color="transparent"
-                    to="/tenant_chat"
+                    to="#"
                     flat
+                    height="100"
+                    width="100"
                   >
-                    <v-sheet
-                      height="100"
-                      width="100"
-                      color="transparent"
-                      class="d-flex rounded-xl flex-column align-center justify-center"
-                    >
+                    
                       <v-icon color="#EF3746" size="45"> mdi-newspaper </v-icon>
                       <small>News</small>
-                    </v-sheet>
+                    
                   </v-card>
                 </div>
               </v-col>

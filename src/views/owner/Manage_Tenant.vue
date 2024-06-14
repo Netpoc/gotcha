@@ -120,8 +120,8 @@
                         <v-row justify="space-around">
                             <v-col cols="5">
                                 <v-card flat class="d-flex flex-column align-center">
-                                    <v-sheet color="cyan" height="120" width="100%" class="rounded-xl">
-
+                                    <v-sheet color="cyan" height="120" width="100%" class="rounded-xl d-flex align-center justify-center">
+                                        an image goes here
                                     </v-sheet>
                                     <span class="ma-2">
                                         Explore fun activities and events near you today...
@@ -130,8 +130,8 @@
                             </v-col>
                             <v-col cols="5">
                                 <v-card flat class="d-flex flex-column align-center">
-                                    <v-sheet color="cyan" height="120" width="100%" class="rounded-xl">
-
+                                    <v-sheet color="cyan" height="120" width="100%" class="rounded-xl d-flex justify-center align-center">
+                                        image goes here...
                                     </v-sheet>
                                     <span class="ma-2">
                                         Explore fun activities and events near you today...
@@ -143,10 +143,15 @@
                 </v-col>
             </v-row>
             <v-row>
-                <v-col md="7">
-                    <v-card class="rounded-xl" color="#F0516E">
+                <v-col md="6">
+                    <v-card class="rounded-xl" flat>
                         <div class="pa-5 d-flex justify-space-between align-center">
-                            <h3>Recent Annoucements</h3>
+                            <div class="d-flex align-center">
+                                <v-sheet color="#EF3746" height="40" width="40" class="mr-2 rounded-lg d-flex align-center justify-center">
+                                    <v-icon>mdi-history</v-icon>
+                                </v-sheet>
+                                <h3>Recent Annoucements</h3>
+                            </div>
                             <v-btn variant="text" size="x-small" class="rounded-xl">See more <v-icon>mdi-arrow-right</v-icon> </v-btn>
                         </div>
                         <v-tabs v-model="tab">
@@ -171,7 +176,7 @@
                                                
                     </v-card>
                 </v-col>
-                <v-col md="5">
+                <v-col md="6">
                     <v-card class="rounded-xl">
                         <v-sheet color="grey" height="300" width="100%">
 

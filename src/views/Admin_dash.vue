@@ -9,7 +9,7 @@
             <v-card
               flat
               color="#FAFAFA"
-              class="pa-4 d-flex align-center justify-space-between rounded-xl"
+              class="d-flex align-center justify-space-between rounded-xl"
             >
               <v-sheet
                 color="#ef3746"
