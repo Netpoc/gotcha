@@ -2,7 +2,7 @@
     <v-container>
         <v-navigation-drawer theme="dark" color="#EF3746" permanent>
             <div>
-              <v-img max-height="65" :src="require('../assets/white.png')"></v-img>
+              <v-img max-height="65" :src="require('../assets/Gotcha_Alt.png')"></v-img>
             </div>
             
             <div class="d-flex flex-column align-center ma-5">
