@@ -2,19 +2,19 @@
   <v-container fluid>
     <Nav />
     <v-main>
+      <h1 class="ma-5">Community</h1>
       <!--FIRST TOP SECTION-->
       <v-row justify="space-between">
         <v-col cols="6">
           <v-card flat color="transparent" class="ma-5">
-            <!--Group of buttons-->
-            <h1 class="ma-5">Community</h1>
+            <!--Group of buttons-->            
             <div class="ma-5 d-flex justify-space-between">
-              <v-card class="rounded-xl d-flex flex-column justify-center align-center" height="100" width="100"
+              <v-card to="#" class="rounded-xl d-flex flex-column justify-center align-center" height="100" width="100"
                 color="#ef3746">
                 <v-icon color="#2A3280" size="40">mdi-forum-outline</v-icon>
                 <span><small>Forum</small></span>
               </v-card>
-              <v-card class="rounded-xl d-flex flex-column justify-center align-center" height="100" width="100"
+              <v-card to="#"  class="rounded-xl d-flex flex-column justify-center align-center" height="100" width="100"
                 color="#2A3280">
                 <v-icon size="40">mdi-square-edit-outline</v-icon>
                 <span><small>Post</small></span>
@@ -31,12 +31,16 @@
               </v-card>
             </div>
           </v-card>
-          <!--Recent Posts Card Content-->
-          <v-card class="rounded-xl ma-5" color="#2A3280">
-            <div class="ma-5 d-flex justify-space-between">
+          <!--Recent Posts Content-->
+          <v-card class="rounded-xl ma-5" flat>
+            <v-card color="#2A3280" class="pa-2 ma-2 d-flex align-center justify-space-between rounded-lg">
+              <v-sheet color="#ef3746" height="35" width="35" class="mr-2 d-flex align-center rounded-lg justify-center">
+                <v-icon>mdi-history</v-icon>
+              </v-sheet>
               <h3>Recent Posts</h3>
+              <v-spacer />
               <v-btn size="x-small" variant="text">See more</v-btn>
-            </div>
+            </v-card>
             <div class="ma-5 d-flex justify-space-between align-center">
               <div class="d-flex">
                 <v-sheet rounded="lg" color="cyan" height="50" width="50">
@@ -92,15 +96,20 @@
             </div>
           </v-card>
           <v-card flat class="ma-5" color="transparent">
-            <!--Upcoming Events-->
-            <div class="ma-5 d-flex justify-space-between align-center">
-              <h3>Upcoming Events</h3>
-              <v-btn size="small" class="rounded-xl" variant="text">See more</v-btn>
-            </div>
-            <div>
+          <!--Recent Posts Ends-->
+          <!--Upcoming Events-->
+          <v-card color="#2A3280" class="pa-2 ma-2 d-flex justify-space-between align-center rounded-lg">
+            <v-sheet color="#ef3746" height="35" width="35" class="mr-2 d-flex align-center rounded-lg justify-center">
+                <v-icon>mdi-history</v-icon>
+              </v-sheet> 
+            <h3>Upcoming Events</h3>
+            <v-spacer />
+             <v-btn size="x-small" class="rounded-xl" variant="text">See more</v-btn>
+          </v-card>
+            <div class="pa-3">
               <div class="ma-3 d-flex justify-space-between align-center">
                 <div class="d-flex align-center">
-                  <v-sheet class="d-flex justify-center align-center" color="cyan" height="30" width="30">
+                  <v-sheet class="d-flex justify-center align-center" height="30" width="30">
                     <v-icon>mdi-calendar-month</v-icon>
                   </v-sheet>
                   <p class="ma-3">Birthday!</p>
@@ -130,27 +139,39 @@
         </v-col>
         <v-col cols="6">
           <!--Approval Card-->
-          <v-card class="ma-5 rounded-xl">
-            <v-sheet rounded="xl" height="250">
-              <div class="pa-5 d-flex justify-space-between">
+          <v-card color="#2A3280" class="pa-2 ma-2 rounded-lg ">
+            <div class="d-flex align-center justify-space-between">
+              <div class="d-flex align-center">
+                <v-sheet color="#ef3746" height="35" width="35" class="mr-2 d-flex align-center rounded-lg justify-center">
+                  <v-icon>mdi-fingerprint</v-icon>
+                </v-sheet>
                 <h3>Approvals</h3>
-                <v-btn variant="text"><v-icon>mdi-arrow-right</v-icon></v-btn>
               </div>
-            </v-sheet>
+              <v-btn size="small" variant="text"><v-icon>mdi-arrow-right</v-icon></v-btn>
+            </div>
           </v-card>
-          <div class="ma-5">
-            <div class="ma-5 d-flex justify-space-between align-center">
-              <h3>General Anouncement</h3>
+          <v-sheet rounded="xl" height="250">
+              
+          </v-sheet>
+          <v-card color="#2A3280" class="pa-2 ma-2 rounded-lg">
+            <div class="d-flex justify-space-between align-center">
+              <div class="d-flex align-center">
+                <v-sheet color="#ef3746" height="35" width="35" class="rounded-lg mr-2 d-flex align-center justify-center">
+                  <v-icon>mdi-alarm-bell</v-icon>
+                </v-sheet>
+                <h3>General Anouncement</h3>
+              </div>
               <v-btn variant="text"><v-icon>mdi-plus</v-icon></v-btn>
             </div>
+          </v-card>
             <v-sheet class="d-flex justify-center align-center ma-5" height="100">
               <small>No news</small>
             </v-sheet>
-          </div>
+          
           <div class="ma-5">
             <div class="ma-5 d-flex justify-space-between align-center">
               <h3>Inbox</h3>
-              <v-btn rounded="xl" size="x-small">See More <v-icon>mdi-chevron-right</v-icon></v-btn>
+              <v-btn variant="text" rounded="xl" size="x-small">See More <v-icon>mdi-chevron-right</v-icon></v-btn>
             </div>
             <v-card flat>
               <v-tabs v-model="tab">

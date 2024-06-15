@@ -1,6 +1,6 @@
 <template>
     <v-container>
-        <v-navigation-drawer theme="dark" color="#2A3280" permanent>
+        <v-navigation-drawer theme="dark" color="#2A3280">
             <div>
               <v-img max-height="65" :src="require('../assets/white.png')"></v-img>
             </div>

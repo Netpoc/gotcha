@@ -1,6 +1,6 @@
 <template>
     <v-container>
-        <v-navigation-drawer theme="dark" color="#EF3746" permanent>
+        <v-navigation-drawer theme="dark" color="#EF3746">
             <div>
               <v-img max-height="65" :src="require('../assets/Gotcha_Alt.png')"></v-img>
             </div>

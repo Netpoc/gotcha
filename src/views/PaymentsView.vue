@@ -23,7 +23,7 @@
                   <h2>Outstanding Bills</h2>
                   <span>Tabulated records of outstanding bills modal.</span>
                 </v-card>
-              </v-dialog>
+              </v-dialog>              
               <!--Bills Popup Dialog Box End-->
               <!--Reports Popup Dialog Box Starts-->
               <v-dialog v-model="bills" max-width="500">
@@ -39,6 +39,8 @@
                   <span>Tabulated records of downloadable finacial reports.</span>
                 </v-card>
               </v-dialog>
+              <!--Reports Popup Dialog Box end-->
+              <!--Transaction History Popup Dialog Box Starts-->
               <v-dialog v-model="history" max-width="500">
                 <template v-slot:activator="{ props: activatorProps }">
                   <v-card class="d-flex flex-column justify-center align-center rounded-xl" v-bind="activatorProps"
@@ -52,6 +54,8 @@
                   <span>Tabulated records of transactions history modal.</span>
                 </v-card>
               </v-dialog>
+              <!--Transaction History Popup Dialog Box ends-->
+              <!--Payment Methods Popup Dialog Box Starts-->
               <v-dialog v-model="methods" max-width="500">
                 <template v-slot:activator="{ props: activatorProps }">
                   <v-card class="d-flex flex-column justify-center align-center rounded-xl" v-bind="activatorProps"
@@ -65,14 +69,21 @@
                   <span>Payment methods options and activations modal</span>
                 </v-card>
               </v-dialog>
+              <!--Payment Methods Popup Dialog Box End-->
             </div>
           </v-card>
           <!--Payment Notification Card -->
           <v-card color="transparent" flat>
-            <div class="ma-5 d-flex justify-space-between align-center">
-              <h3>Payment Notifications</h3>
+            <v-card color="#2A3280" class="pa-3 ma-3 d-flex justify-space-between align-center rounded-lg">
+              <div class="d-flex align-center">
+              <v-sheet height="40" width="40" color="#EF3746" class="mr-2 rounded-lg d-flex align-center justify-center">
+              <v-icon>mdi-bell-ring</v-icon>
+              </v-sheet>
+                <h3>Payment Notifications</h3>
+              </div>
+              <v-spacer></v-spacer>
               <v-btn variant="text" rounded="xl" size="x-small">See more</v-btn>
-            </div>
+            </v-card>
             <div class="ma-5">
               <v-table>
                 <thead>
@@ -115,11 +126,17 @@
           </v-card>
 
           <v-card class="mx-5" flat>
-            <div class="ma-5 d-flex justify-space-between align-center">
-              <h4>Schedule Payment</h4>
+            <v-card color="#2A3280" class="pa-3 ma-3 d-flex justify-space-between align-center rounded-lg">
+              <div class="d-flex align-center">
+              <v-sheet height="40" width="40" color="#EF3746" class="mr-2 rounded-lg d-flex align-center justify-center">
+              <v-icon>mdi-cash-clock</v-icon>
+              </v-sheet>
+                <h3>Schedule Payments</h3>
+              </div>
+              <v-spacer />
               <v-dialog v-model="schedule" max-width="800">
                 <template v-slot:activator="{ props: activatorProps }">
-                  <v-btn v-bind="activatorProps" variant="text"><v-icon>mdi-plus</v-icon></v-btn>
+                  <v-btn class="rounded-xl" v-bind="activatorProps" variant="text"><v-icon>mdi-plus</v-icon></v-btn>
                 </template>
                 <v-card class="pa-5">                
                   <v-data-table v-model:expanded="expanded" :headers="dessertHeaders" :items="payments" item-value="name"
@@ -141,7 +158,7 @@
                   </v-data-table>
                 </v-card>
               </v-dialog>            
-            </div>
+            </v-card>
             <v-list v-for="sch in payments" v-bind:key="name">
               <v-list-item><small>Payment: {{sch.name}}</small> | <small>Amount: ${{sch.amount}}</small> | <small>Due: {{sch.recurrence}}</small></v-list-item>
             </v-list>
@@ -153,10 +170,16 @@
       <!--Transaction History-->
       <v-row>
         <v-col>
-          <div class="ma-5 d-flex justify-space-between align-center">
-            <h4>Transaction History</h4>
+          <v-card color="#2A3280" class="rounded-lg pa-2 ma-2 d-flex justify-space-between align-center">
+            <v-div class="d-flex align-center">
+              <v-sheet color="#EF3746" height="40" width="40" class="d-flex mr-2 align-center justify-center rounded-lg">
+                <v-icon>mdi-bank-transfer</v-icon>
+              </v-sheet>
+              <h4>Transaction History</h4>
+            </v-div>
+            <v-spacer />
             <v-btn rounded="xl" size="x-small" variant="text">See more<v-icon>mdi-chevron-right</v-icon></v-btn>
-          </div>
+          </v-card>
           <div class="ma-5">
             <v-table>
               <thead>
