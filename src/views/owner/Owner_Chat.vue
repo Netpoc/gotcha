@@ -2,75 +2,62 @@
     <v-container fluid>
         <Nav />
         <v-main>
-           <div class="d-flex ">
+           <div class="d-flex align-center justify-space-between">
             <h1 class="mx-5">Chat Room</h1>
             <v-spacer></v-spacer>
-            <v-text-field prepend="mdi-magnify">
+            <v-text-field size="x-small" prepend="mdi-magnify">
             </v-text-field>
            </div>
             <v-row align="top" justify="space-evenly">
                 <v-col md="5">                  
                     <v-card class="mx-5" flat>                      
-                        <div class="ma-5 d-flex justify-space-evenly">                          
-                            <v-card class="d-flex ma-3 rounded-xl flex-column align-center justify-center" height="100" width="100" color="#2A3280">
-                              <v-icon size="45">mdi-forum</v-icon>
-                              <small>Chat</small>
-                            </v-card>                          
-                          
-                            <v-card class="d-flex ma-3 rounded-xl flex-column align-center justify-center" height="100" width="100" color="#2A3280">
-                              <v-icon size="45">mdi-square-edit-outline</v-icon>
-                              <small>Post</small>
-                            </v-card>                           
-                          
-                            <v-card class="d-flex ma-3 rounded-xl flex-column align-center justify-center" height="100" width="100" color="#2A3280">
-                              <v-icon size="45">mdi-newspaper-variant-multiple-outline</v-icon>
-                              <small>News</small>
-                            </v-card>                              
-                        </div>                      
+                                              
                       <!--Online Chat-->
                       <div class="mt-5">
-                        <h3>Online</h3>
-                        <v-card class="rounded-xl pa-2">                          
-                          <v-sheet v-bind="props" color="grey" class="d-flex pa-2  rounded-xl justify-space-between align-center">
+                        
+                        <v-card class="rounded-lg pa-3">   
+                          <h3 class="ma-3">Online</h3>                       
+                          <v-sheet class="d-flex rounded-xl justify-space-between align-center">
                             <div class="d-flex justify-space-between align-center ma-3">
-                              <v-icon class="ma-2">mdi-account</v-icon>
+                              <v-icon class="mr-3">mdi-account</v-icon>
                             <div class="d-flex flex-column justify-center">
-                              <strong>Abdul Christopher</strong>
+                              <strong>Abdul John</strong>
                               <span>Hello...</span>
                             </div>
                             </div>
                             <small>12:30AM</small>                          
                           </v-sheet>
-                          <div class="d-flex justify-space-between align-center ma-3">
-                            <div class="d-flex align-center">
-                              <v-icon class="ma-2">mdi-account</v-icon>
-                              <div class="d-flex flex-column">
-                                <strong>Christopher Kolade</strong>
-                                <span>How are you doing?</span>
-                              </div>                              
+                          <v-sheet class="d-flex rounded-xl justify-space-between align-center">
+                            <div class="d-flex justify-space-between align-center ma-3">
+                              <v-icon class="mr-3">mdi-account</v-icon>
+                            <div class="d-flex flex-column justify-center">
+                              <strong>Abdul John</strong>
+                              <span>Hello...</span>
                             </div>
-                            <small>8:00AM</small>
-                          </div>
-                          <div class="d-flex justify-space-between align-center ma-3">
-                            <div class="d-flex align-center">
-                              <v-icon class="ma-2">mdi-account</v-icon>
-                              <div class="d-flex flex-column">
-                                <strong>Christopher Kolade</strong>
-                                <span>How are you doing?</span>
-                              </div>                              
                             </div>
-                            <small>6:13PM</small>
-                          </div>
-                          <div class="d-flex justify-space-between align-center ma-3">
-                            <div class="d-flex align-center">
-                              <v-icon class="ma-2">mdi-account</v-icon>
-                              <div class="d-flex flex-column">
-                                <strong>Christopher Kolade</strong>
-                                <span>How are you doing?</span>
-                              </div>                              
+                            <small>12:30AM</small>                          
+                          </v-sheet>
+                          <v-sheet class="d-flex rounded-xl justify-space-between align-center">
+                            <div class="d-flex justify-space-between align-center ma-3">
+                              <v-icon class="mr-3">mdi-account</v-icon>
+                            <div class="d-flex flex-column justify-center">
+                              <strong>Abdul John</strong>
+                              <span>Hello...</span>
                             </div>
-                            <small>2:43PM</small>
-                          </div>
+                            </div>
+                            <small>12:30AM</small>                          
+                          </v-sheet>
+                          <v-sheet class="d-flex rounded-xl justify-space-between align-center">
+                            <div class="d-flex justify-space-between align-center ma-3">
+                              <v-icon class="mr-3">mdi-account</v-icon>
+                            <div class="d-flex flex-column justify-center">
+                              <strong>Abdul John</strong>
+                              <span>Hello...</span>
+                            </div>
+                            </div>
+                            <small>12:30AM</small>                          
+                          </v-sheet>
+                          
                           
                         </v-card>
                       </div>
@@ -124,12 +111,12 @@
                 </v-col>
                 <v-col md="7">
                   
-                  <v-card color="#2A3280" class="rounded-xl">
-                    <div class="ma-5 d-flex">
-                      <v-icon>mdi-account</v-icon>
+                  <v-card color="#2A3280" class="ma-5 rounded-xl">
+                    <div class="ma-5 d-flex">                   
+                      
                       <h3>Abdul Christopher</h3>
                     </div>
-                    <v-sheet class="ma-5 pa-5" height="500">
+                    <v-sheet class="rounded-lg ma-5 pa-5" height="500">
                       <div class="ma-3">
                         <v-sheet class="pa-5 rounded-xl" color="cyan" width="300">
                           <span>hi</span>

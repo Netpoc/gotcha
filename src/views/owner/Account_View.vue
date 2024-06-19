@@ -7,45 +7,29 @@
         <v-col cols="5">
           <v-card flat class="pa-5 d-flex justify-space-between rounded-xl">
             <v-card class="rounded-xl" to="#">
-              <v-sheet
-                class="rounded-xl d-flex flex-column align-center justify-center"
-                height="100"
-                width="100"
-                color="#2A3280"
-              >
+              <v-sheet class="rounded-xl d-flex flex-column align-center justify-center" height="100" width="100"
+                color="#2A3280">
                 <v-icon size="30">mdi-cash-fast</v-icon>
                 <p>Pay</p>
               </v-sheet>
             </v-card>
             <v-card class="rounded-xl" flat to="#">
-              <v-sheet
-                class="rounded-xl d-flex flex-column align-center justify-center"
-                height="100"
-                width="100"
-                color="#2A3280"
-              >
+              <v-sheet class="rounded-xl d-flex flex-column align-center justify-center" height="100" width="100"
+                color="#2A3280">
                 <v-icon size="30">mdi-wallet-outline</v-icon>
                 <small>Wallet</small>
               </v-sheet>
             </v-card>
             <v-card class="rounded-xl" flat to="#">
-              <v-sheet
-                class="rounded-xl d-flex flex-column align-center justify-center"
-                height="100"
-                width="100"
-                color="#2A3280"
-              >
+              <v-sheet class="rounded-xl d-flex flex-column align-center justify-center" height="100" width="100"
+                color="#2A3280">
                 <v-icon size="30">mdi-file-sign</v-icon>
                 <small>Report</small>
               </v-sheet>
             </v-card>
             <v-card class="rounded-xl" flat to="#">
-              <v-sheet
-                class="rounded-xl d-flex flex-column align-center justify-center"
-                height="100"
-                width="100"
-                color="#2A3280"
-              >
+              <v-sheet class="rounded-xl d-flex flex-column align-center justify-center" height="100" width="100"
+                color="#2A3280">
                 <v-icon size="30">mdi-tune-vertical</v-icon>
                 <small>Misc</small>
               </v-sheet>
@@ -53,10 +37,15 @@
           </v-card>
           <div class="ma-5">
             <div class="d-flex align-center justify-space-between">
-              <h3>Recent Transaction</h3>
-              <v-btn variant="text" class="rounded-xl" size="x-small"
-                >See more <v-icon>mdi-arrow-right</v-icon></v-btn
-              >
+              <div class="d-flex align-center">
+                <v-sheet color="#ef3746" height="40" width="40"
+                class="mr-2 d-flex rounded-lg align-center justify-center">
+                <v-icon>mdi-bank-transfer</v-icon>
+              </v-sheet>
+              <h3>Recent Transactions</h3>
+              </div>
+              <v-spacer />
+              <v-btn variant="text" class="rounded-xl" size="x-small">See more</v-btn>
             </div>
             <v-table>
               <thead>
@@ -77,33 +66,30 @@
           </div>
         </v-col>
         <v-col cols="6">
-          <v-card class="mx-5 rounded-xl" flat height="300">
+          <v-card class="rounded-xl" flat height="300">
             <div class="pa-5 d-flex align-center justify-space-between">
               <div class="d-flex align-center">
-                <v-sheet
-                  color="#ef3746"
-                  height="40"
-                  width="40"
-                  class="mx-3 d-flex rounded-lg align-center justify-center"
-                >
+                <v-sheet color="#ef3746" height="40" width="40"
+                  class="mx-3 d-flex rounded-lg align-center justify-center">
                   <v-icon>mdi-integrated-circuit-chip</v-icon>
                 </v-sheet>
                 <h3>My Cards</h3>
               </div>
-              <v-btn variant="text" icon
-                ><v-icon>mdi-arrow-right</v-icon></v-btn
-              >
+              <v-btn variant="text" icon><v-icon>mdi-arrow-right</v-icon></v-btn>
             </div>
-            <v-sheet class="ma-5 rounded-xl" color="cyan" height="250">
+            <v-sheet class="ma-5 rounded-xl" height="250">
             </v-sheet>
           </v-card>
-          <div>
+          <div class="ma-5">
             <v-sheet class="rounded-xl">
-              <div class="pa-5 d-flex align-center justify-space-between">
-                <h3>Schedule Payments</h3>
-                <v-btn icon class="rounded-xl" variant="text"
-                  ><v-icon>mdi-plus</v-icon></v-btn
-                >
+              <div class="pa-5 d-flex justify-space-between">
+                <div class="d-flex align-center">
+                  <v-sheet color="#EF3746" width="40" height="40" class="mr-2 rounded-lg align-center">
+                    <v-icon>mdi-cash-clock</v-icon>
+                  </v-sheet>
+                  <h3>Schedule Payments</h3>
+                </div>
+                <v-btn icon class="rounded-xl" variant="text"><v-icon>mdi-plus</v-icon></v-btn>
               </div>
               <div class="d-flex justify-center">
                 <span>No Payment</span>
@@ -117,14 +103,13 @@
           <v-card class="mx-5 pa-5" flat>
             <div class="d-flex align-center justify-space-between">
               <div class="d-flex align-center">
-                <v-sheet height="40" width="40" color="#ef3746" class="mx-3 rounded-lg d-flex align-center justify-center">
+                <v-sheet height="40" width="40" color="#ef3746"
+                  class="mx-2 rounded-lg d-flex align-center justify-center">
                   <v-icon>mdi-finance</v-icon>
                 </v-sheet>
                 <h3>Transaction History</h3>
-              </div>              
-              <v-btn variant="text" size="x-small" class="rounded-xl"
-                >See more <v-icon>mdi-arrow-right</v-icon></v-btn
-              >
+              </div>
+              <v-btn variant="text" size="x-small" class="rounded-xl">See more</v-btn>
             </div>
             <v-table>
               <thead>

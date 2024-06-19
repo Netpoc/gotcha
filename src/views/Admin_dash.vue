@@ -7,8 +7,8 @@
       <v-row align="top" justify="space-evenly">
         <v-col md="6">
           <v-card flat color="transparent" class="rounded-xl ma-5">
-            <v-card flat color="#2A3280" class="pa-3 ma-3 d-flex align-center justify-space-between rounded-lg">
-              <v-sheet color="#ef3746" height="40" width="40"
+            <v-card flat color="#2A3280" class="pa-2 ma-2 d-flex align-center justify-space-between rounded-lg">
+              <v-sheet color="#ef3746" height="35" width="35"
                 class="mx-3 d-flex align-center justify-center rounded-lg">
                 <v-icon>mdi-gauge</v-icon>
               </v-sheet>
@@ -122,7 +122,7 @@
           <v-card class="ma-5" flat>
             <v-card color="#2A3280" class="pa-2 ma-2 rounded-lg d-flex justify-space-between align-center">
               <div class="d-flex align-center">
-                <v-sheet color="#ef3746" height="40" width="40"
+                <v-sheet color="#ef3746" height="35" width="35"
                   class="ma-2 rounded-lg d-flex justify-center align-center">
                   <v-icon>mdi-home-city</v-icon>
                 </v-sheet>
@@ -212,7 +212,7 @@
         <v-col md="6">
           <v-card color="#2A3280" class="pa-3 align-center d-flex justify-space-between">
             <div class="d-flex align-center">
-              <v-sheet height="40" width="40" color="#EF3746"
+              <v-sheet height="35" width="35" color="#EF3746"
                 class="rounded-lg mr-2 d-flex align-center justify-center">
                 <v-icon>mdi-av-timer</v-icon>
               </v-sheet>
@@ -278,7 +278,7 @@
         <v-col md="6">
           <v-sheet color="#2A3280" class="pa-3 rounded-lg d-flex align-center justify-space-between">
             <div class="d-flex align-center">
-              <v-sheet height="40" width="40" color="#EF3746"
+              <v-sheet height="35" width="35" color="#EF3746"
                 class="rounded-lg mr-2 d-flex align-center justify-center">
                 <v-icon>mdi-timer</v-icon>
               </v-sheet>

@@ -5,7 +5,7 @@
             <h1 class="mx-5">Profile</h1>           
             <v-row justify="space-between">                
                 <v-col md="6">
-                    <v-card class="mx-5 pa-5 d-flex justify-space-evenly rounded-xl" flat>
+                    <v-card class="mx-5 pa-5 d-flex justify-space-between rounded-xl" flat>
                         <v-card class="rounded-xl" to="#" color="transparent">
                             <v-sheet color="#2A3280" height="100" width="100" class="rounded-xl d-flex flex-column align-center justify-center">
                                 <v-icon size="45">
@@ -25,7 +25,7 @@
                         <v-card class="rounded-xl" to="#" color="transparent">
                             <v-sheet color="#2A3280" height="100" width="100" class="rounded-xl d-flex flex-column align-center justify-center">
                                 <v-icon size="45">
-                                    mdi-home-group
+                                    mdi-account-group
                                 </v-icon>
                                 <small>Community</small>
                             </v-sheet>
@@ -35,17 +35,24 @@
                                 <v-icon size="45">
                                     mdi-home-group
                                 </v-icon>
-                                <small>Card</small>
+                                <small>Property</small>
                             </v-sheet>
                         </v-card>
                     </v-card>
 
                     <div class="ma-5">
                         <div class="d-flex justify-space-between align-center">
-                            <h3>Notification Prefrences</h3>
+                            <div class="d-flex align-center">
+                                <v-sheet height="35" width="35" class="mr-2 rounded-lg d-flex align-center justify-center" color="#EF3746">
+                                    <v-icon>
+                                        mdi-account-cog
+                                    </v-icon>
+                                </v-sheet>
+                                <h3>Notification Prefrences</h3>
+                            </div>
                             <v-btn size="x-small" variant="text" class="rounded-xl"> See more</v-btn>
                         </div>
-                        <div>
+                        <div class="pa-3">
                             <v-row>
                                 <v-col>
                                     <v-checkbox
@@ -53,6 +60,7 @@
                                         :rules="[v => !!v || 'You must agree to continue!']"
                                         label="Do you agree?"
                                         required
+                                        size="x-small"
                                     ></v-checkbox>
                                     
                                     <v-radio-group
@@ -108,7 +116,7 @@
                     </div>
                 </v-col>
                 <v-col md="6">                    
-                    <v-card class="pa-5 rounded-xl">
+                    <v-card flat class="rounded-xl">
                         <div class="d-flex justify-space-between">
                             <div class="d-flex align-center">
                                 <v-sheet color="#EF3746" class="rounded-lg mx-3 d-flex align-center justify-center" height="40" width="40">
@@ -120,30 +128,40 @@
                             <v-btn variant="text"><v-icon>mdi-arrow-right</v-icon></v-btn>
                         </div>                     
                     
-                    <div class="d-flex justify-center">
-                        <v-sheet class="rounded-xl" color="grey" height="170" width="250">
-
+                    
+                        <v-sheet class="mt-5 rounded-xl d-flex align-center justify-center" height="200" width="100%">
+                            Card slides here..
                         </v-sheet>
-                    </div>
+                    
                     </v-card>
-                    <div class="ma-5">
+                    <v-card flat class="ma-5">
                         <div class="d-flex justify-space-between align-center">
-                            <h3>Manage Visitors</h3>
+                            <div class="d-flex align-center">
+                                <v-sheet color="#EF3746" class="rounded-lg mx-3 d-flex align-center justify-center" height="40" width="40">
+                                    <v-icon>mdi-account-box-plus-outline</v-icon>                                    
+                                </v-sheet>
+                                <h3>Manage Visitors</h3>
+                            </div>
                             <v-btn variant="text"><v-icon>mdi-plus</v-icon></v-btn>
                         </div>
-                        <div class="d-flex justify-center align-center">
+                        <v-sheet height="100" class="d-flex justify-center align-center">
                             <small>No visitors</small>
-                        </div>
-                    </div>
-                    <div class="ma-5">
+                        </v-sheet>
+                    </v-card>
+                    <v-card flat class="ma-5">
                         <div class="d-flex justify-space-between align-center">
-                            <h3>Manage Vehicles</h3>
+                            <div class="d-flex align-center">
+                                <v-sheet color="#EF3746" class="rounded-lg mx-3 d-flex align-center justify-center" height="40" width="40">
+                                    <v-icon>mdi-car</v-icon>                                    
+                                </v-sheet>
+                                <h3>Manage Vehicles</h3>
+                            </div>
                             <v-btn variant="text"><v-icon>mdi-plus</v-icon></v-btn>
                         </div>
-                        <div class="d-flex justify-center align-center">
+                        <v-sheet height="80" class="d-flex justify-center align-center">
                             <small>No visitors</small>
-                        </div>
-                    </div>
+                        </v-sheet>
+                    </v-card>
                 </v-col>
             </v-row>
             <v-row>

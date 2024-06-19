@@ -7,34 +7,46 @@
                 <v-col md="6">
                     <v-card color="#2A3280" class="rounded-xl mx-5">
                         <div class="d-flex pa-5 justify-space-evenly">
-                            <v-card class="rounded-xl" color="transparent" to="/tenant_chat" flat>
-                            <v-sheet color="#EF3746" class="rounded-xl d-flex justify-center" height="100" width="100">
+                            <v-card class="rounded-xl align-content-center" height="100" width="100" color="#EF3746" to="/tenant_chat" flat>                            
                                 <div class="d-flex flex-column justify-center align-center">
                                     <v-icon color="#2A3280" size="45">mdi-forum</v-icon>
                                     <small>Chat</small>
-                                </div>
-                            </v-sheet>
+                                </div>                            
                             </v-card>
-                            <v-card class="rounded-xl" color="transparent" to="/tenant_chat" flat>
-                            <v-sheet color="#EF3746" class="rounded-xl d-flex justify-center" height="100" width="100">
+                            <v-card class="rounded-xl align-content-center" height="100" width="100" color="#EF3746" to="/tenant_chat" flat>
+                            
                                 <div class="d-flex flex-column justify-center align-center">
                                     <v-icon color="#2A3280" size="45">mdi-square-edit-outline</v-icon>
                                     <small>Create Post</small>
                                 </div>
-                            </v-sheet>
+                            
                             </v-card>
-                            <v-card class="rounded-xl" color="transparent" to="/tenant_chat" flat>
-                            <v-sheet color="#EF3746" class="rounded-xl d-flex justify-center" height="100" width="100">
+                            <v-card class="rounded-xl align-content-center" height="100" width="100" color="#EF3746" to="/tenant_chat" flat>
+                            
                                 <div class="d-flex flex-column justify-center align-center">
                                     <v-icon color="#2A3280" size="45">mdi-newspaper-variant-multiple-outline</v-icon>
                                     <small>News</small>
                                 </div>
-                            </v-sheet>
+                            
                             </v-card>
+
+                            <v-card class="rounded-xl align-content-center" height="100" width="100" color="#EF3746" to="/tenant_chat" flat>
+                            
+                            <div class="d-flex flex-column justify-center align-center">
+                                <v-icon color="#2A3280" size="45">mdi-newspaper-variant-multiple-outline</v-icon>
+                                <small>News</small>
+                            </div>
+                        
+                        </v-card>
                         </div>
                         <div class="pa-5">
                             <div class="d-flex justify-space-between">
+                                <div class="d-flex align-center">
+                                <v-sheet color="#EF3746" class="rounded-lg mx-3 d-flex align-center justify-center" height="40" width="40">
+                                    <v-icon>mdi-post</v-icon>                                    
+                                </v-sheet>
                                 <h3>Recent Posts</h3>
+                            </div>
                                 <v-btn variant="text" size="x-small">See more</v-btn>
                             </div>
                             <div class="ma-5 d-flex align-center justify-space-between">

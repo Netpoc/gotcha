@@ -72,11 +72,11 @@
               <!--Payment Methods Popup Dialog Box End-->
             </div>
           </v-card>
-          <!--Payment Notification Card -->
+          <!--Payment Notification Card tschuss bis spater-->
           <v-card color="transparent" flat>
-            <v-card color="#2A3280" class="pa-3 ma-3 d-flex justify-space-between align-center rounded-lg">
+            <v-card color="#2A3280" class="pa-2 ma-2 d-flex justify-space-between align-center rounded-lg">
               <div class="d-flex align-center">
-              <v-sheet height="40" width="40" color="#EF3746" class="mr-2 rounded-lg d-flex align-center justify-center">
+              <v-sheet height="35" width="35" color="#EF3746" class="mr-2 rounded-lg d-flex align-center justify-center">
               <v-icon>mdi-bell-ring</v-icon>
               </v-sheet>
                 <h3>Payment Notifications</h3>
@@ -126,9 +126,9 @@
           </v-card>
 
           <v-card class="mx-5" flat>
-            <v-card color="#2A3280" class="pa-3 ma-3 d-flex justify-space-between align-center rounded-lg">
+            <v-card color="#2A3280" class="pa-2 ma-2 d-flex justify-space-between align-center rounded-lg">
               <div class="d-flex align-center">
-              <v-sheet height="40" width="40" color="#EF3746" class="mr-2 rounded-lg d-flex align-center justify-center">
+              <v-sheet height="35" width="35" color="#EF3746" class="mr-2 rounded-lg d-flex align-center justify-center">
               <v-icon>mdi-cash-clock</v-icon>
               </v-sheet>
                 <h3>Schedule Payments</h3>
@@ -172,7 +172,7 @@
         <v-col>
           <v-card color="#2A3280" class="rounded-lg pa-2 ma-2 d-flex justify-space-between align-center">
             <v-div class="d-flex align-center">
-              <v-sheet color="#EF3746" height="40" width="40" class="d-flex mr-2 align-center justify-center rounded-lg">
+              <v-sheet color="#EF3746" height="35" width="35" class="d-flex mr-2 align-center justify-center rounded-lg">
                 <v-icon>mdi-bank-transfer</v-icon>
               </v-sheet>
               <h4>Transaction History</h4>
